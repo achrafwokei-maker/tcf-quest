@@ -1,0 +1,230 @@
+{
+  "id": "acad-eo1",
+  "version": 1,
+  "title": "Académie · Expression orale, tâche 1",
+  "review_status": "reviewed",
+  "level": "A2–B1",
+  "context": "academy",
+  "group": "EO-T1",
+  "tcf_target": {
+    "section": "EO",
+    "task": "EO-T1",
+    "purpose": "Académie TCF: strategy for EO-T1, with guided, independent and timed practice."
+  },
+  "items": [
+    {
+      "id": "aeo1-methode",
+      "type": "card",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Entretien dirigé : développer chaque réponse",
+      "stage": "B",
+      "points": [
+        "Répondez, puis ajoutez un détail : pourquoi, depuis quand, un exemple (la règle « réponse + 2 »).",
+        "Variez les temps : présent pour aujourd'hui, passé composé pour une expérience, futur pour vos projets.",
+        "Si vous ne comprenez pas : « Pardon, pouvez-vous répéter / reformuler ? » C'est permis et naturel.",
+        "Évitez les réponses d'un mot et les textes appris par cœur : l'examinateur relance."
+      ]
+    },
+    {
+      "id": "aeo1-exemple",
+      "type": "card",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "language",
+      "title": "Exemple : réponse + 2",
+      "stage": "C",
+      "body": "Question : Vous aimez votre ville ? — Faible : « Oui. » — Bien : « Oui, beaucoup. J'habite à Montréal depuis deux ans, et ce que j'aime le plus, ce sont les festivals d'été. Par exemple, l'an dernier, je suis allé au festival de jazz. »"
+    },
+    {
+      "id": "aeo1-guide-1",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Answer + 2 details."
+      },
+      "level": "A2",
+      "competencies": [
+        "eo.developper-reponse",
+        "eo.parler-de-soi"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quelle réponse développe le mieux ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« Je travaille. »",
+          "explanation": "Too short."
+        },
+        {
+          "id": "b",
+          "text": "« Je suis infirmière depuis cinq ans, dans un hôpital. J'aime aider les gens, même si les horaires sont difficiles. »",
+          "explanation": "Yes: answer + reason + nuance."
+        },
+        {
+          "id": "c",
+          "text": "« Infirmière. »",
+          "explanation": "One word."
+        },
+        {
+          "id": "d",
+          "text": "« Je ne sais pas. »",
+          "explanation": "No answer."
+        }
+      ],
+      "answer": "b",
+      "stage": "D",
+      "hint": "Look for the answer with a reason and a detail."
+    },
+    {
+      "id": "aeo1-guide-2",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Ask for repetition politely."
+      },
+      "level": "A2",
+      "competencies": [
+        "eo.interaction",
+        "eo.reformuler"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Vous n'avez pas compris la question. Que dites-vous ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« Quoi ? »",
+          "explanation": "Too abrupt for an examiner."
+        },
+        {
+          "id": "b",
+          "text": "« Pardon, pourriez-vous répéter la question, s'il vous plaît ? »",
+          "explanation": "Yes: polite and natural."
+        },
+        {
+          "id": "c",
+          "text": "Rien, vous attendez.",
+          "explanation": "Silence loses time."
+        },
+        {
+          "id": "d",
+          "text": "« Je ne parle pas français. »",
+          "explanation": "No."
+        }
+      ],
+      "answer": "b",
+      "stage": "D",
+      "hint": "Politeness + conditional."
+    },
+    {
+      "id": "aeo1-auto-1",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Future for plans."
+      },
+      "level": "B1",
+      "competencies": [
+        "eo.temps-verbaux",
+        "gram.futur"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Pour parler de vos projets, quelle phrase est correcte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« L'année prochaine, je vais commencer une formation en informatique. »",
+          "explanation": "Yes: futur proche, correct."
+        },
+        {
+          "id": "b",
+          "text": "« L'année prochaine, j'ai commencé une formation. »",
+          "explanation": "Past tense for a future plan."
+        },
+        {
+          "id": "c",
+          "text": "« L'année prochaine, je commençais une formation. »",
+          "explanation": "Imperfect: wrong."
+        },
+        {
+          "id": "d",
+          "text": "« L'année prochaine, je commencer une formation. »",
+          "explanation": "Infinitive without auxiliary."
+        }
+      ],
+      "answer": "a",
+      "stage": "E"
+    },
+    {
+      "id": "aeo1-chrono",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Timed: add an example quickly."
+      },
+      "level": "B1",
+      "competencies": [
+        "eo.developper-reponse",
+        "eo.exemplifier"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quel ajout rend la réponse « J'aime cuisiner » plus riche ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« … c'est tout. »",
+          "explanation": "Ends the answer."
+        },
+        {
+          "id": "b",
+          "text": "« … surtout des plats de mon pays, par exemple le couscous du vendredi en famille. »",
+          "explanation": "Yes: specific example."
+        },
+        {
+          "id": "c",
+          "text": "« … oui. »",
+          "explanation": "Adds nothing."
+        },
+        {
+          "id": "d",
+          "text": "« … je ne sais pas pourquoi. »",
+          "explanation": "Weakens the answer."
+        }
+      ],
+      "answer": "b",
+      "stage": "F",
+      "time_limit_s": 30
+    },
+    {
+      "id": "aeo1-application",
+      "type": "card",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "outro",
+      "title": "À vous : l'entretien réel",
+      "stage": "H",
+      "body": "Faites une tâche 1 complète avec l'examinatrice (2 minutes), puis lisez le retour.",
+      "link": {
+        "label": "Faire la tâche 1",
+        "to": "/oral/eo1-presentation"
+      }
+    }
+  ]
+}

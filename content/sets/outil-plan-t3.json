@@ -1,0 +1,95 @@
+{
+  "id": "outil-plan-t3",
+  "version": 1,
+  "title": "Plan d'argumentation (tâche 3)",
+  "review_status": "reviewed",
+  "level": "B1",
+  "context": "toolbox",
+  "group": "Cadres de réponse",
+  "tcf_target": {
+    "section": "EO",
+    "task": "EO-T3",
+    "purpose": "Boîte à outils: Plan d'argumentation (tâche 3)."
+  },
+  "items": [
+    {
+      "id": "o-plan-t3-fiche",
+      "type": "card",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Boîte à outils: Plan d'argumentation (tâche 3)."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Plan d'argumentation (tâche 3)",
+      "stage": "B",
+      "points": [
+        "Ce que c'est : opinion → argument 1 + exemple → argument 2 + exemple → concession → conclusion.",
+        "Quand l'utiliser : pour parler 4 minutes de façon organisée.",
+        "Quand l'éviter : ne récitez pas un texte appris : adaptez-le à la question posée.",
+        "Exemple : « À mon avis, … D'une part… Par exemple… D'autre part… Certes… mais… En conclusion… »"
+      ]
+    },
+    {
+      "id": "o-plan-t3-adapter",
+      "type": "type",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Boîte à outils: Plan d'argumentation (tâche 3)."
+      },
+      "level": "B1",
+      "competencies": [
+        "eo.argumenter"
+      ],
+      "stage": "D",
+      "instructions": "Complétez la phrase.",
+      "instructions_en": "Fill in the gap.",
+      "sentence": "Certes, le vélo est écologique, ___ il est dangereux en hiver.",
+      "answers": [
+        "mais"
+      ],
+      "explanation": "« Certes… mais »: concession then your point."
+    },
+    {
+      "id": "o-plan-t3-pratique",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Boîte à outils: Plan d'argumentation (tâche 3)."
+      },
+      "level": "B1",
+      "competencies": [
+        "eo.argumenter"
+      ],
+      "stage": "E",
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Que faut-il dire en premier ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Votre opinion.",
+          "explanation": "Yes: start with a clear position."
+        },
+        {
+          "id": "b",
+          "text": "Une anecdote sans rapport.",
+          "explanation": "Off-topic."
+        },
+        {
+          "id": "c",
+          "text": "La conclusion.",
+          "explanation": "Comes last."
+        },
+        {
+          "id": "d",
+          "text": "« Je ne sais pas. »",
+          "explanation": "No position."
+        }
+      ],
+      "answer": "a"
+    }
+  ]
+}

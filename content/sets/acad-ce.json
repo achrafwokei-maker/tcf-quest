@@ -1,0 +1,250 @@
+{
+  "id": "acad-ce",
+  "version": 1,
+  "title": "Académie · Compréhension écrite",
+  "review_status": "reviewed",
+  "level": "A2–B2",
+  "context": "academy",
+  "group": "CE",
+  "tcf_target": {
+    "section": "CE",
+    "purpose": "Académie TCF: strategy for CE, with guided, independent and timed practice."
+  },
+  "items": [
+    {
+      "id": "ace-methode",
+      "type": "card",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Lire pour répondre",
+      "stage": "B",
+      "points": [
+        "Lisez d'abord la question : elle dit quoi chercher (un détail, le but, l'opinion).",
+        "Trouvez la phrase-preuve dans le texte. Si aucune phrase ne prouve une option, elle est fausse.",
+        "Attention aux connecteurs : « mais, cependant, pourtant » annoncent souvent l'idée importante.",
+        "Pour l'opinion de l'auteur, regardez la conclusion et les mots qui jugent (heureusement, hélas…).",
+        "Temps : environ 1 min 30 par question au TCF. Si un mot est inconnu, devinez-le grâce au contexte."
+      ]
+    },
+    {
+      "id": "ace-exemple",
+      "type": "card",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "language",
+      "title": "Exemple : la phrase-preuve",
+      "stage": "C",
+      "body": "Texte : « Certes, le télétravail fait gagner du temps. Cependant, il isole les nouveaux employés. » Question : Que pense l'auteur ? La preuve est après « Cependant » : il voit surtout un risque d'isolement."
+    },
+    {
+      "id": "ace-guide-1",
+      "type": "select",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Find the idea after the connector."
+      },
+      "level": "B1",
+      "competencies": [
+        "ce.point-de-vue",
+        "gram.connecteur-opposition"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Que pense l'auteur des trottinettes électriques ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elles sont parfaites.",
+          "explanation": "He sees a problem."
+        },
+        {
+          "id": "b",
+          "text": "Elles sont pratiques mais posent un problème de sécurité.",
+          "explanation": "Yes: after « pourtant »."
+        },
+        {
+          "id": "c",
+          "text": "Il faut les interdire.",
+          "explanation": "He asks for rules, not a ban."
+        },
+        {
+          "id": "d",
+          "text": "Personne ne les utilise.",
+          "explanation": "Not said."
+        }
+      ],
+      "answer": "b",
+      "stage": "D",
+      "hint": "Read what comes after « pourtant ».",
+      "passage": "Les trottinettes électriques sont rapides et pratiques en ville. Pourtant, sans règles claires, elles mettent en danger les piétons sur les trottoirs."
+    },
+    {
+      "id": "ace-guide-2",
+      "type": "select",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Guess an unknown word from context."
+      },
+      "level": "B1",
+      "competencies": [
+        "ce.vocabulaire-contexte",
+        "ce.inference"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Dans le texte, « bénévole » veut dire :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Payé à l'heure.",
+          "explanation": "The text says they aren't paid."
+        },
+        {
+          "id": "b",
+          "text": "Qui travaille sans être payé.",
+          "explanation": "Yes: « sans recevoir de salaire »."
+        },
+        {
+          "id": "c",
+          "text": "Malade.",
+          "explanation": "No."
+        },
+        {
+          "id": "d",
+          "text": "Étudiant.",
+          "explanation": "No."
+        }
+      ],
+      "answer": "b",
+      "stage": "D",
+      "hint": "Look at the end of the same sentence.",
+      "passage": "Le festival fonctionne grâce à deux cents bénévoles, qui donnent de leur temps sans recevoir de salaire."
+    },
+    {
+      "id": "ace-auto-1",
+      "type": "select",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Identify the purpose of a notice."
+      },
+      "level": "B1",
+      "competencies": [
+        "ce.intention",
+        "ce.information-cle"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quel est le but de ce message ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Inviter les voisins à une fête.",
+          "explanation": "No party."
+        },
+        {
+          "id": "b",
+          "text": "Prévenir d'une coupure d'eau.",
+          "explanation": "Yes."
+        },
+        {
+          "id": "c",
+          "text": "Demander de l'argent.",
+          "explanation": "No."
+        },
+        {
+          "id": "d",
+          "text": "Annoncer des travaux de peinture.",
+          "explanation": "It's plumbing work."
+        }
+      ],
+      "answer": "b",
+      "stage": "E",
+      "passage": "Avis aux résidents : en raison de travaux de plomberie, l'eau sera coupée mardi de 9 h à 13 h. Merci de prévoir des réserves."
+    },
+    {
+      "id": "ace-auto-2",
+      "type": "select",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Implicit meaning in a conclusion."
+      },
+      "level": "B2",
+      "competencies": [
+        "ce.inference",
+        "ce.point-de-vue"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Que suggère l'auteure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les applications de méditation sont inutiles.",
+          "explanation": "She doesn't say useless."
+        },
+        {
+          "id": "b",
+          "text": "Une application ne remplace pas un vrai changement d'habitudes.",
+          "explanation": "Yes: implicit in the last sentence."
+        },
+        {
+          "id": "c",
+          "text": "Il faut méditer plusieurs heures par jour.",
+          "explanation": "No."
+        },
+        {
+          "id": "d",
+          "text": "Les applications sont trop chères.",
+          "explanation": "Price isn't discussed."
+        }
+      ],
+      "answer": "b",
+      "stage": "E",
+      "passage": "Les applications de méditation promettent la sérénité en dix minutes par jour. Encore faut-il éteindre son téléphone ensuite, ce que peu d'utilisateurs font."
+    },
+    {
+      "id": "ace-chrono",
+      "type": "select",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Timed: find a detail fast."
+      },
+      "level": "B1",
+      "competencies": [
+        "ce.document-pratique",
+        "ce.information-cle"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Où peut-on garer son vélo gratuitement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Au sous-sol.",
+          "explanation": "The basement costs 2 $."
+        },
+        {
+          "id": "b",
+          "text": "Devant l'entrée principale.",
+          "explanation": "Yes: « gratuit devant l'entrée principale »."
+        },
+        {
+          "id": "c",
+          "text": "Sur le toit.",
+          "explanation": "Not mentioned."
+        },
+        {
+          "id": "d",
+          "text": "Nulle part.",
+          "explanation": "No."
+        }
+      ],
+      "answer": "b",
+      "stage": "F",
+      "time_limit_s": 60,
+      "passage": "Stationnement vélos : gratuit devant l'entrée principale ; 2 $ par jour au sous-sol (surveillé)."
+    }
+  ]
+}

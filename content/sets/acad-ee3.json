@@ -1,0 +1,228 @@
+{
+  "id": "acad-ee3",
+  "version": 1,
+  "title": "Académie · Expression écrite, tâche 3",
+  "review_status": "reviewed",
+  "level": "A2–B2",
+  "context": "academy",
+  "group": "EE-T3",
+  "tcf_target": {
+    "section": "EE",
+    "task": "EE-T3",
+    "purpose": "Académie TCF: strategy for EE-T3, with guided, independent and timed practice."
+  },
+  "items": [
+    {
+      "id": "aee3-methode",
+      "type": "card",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Points de vue (120–180 mots) : la méthode",
+      "stage": "B",
+      "points": [
+        "Une phrase d'introduction : le sujet.",
+        "Reformulez le document 1 (sans copier).",
+        "Reformulez le document 2 avec un connecteur d'opposition.",
+        "Donnez votre opinion avec un argument et un exemple.",
+        "Conclusion courte. 120 à 180 mots."
+      ]
+    },
+    {
+      "id": "aee3-exemple",
+      "type": "card",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "language",
+      "title": "Exemple",
+      "stage": "C",
+      "body": "« Le premier document affirme que le télétravail améliore la qualité de vie. En revanche, le second souligne qu'il isole les employés. Pour ma part, … »"
+    },
+    {
+      "id": "aee3-guide-1",
+      "type": "select",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Guided practice."
+      },
+      "level": "B1",
+      "competencies": [
+        "ee.comparer-points-de-vue"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quelle phrase reformule au lieu de copier ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Document : « Le télétravail isole. » → « Selon le second auteur, travailler chez soi coupe des collègues. »",
+          "explanation": "Yes: same idea, new words."
+        },
+        {
+          "id": "b",
+          "text": "« Le télétravail isole. »",
+          "explanation": "Copied."
+        },
+        {
+          "id": "c",
+          "text": "« Le document dit : “Le télétravail isole.” »",
+          "explanation": "Copied in quotes."
+        },
+        {
+          "id": "d",
+          "text": "« Le télétravail, isole. »",
+          "explanation": "Copied."
+        }
+      ],
+      "answer": "a",
+      "stage": "D",
+      "hint": "Rephrase the documents."
+    },
+    {
+      "id": "aee3-guide-2",
+      "type": "select",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Guided practice."
+      },
+      "level": "B1",
+      "competencies": [
+        "ee.comparer-points-de-vue"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quel connecteur oppose les deux documents ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« En revanche »",
+          "explanation": "Yes."
+        },
+        {
+          "id": "b",
+          "text": "« De plus »",
+          "explanation": "Addition."
+        },
+        {
+          "id": "c",
+          "text": "« Ainsi »",
+          "explanation": "Consequence."
+        },
+        {
+          "id": "d",
+          "text": "« D'abord »",
+          "explanation": "Sequence."
+        }
+      ],
+      "answer": "a",
+      "stage": "D",
+      "hint": "Opposition connector."
+    },
+    {
+      "id": "aee3-auto-1",
+      "type": "select",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Independent practice."
+      },
+      "level": "B1",
+      "competencies": [
+        "ee.comparer-points-de-vue"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Où placer votre opinion personnelle ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Après avoir présenté les deux points de vue.",
+          "explanation": "Yes: compare first, then give your view."
+        },
+        {
+          "id": "b",
+          "text": "Dans la première phrase uniquement.",
+          "explanation": "Comparison comes first."
+        },
+        {
+          "id": "c",
+          "text": "Nulle part.",
+          "explanation": "It's required."
+        },
+        {
+          "id": "d",
+          "text": "À la place du document 2.",
+          "explanation": "Both documents are needed."
+        }
+      ],
+      "answer": "a",
+      "stage": "E"
+    },
+    {
+      "id": "aee3-chrono",
+      "type": "select",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Timed: word-range decision."
+      },
+      "level": "B1",
+      "competencies": [
+        "ee.comparer-points-de-vue",
+        "ee.longueur"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Vous avez écrit 195 mots. Que faites-vous ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Supprimer une phrase pour revenir sous 180 mots.",
+          "explanation": "Yes: above 180 is outside the range."
+        },
+        {
+          "id": "b",
+          "text": "Rien.",
+          "explanation": "Over the limit."
+        },
+        {
+          "id": "c",
+          "text": "Ajouter une conclusion.",
+          "explanation": "Longer still."
+        },
+        {
+          "id": "d",
+          "text": "Enlever l'opinion.",
+          "explanation": "It's required."
+        }
+      ],
+      "answer": "a",
+      "stage": "F",
+      "time_limit_s": 30
+    },
+    {
+      "id": "aee3-application",
+      "type": "card",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "outro",
+      "title": "À vous : la tâche réelle",
+      "stage": "H",
+      "body": "Écrivez la tâche complète dans le studio d'écriture, puis lisez le retour.",
+      "link": {
+        "label": "Écrire la tâche 3",
+        "to": "/ecrit/ee3-teletravail"
+      }
+    }
+  ]
+}

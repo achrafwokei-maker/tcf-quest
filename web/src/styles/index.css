@@ -1,0 +1,143 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/* Expose tokens to Tailwind utilities (bg-surface, text-ink, bg-violet, ...). */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-night-1: var(--night-1);
+  --color-night-2: var(--night-2);
+  --color-night-3: var(--night-3);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-on-color: var(--on-color);
+  --color-violet: var(--violet);
+  --color-blue: var(--blue);
+  --color-cyan: var(--cyan);
+  --color-gold: var(--gold);
+  --color-orange: var(--orange);
+  --color-pink: var(--pink);
+  --color-green: var(--green);
+  --color-red: var(--red);
+  --color-locked: var(--locked);
+  --color-accent: var(--accent);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --shadow-card: var(--shadow-card);
+  --shadow-pop: var(--shadow-pop);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    min-height: 100dvh;
+    background:
+      radial-gradient(60rem 40rem at 110% -10%, color-mix(in srgb, var(--violet) 16%, transparent), transparent 60%),
+      radial-gradient(50rem 36rem at -10% 110%, color-mix(in srgb, var(--pink) 10%, transparent), transparent 60%),
+      var(--bg);
+    background-attachment: fixed;
+  }
+
+  /* Poster titles: tall, condensed, uppercase (reference 1) */
+  .title-poster {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    line-height: 0.95;
+  }
+
+  h1, h2, h3 {
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--violet) 30%, transparent);
+  }
+}
+
+@layer components {
+  .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  /* Solid game card (reference 2) */
+  .card {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Glossy glass panel (reference 6) */
+  .glass {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(18px) saturate(1.4);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  }
+
+  /* Bright gradient tile: icons, mission cards (references 2 and 6) */
+  .tile {
+    --tile: var(--violet);
+    background:
+      radial-gradient(120% 90% at 20% 0%, rgb(255 255 255 / 0.38), transparent 55%),
+      linear-gradient(160deg, color-mix(in srgb, var(--tile) 82%, white), var(--tile) 60%, color-mix(in srgb, var(--tile) 80%, black));
+    color: var(--on-color);
+    box-shadow: 0 1px 0 rgb(255 255 255 / 0.45) inset, 0 12px 24px -12px color-mix(in srgb, var(--tile) 80%, black);
+  }
+
+  /* Night stage: hero, map frame, avatar stage (reference 5) */
+  .night {
+    background:
+      radial-gradient(40% 55% at 70% 18%, rgb(255 214 236 / 0.55), transparent 60%),
+      radial-gradient(70% 60% at 30% 10%, color-mix(in srgb, var(--violet) 55%, transparent), transparent 70%),
+      linear-gradient(180deg, var(--night-3), var(--night-2) 45%, var(--night-1));
+    color: #fff;
+  }
+}
+
+@layer components {
+  /* Painted stand-in for the France map while the artwork file is missing. */
+  .map-fallback {
+    background:
+      radial-gradient(18% 14% at 30% 24%, rgb(255 200 120 / 0.35), transparent 70%),
+      radial-gradient(16% 12% at 56% 14%, rgb(255 200 120 / 0.4), transparent 70%),
+      radial-gradient(16% 12% at 86% 20%, rgb(255 200 120 / 0.3), transparent 70%),
+      radial-gradient(16% 12% at 66% 50%, rgb(255 200 120 / 0.3), transparent 70%),
+      radial-gradient(18% 14% at 36% 80%, rgb(255 200 120 / 0.3), transparent 70%),
+      radial-gradient(70% 80% at 55% 50%, #2f6a4a, #1d4436 55%, transparent 75%),
+      linear-gradient(180deg, #123257, #0b1f3c);
+  }
+}

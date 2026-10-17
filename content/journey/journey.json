@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "destination": "Prêt pour le TCF Canada",
+  "unlock_share": 0.6,
+  "chapters": [
+    {
+      "n": 0,
+      "title": "Départ",
+      "subtitle": "Comprendre l'examen et trouver ton niveau",
+      "place": "Le quai",
+      "goal": "Know what the TCF Canada asks, set your target and measure your starting level.",
+      "nodes": [
+        "onboarding",
+        "exam:diagnostic"
+      ],
+      "cefr": "A1"
+    },
+    {
+      "n": 1,
+      "title": "Se présenter, comprendre l'essentiel",
+      "subtitle": "Expression orale tâche 1 · documents du quotidien",
+      "place": "Normandie",
+      "goal": "Talk about yourself with developed answers and catch key information in short documents.",
+      "nodes": [
+        "set:premiers-pas-a",
+        "set:acad-co",
+        "set:acad-ce",
+        "set:acad-eo1",
+        "eo:eo1-presentation",
+        "set:outil-registre",
+        "set:premiers-pas-b"
+      ],
+      "boss": "exam:weekly-1",
+      "cefr": "A2"
+    },
+    {
+      "n": 2,
+      "title": "Obtenir des informations",
+      "subtitle": "Belleville · expression orale tâche 2 · messages",
+      "place": "Paris",
+      "goal": "Ask clear, polite questions on the phone and write short messages that answer every point.",
+      "nodes": [
+        "set:belleville-a2|belleville-b1",
+        "set:acad-eo2",
+        "set:outil-questions-t2",
+        "set:outil-conditionnel-politesse",
+        "eo:eo2-belleville",
+        "eo:eo2-club-sport",
+        "set:acad-ee1",
+        "ee:ee1-voisin-fete",
+        "ee:ee1-amie-demenagement",
+        "eo:eo2-location-appartement"
+      ],
+      "boss": "exam:weekly-2",
+      "cefr": "B1"
+    },
+    {
+      "n": 3,
+      "title": "Raconter",
+      "subtitle": "Expression écrite tâche 2 · temps du passé",
+      "place": "Lyon",
+      "goal": "Tell an experience in the past, comment on it and give advice, with accurate grammar.",
+      "nodes": [
+        "set:outil-passe-imparfait",
+        "set:acad-ee2",
+        "ee:ee2-premier-jour",
+        "set:outil-connecteurs-logiques",
+        "set:outil-accord",
+        "set:outil-elision",
+        "set:outil-a-ou-accents",
+        "ee:ee2-benevolat",
+        "eo:eo2-cours-cuisine"
+      ],
+      "boss": "exam:weekly-3",
+      "cefr": "B2"
+    },
+    {
+      "n": 4,
+      "title": "Argumenter",
+      "subtitle": "Expression orale tâche 3 · expression écrite tâche 3",
+      "place": "Strasbourg",
+      "goal": "Defend an opinion with arguments and examples, and compare two viewpoints in writing.",
+      "nodes": [
+        "set:acad-eo3",
+        "set:outil-plan-t3",
+        "eo:eo3-teletravail",
+        "set:acad-ee3",
+        "set:outil-connecteurs-opposition",
+        "set:outil-intro-conclusion",
+        "ee:ee3-teletravail",
+        "eo:eo3-reseaux-sociaux",
+        "ee:ee3-ecrans-enfants",
+        "eo:eo3-voiture-ville",
+        "ee:ee3-voiture-centre"
+      ],
+      "boss": "exam:weekly-4",
+      "cefr": "C1"
+    },
+    {
+      "n": 5,
+      "title": "Le Grand TCF",
+      "subtitle": "Conditions réelles · 2 h 47",
+      "place": "L'observatoire",
+      "goal": "Manage time and stamina over a complete exam, then check you're ready.",
+      "nodes": [
+        "set:outil-gestion-temps",
+        "ee:ee1-responsable-formation",
+        "ee:ee2-voyage-decevant"
+      ],
+      "boss": "exam:mock-full-1",
+      "cefr": "C2"
+    }
+  ],
+  "cefr_note": "Each stage's CEFR label shows the difficulty it aims at. Your own level is measured separately and never awarded by the map."
+}

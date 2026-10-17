@@ -1,0 +1,94 @@
+{
+  "id": "premiers-pas-b",
+  "version": 1,
+  "title": "Premiers pas",
+  "review_status": "reviewed",
+  "level": "B1–B2",
+  "context": "practice",
+  "tcf_target": { "section": "CO", "purpose": "First taste of the four TCF sections at B1–B2, using the exercise engine." },
+  "items": [
+    {
+      "id": "ppb-message-julie",
+      "type": "listen",
+      "tcf_target": { "section": "CO", "purpose": "Catch the key change in a phone message (TCF listening, dialogue items)." },
+      "level": "B1",
+      "competencies": ["co.message-telephonique", "co.information-cle"],
+      "instructions": "Écoutez et choisissez.",
+      "instructions_en": "Listen and choose.",
+      "question": "Qu'apprend-on sur la réunion ?",
+      "audio": { "text": "Bonjour, c'est Julie. La réunion de jeudi est déplacée à vendredi, même heure. Rappelle-moi si ça te pose problème." },
+      "options": [
+        { "id": "a", "text": "Elle est annulée.", "explanation": "« Déplacée » means moved, not cancelled." },
+        { "id": "b", "text": "Elle a lieu vendredi, à la même heure.", "explanation": "Yes: « déplacée à vendredi, même heure »." },
+        { "id": "c", "text": "Elle commence plus tôt jeudi.", "explanation": "Thursday is the old day; the time doesn't change." },
+        { "id": "d", "text": "Elle a lieu chez Julie.", "explanation": "No place is mentioned." }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "ppb-piste-cyclable",
+      "type": "select",
+      "tcf_target": { "section": "CE", "purpose": "Identify a nuanced position marked by « en revanche » (TCF reading, viewpoint texts)." },
+      "level": "B2",
+      "competencies": ["ce.point-de-vue", "gram.connecteur-opposition"],
+      "instructions": "Lisez et choisissez.",
+      "instructions_en": "Read and choose.",
+      "passage": "L'association des habitants du quartier Saint-Paul soutient la création d'une piste cyclable rue Victor-Hugo. En revanche, elle s'oppose à la suppression des places de stationnement prévue par la mairie et demande une réunion publique avant le début des travaux.",
+      "question": "Quelle est la position de l'association ?",
+      "options": [
+        { "id": "a", "text": "Elle refuse le projet de piste cyclable.", "explanation": "No: it « soutient » (supports) the bike lane." },
+        { "id": "b", "text": "Elle soutient entièrement le projet de la mairie.", "explanation": "Not entirely: « en revanche » introduces what it opposes." },
+        { "id": "c", "text": "Elle approuve la piste cyclable, mais pas la suppression des places.", "explanation": "Yes: support, then opposition after « en revanche »." },
+        { "id": "d", "text": "Elle demande l'arrêt immédiat des travaux.", "explanation": "It asks for a meeting before the works start, not to stop them." }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "ppb-ouverture-proprietaire",
+      "type": "select",
+      "tcf_target": { "section": "EE", "task": "EE-T1", "purpose": "Choose the right register to open a message to a landlord (writing task 1)." },
+      "level": "B1",
+      "competencies": ["ee.registre-ouverture"],
+      "instructions": "Choisissez la bonne formule.",
+      "instructions_en": "Choose the right opening.",
+      "question": "Vous écrivez à votre propriétaire pour signaler une fuite d'eau. Comment commencez-vous ?",
+      "options": [
+        { "id": "a", "text": "Coucou !", "explanation": "Too familiar for a landlord." },
+        { "id": "b", "text": "Madame,", "explanation": "Yes: polite and standard for a landlady you don't know well." },
+        { "id": "c", "text": "Salut la proprio !", "explanation": "Familiar and slangy: not suitable here." },
+        { "id": "d", "text": "Bisous,", "explanation": "A closing between close friends, never an opening." }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "ppb-si-javais-su",
+      "type": "arrange",
+      "tcf_target": { "section": "EE", "task": "EE-T2", "purpose": "Express a past regret when recounting an experience (writing task 2)." },
+      "level": "B1",
+      "competencies": ["gram.conditionnel-passe", "gram.si-plus-que-parfait"],
+      "instructions": "Remettez les mots dans l'ordre.",
+      "instructions_en": "Put the words in order.",
+      "translation": "If I had known, I would have come earlier.",
+      "answers": [
+        ["Si", "j'avais", "su,", "je", "serais", "venu", "plus", "tôt."],
+        ["Je", "serais", "venu", "plus", "tôt", "si", "j'avais", "su."]
+      ],
+      "distractors": ["aurais"],
+      "explanation": "« Si » + plus-que-parfait (j'avais su), then conditionnel passé (je serais venu). « Venir » uses « être »."
+    },
+    {
+      "id": "ppb-il-faut-que",
+      "type": "type",
+      "tcf_target": { "section": "EO", "task": "EO-T3", "purpose": "Express necessity when arguing a point of view (speaking task 3)." },
+      "level": "B1",
+      "competencies": ["gram.subjonctif-necessite"],
+      "instructions": "Complétez la phrase.",
+      "instructions_en": "Complete the sentence.",
+      "sentence": "Il faut que tu ___ à la réunion demain.",
+      "base_form": "venir",
+      "answers": ["viennes"],
+      "hint": "« Il faut que » is followed by the subjonctif.",
+      "explanation": "« Il faut que » + subjonctif: que tu viennes (from « ils viennent »)."
+    }
+  ]
+}

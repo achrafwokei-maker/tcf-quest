@@ -1,0 +1,92 @@
+{
+  "id": "outil-connecteurs-opposition",
+  "version": 1,
+  "title": "Connecteurs d'opposition",
+  "review_status": "reviewed",
+  "level": "B1",
+  "context": "toolbox",
+  "group": "Connecteurs",
+  "tcf_target": {
+    "section": "EE",
+    "purpose": "Boîte à outils: Connecteurs d'opposition."
+  },
+  "items": [
+    {
+      "id": "o-connecteurs-opposition-fiche",
+      "type": "card",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: Connecteurs d'opposition."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Connecteurs d'opposition",
+      "stage": "B",
+      "points": [
+        "Ce que c'est : mais, cependant, pourtant, en revanche, alors que, bien que (+ subjonctif).",
+        "Quand l'utiliser : pour comparer deux points de vue ou nuancer.",
+        "Quand l'éviter : « bien que » demande le subjonctif ; « malgré » est suivi d'un nom.",
+        "Exemple : « Bien que ce soit cher, cela vaut la peine. » / « Malgré le prix, … »"
+      ]
+    },
+    {
+      "id": "o-connecteurs-opposition-adapter",
+      "type": "type",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: Connecteurs d'opposition."
+      },
+      "level": "B1",
+      "competencies": [
+        "gram.connecteur-opposition"
+      ],
+      "stage": "D",
+      "instructions": "Complétez la phrase.",
+      "instructions_en": "Fill in the gap.",
+      "sentence": "___ le froid, nous sommes sortis.",
+      "answers": [
+        "Malgré",
+        "malgré"
+      ],
+      "explanation": "« Malgré » + noun."
+    },
+    {
+      "id": "o-connecteurs-opposition-pratique",
+      "type": "select",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: Connecteurs d'opposition."
+      },
+      "level": "B1",
+      "competencies": [
+        "gram.connecteur-opposition"
+      ],
+      "stage": "E",
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Complétez : « Il est fatigué ___ il a dormi dix heures. »",
+      "options": [
+        {
+          "id": "a",
+          "text": "alors qu'",
+          "explanation": "Yes: contrast between two facts."
+        },
+        {
+          "id": "b",
+          "text": "donc",
+          "explanation": "Consequence."
+        },
+        {
+          "id": "c",
+          "text": "parce qu'",
+          "explanation": "Cause."
+        },
+        {
+          "id": "d",
+          "text": "ensuite",
+          "explanation": "Sequence."
+        }
+      ],
+      "answer": "a"
+    }
+  ]
+}

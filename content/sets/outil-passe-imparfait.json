@@ -1,0 +1,96 @@
+{
+  "id": "outil-passe-imparfait",
+  "version": 1,
+  "title": "Passé composé ou imparfait ?",
+  "review_status": "reviewed",
+  "level": "B1",
+  "context": "toolbox",
+  "group": "Grammaire",
+  "tcf_target": {
+    "section": "EE",
+    "task": "EE-T2",
+    "purpose": "Boîte à outils: Passé composé ou imparfait ?."
+  },
+  "items": [
+    {
+      "id": "o-passe-imparfait-fiche",
+      "type": "card",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T2",
+        "purpose": "Boîte à outils: Passé composé ou imparfait ?."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Passé composé ou imparfait ?",
+      "stage": "B",
+      "points": [
+        "Ce que c'est : passé composé : action terminée, ponctuelle ; imparfait : décor, habitude, description.",
+        "Quand l'utiliser : dans tout récit (tâche 2, entretien).",
+        "Quand l'éviter : n'utilisez pas l'imparfait pour une suite d'actions (« je me levais, je partais » = habitude).",
+        "Exemple : « Il faisait nuit quand le train est arrivé. »"
+      ]
+    },
+    {
+      "id": "o-passe-imparfait-adapter",
+      "type": "type",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T2",
+        "purpose": "Boîte à outils: Passé composé ou imparfait ?."
+      },
+      "level": "B1",
+      "competencies": [
+        "gram.temps-du-passe"
+      ],
+      "stage": "D",
+      "instructions": "Complétez la phrase.",
+      "instructions_en": "Fill in the gap.",
+      "sentence": "Quand j'étais petit, je ___ au parc tous les jours.",
+      "answers": [
+        "jouais"
+      ],
+      "base_form": "jouer",
+      "explanation": "Habit in the past → imparfait."
+    },
+    {
+      "id": "o-passe-imparfait-pratique",
+      "type": "select",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T2",
+        "purpose": "Boîte à outils: Passé composé ou imparfait ?."
+      },
+      "level": "B1",
+      "competencies": [
+        "gram.temps-du-passe"
+      ],
+      "stage": "E",
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Complétez : « Hier, je ___ mes clés et je suis rentré à pied. »",
+      "options": [
+        {
+          "id": "a",
+          "text": "perdais",
+          "explanation": "Imperfect: not a single completed action."
+        },
+        {
+          "id": "b",
+          "text": "ai perdu",
+          "explanation": "Yes: completed action."
+        },
+        {
+          "id": "c",
+          "text": "perds",
+          "explanation": "Present."
+        },
+        {
+          "id": "d",
+          "text": "perdrai",
+          "explanation": "Future."
+        }
+      ],
+      "answer": "b"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "tcf-canada",
+  "version": 1,
+  "checked_on": "2026-10-16",
+  "sources": [
+    { "name": "France Éducation international – TCF Canada", "url": "https://www.france-education-international.fr/test/tcf-canada" },
+    { "name": "France Éducation international – Exemples d'épreuves du TCF", "url": "https://www.france-education-international.fr/test/exemples-epreuves-tcf" }
+  ],
+  "notes": [
+    "Only TCF Canada. Never use TCF Québec, TCF IRN, TCF Tout Public, DELF or DALF rules.",
+    "The FEI sample-tests page covers all TCF versions and includes 'Maîtrise des structures de la langue', which is NOT part of TCF Canada.",
+    "Practice items in TCF Quest are original; official examples are format references only."
+  ],
+  "total_minutes": 167,
+  "sections": [
+    {
+      "id": "CO",
+      "name": "Compréhension orale",
+      "compulsory": true,
+      "mode": "collective",
+      "items": 39,
+      "format": "mcq",
+      "choices_per_item": 4,
+      "correct_per_item": 1,
+      "minutes": 35,
+      "difficulty": "progressive",
+      "audio_plays": 1,
+      "question_after_audio": true,
+      "score_scale": { "min": 331, "max": 699 },
+      "item_patterns": [
+        "image shown, four spoken statements, choose the one matching the image",
+        "spoken question, four spoken replies, choose the appropriate reply",
+        "short dialogue, spoken question, four written answers",
+        "longer monologue or interview, spoken question, four written answers"
+      ]
+    },
+    {
+      "id": "CE",
+      "name": "Compréhension écrite",
+      "compulsory": true,
+      "mode": "collective",
+      "items": 39,
+      "format": "mcq",
+      "choices_per_item": 4,
+      "correct_per_item": 1,
+      "minutes": 60,
+      "difficulty": "progressive",
+      "score_scale": { "min": 331, "max": 699 }
+    },
+    {
+      "id": "EE",
+      "name": "Expression écrite",
+      "compulsory": true,
+      "mode": "collective",
+      "minutes": 60,
+      "score_scale": { "min": 0, "max": 20 },
+      "tasks": [
+        { "id": "EE-T1", "name": "Message", "words": { "min": 60, "max": 120 },
+          "summary": "Message to one or more recipients whose status is given: describe, recount and/or explain." },
+        { "id": "EE-T2", "name": "Compte rendu d'expérience ou récit", "words": { "min": 120, "max": 150 },
+          "summary": "Article, letter or note for several recipients reporting an experience or a story, with comments, opinions or arguments toward a goal." },
+        { "id": "EE-T3", "name": "Comparaison de deux points de vue", "words": { "min": 120, "max": 180 },
+          "summary": "Text comparing two viewpoints on a social issue taken from two documents, then giving one's own opinion." }
+      ],
+      "fail_conditions_a1_not_reached": [
+        "illegible writing (paper sitting)",
+        "a task not written with the required number of words",
+        "off-topic production",
+        "one or more tasks not done"
+      ]
+    },
+    {
+      "id": "EO",
+      "name": "Expression orale",
+      "compulsory": true,
+      "mode": "individual, face to face with an examiner",
+      "minutes": 12,
+      "score_scale": { "min": 0, "max": 20 },
+      "tasks": [
+        { "id": "EO-T1", "name": "Entretien dirigé", "minutes": 2, "preparation_minutes": 0,
+          "summary": "Show you can exchange with someone you don't know (the examiner)." },
+        { "id": "EO-T2", "name": "Exercice en interaction", "minutes": 5.5, "preparation_minutes": 2,
+          "summary": "Obtain information in an everyday situation; the roles of examiner and candidate are given in the instructions." },
+        { "id": "EO-T3", "name": "Expression d'un point de vue", "minutes": 4.5, "preparation_minutes": 0,
+          "summary": "Speak spontaneously, continuously and convincingly in answer to a question chosen by the examiner." }
+      ]
+    }
+  ],
+  "administration": {
+    "retake_wait_days": 20,
+    "retakes_unlimited": true,
+    "results_within_working_days": 15,
+    "result_validity_years": 2,
+    "computer_based_available": "all sections except Expression orale (face to face)",
+    "recorrection": "Re-correction of EO and EE suspended for sessions from 2026-09-01; resumption planned autumn 2027."
+  }
+}

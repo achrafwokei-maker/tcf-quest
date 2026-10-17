@@ -1,0 +1,96 @@
+{
+  "id": "outil-intro-conclusion",
+  "version": 1,
+  "title": "Introduire et conclure (écrit)",
+  "review_status": "reviewed",
+  "level": "B1",
+  "context": "toolbox",
+  "group": "Cadres de réponse",
+  "tcf_target": {
+    "section": "EE",
+    "task": "EE-T3",
+    "purpose": "Boîte à outils: Introduire et conclure (écrit)."
+  },
+  "items": [
+    {
+      "id": "o-intro-conclusion-fiche",
+      "type": "card",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Boîte à outils: Introduire et conclure (écrit)."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Introduire et conclure (écrit)",
+      "stage": "B",
+      "points": [
+        "Ce que c'est : une phrase d'introduction qui présente le sujet et une conclusion qui reprend votre position.",
+        "Quand l'utiliser : en tâche 2 et 3 surtout.",
+        "Quand l'éviter : pas de longue introduction générale : chaque mot compte dans la fourchette.",
+        "Exemple : « La question du télétravail divise. … En somme, un modèle hybride me semble le plus juste. »"
+      ]
+    },
+    {
+      "id": "o-intro-conclusion-adapter",
+      "type": "type",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Boîte à outils: Introduire et conclure (écrit)."
+      },
+      "level": "B1",
+      "competencies": [
+        "ee.structure"
+      ],
+      "stage": "D",
+      "instructions": "Complétez la phrase.",
+      "instructions_en": "Fill in the gap.",
+      "sentence": "___ somme, je pense qu'il faut limiter le temps d'écran.",
+      "answers": [
+        "En",
+        "en"
+      ],
+      "explanation": "« En somme » introduces a conclusion."
+    },
+    {
+      "id": "o-intro-conclusion-pratique",
+      "type": "select",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Boîte à outils: Introduire et conclure (écrit)."
+      },
+      "level": "B1",
+      "competencies": [
+        "ee.structure"
+      ],
+      "stage": "E",
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quelle phrase est une bonne conclusion ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« Pour toutes ces raisons, je reste favorable au télétravail partiel. »",
+          "explanation": "Yes: restates the position."
+        },
+        {
+          "id": "b",
+          "text": "« Le télétravail existe. »",
+          "explanation": "Not a conclusion."
+        },
+        {
+          "id": "c",
+          "text": "« Ensuite, il y a le prix. »",
+          "explanation": "Adds a new point."
+        },
+        {
+          "id": "d",
+          "text": "« Merci. »",
+          "explanation": "Not a conclusion."
+        }
+      ],
+      "answer": "a"
+    }
+  ]
+}

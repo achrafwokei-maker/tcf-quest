@@ -1,0 +1,91 @@
+{
+  "id": "outil-a-ou-accents",
+  "version": 1,
+  "title": "a/à, ou/où, et/est",
+  "review_status": "reviewed",
+  "level": "B1",
+  "context": "toolbox",
+  "group": "Grammaire",
+  "tcf_target": {
+    "section": "EE",
+    "purpose": "Boîte à outils: a/à, ou/où, et/est."
+  },
+  "items": [
+    {
+      "id": "o-a-ou-accents-fiche",
+      "type": "card",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: a/à, ou/où, et/est."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "a/à, ou/où, et/est",
+      "stage": "B",
+      "points": [
+        "Ce que c'est : a = verbe avoir, à = préposition ; ou = choix, où = lieu/temps ; et = addition, est = verbe être.",
+        "Quand l'utiliser : dans chaque texte : ce sont des erreurs fréquentes et visibles.",
+        "Quand l'éviter : remplacez par « avait », « ou bien » ou « était » pour vérifier.",
+        "Exemple : « Il a rendez-vous à 9 h. » / « Où habites-tu ? »"
+      ]
+    },
+    {
+      "id": "o-a-ou-accents-adapter",
+      "type": "type",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: a/à, ou/où, et/est."
+      },
+      "level": "B1",
+      "competencies": [
+        "orth.accents"
+      ],
+      "stage": "D",
+      "instructions": "Complétez la phrase.",
+      "instructions_en": "Fill in the gap.",
+      "sentence": "Je vais ___ Montréal demain.",
+      "answers": [
+        "à"
+      ],
+      "explanation": "Preposition « à » (not the verb « a »)."
+    },
+    {
+      "id": "o-a-ou-accents-pratique",
+      "type": "select",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: a/à, ou/où, et/est."
+      },
+      "level": "B1",
+      "competencies": [
+        "orth.accents"
+      ],
+      "stage": "E",
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Complétez : « Tu préfères le thé ___ le café ? »",
+      "options": [
+        {
+          "id": "a",
+          "text": "ou",
+          "explanation": "Yes: a choice."
+        },
+        {
+          "id": "b",
+          "text": "où",
+          "explanation": "Place/time."
+        },
+        {
+          "id": "c",
+          "text": "et",
+          "explanation": "Addition, not a choice."
+        },
+        {
+          "id": "d",
+          "text": "est",
+          "explanation": "Verb."
+        }
+      ],
+      "answer": "a"
+    }
+  ]
+}

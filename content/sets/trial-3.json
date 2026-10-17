@@ -1,0 +1,678 @@
+{
+  "id": "trial-3",
+  "version": 1,
+  "title": "Épreuve hebdomadaire 3",
+  "review_status": "reviewed",
+  "level": "A2–C1",
+  "context": "exam",
+  "tcf_target": {
+    "section": "CO",
+    "purpose": "Weekly partial simulation 3."
+  },
+  "items": [
+    {
+      "id": "trial-3-co-00",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Unseen listening item (TCF format: one play, four answers)."
+      },
+      "competencies": [
+        "co.annonce",
+        "co.tcf"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Où les clients doivent-ils aller ?",
+      "options": [
+        {
+          "text": "Au fond du magasin.",
+          "explanation": "Yes: « déplacé au fond du magasin ».",
+          "id": "a"
+        },
+        {
+          "text": "À l'entrée.",
+          "explanation": "Not said.",
+          "id": "b"
+        },
+        {
+          "text": "Au premier étage.",
+          "explanation": "Not said.",
+          "id": "c"
+        },
+        {
+          "text": "Dans un autre magasin.",
+          "explanation": "It's in the same shop.",
+          "id": "d"
+        }
+      ],
+      "answer": "a",
+      "audio": {
+        "text": "Le rayon des fruits et légumes est temporairement déplacé au fond du magasin, près des caisses libre-service.",
+        "speaker": "Narratrice"
+      }
+    },
+    {
+      "id": "trial-3-co-01",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Unseen listening item (TCF format: one play, four answers)."
+      },
+      "competencies": [
+        "co.dialogue-quotidien",
+        "co.tcf"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Que prend la cliente ?",
+      "options": [
+        {
+          "text": "Un thé vert.",
+          "explanation": "Her first choice, then changed.",
+          "id": "a"
+        },
+        {
+          "text": "Un chocolat chaud.",
+          "explanation": "Yes: She changes her mind: « finalement, un chocolat chaud ».",
+          "id": "b"
+        },
+        {
+          "text": "Un café.",
+          "explanation": "Not mentioned.",
+          "id": "c"
+        },
+        {
+          "text": "Un thé et un chocolat.",
+          "explanation": "Only one drink.",
+          "id": "d"
+        }
+      ],
+      "answer": "b",
+      "audio": {
+        "text": "— Vous désirez ? — Un thé vert, s'il vous plaît. Ah non, finalement, un chocolat chaud. — Très bien.",
+        "speaker": "Madame Roux"
+      }
+    },
+    {
+      "id": "trial-3-co-02",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Unseen listening item (TCF format: one play, four answers)."
+      },
+      "competencies": [
+        "co.message-telephonique",
+        "co.tcf"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Que demande la secrétaire ?",
+      "options": [
+        {
+          "text": "D'annuler le rendez-vous.",
+          "explanation": "The appointment stays.",
+          "id": "a"
+        },
+        {
+          "text": "De venir plus tôt.",
+          "explanation": "Not asked.",
+          "id": "b"
+        },
+        {
+          "text": "D'envoyer un document avant jeudi.",
+          "explanation": "Yes: « nous envoyer une copie de votre carte d'assurance avant… jeudi ».",
+          "id": "c"
+        },
+        {
+          "text": "De payer par téléphone.",
+          "explanation": "Not asked.",
+          "id": "d"
+        }
+      ],
+      "answer": "c",
+      "audio": {
+        "text": "Bonjour monsieur Bouchard, ici le cabinet du docteur Martel. Pourriez-vous nous envoyer une copie de votre carte d'assurance avant votre rendez-vous de jeudi ? Merci.",
+        "speaker": "Madame Roux"
+      }
+    },
+    {
+      "id": "trial-3-co-03",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Unseen listening item (TCF format: one play, four answers)."
+      },
+      "competencies": [
+        "co.consequence",
+        "co.tcf"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Qu'est-ce qui change pour les usagers ?",
+      "options": [
+        {
+          "text": "Le métro est gratuit.",
+          "explanation": "Not said.",
+          "id": "a"
+        },
+        {
+          "text": "Toutes les stations ferment.",
+          "explanation": "Only one station.",
+          "id": "b"
+        },
+        {
+          "text": "Les travaux sont terminés.",
+          "explanation": "They take place this weekend.",
+          "id": "c"
+        },
+        {
+          "text": "Ils prendront un autobus de remplacement.",
+          "explanation": "Yes: « Des autobus de remplacement circuleront ».",
+          "id": "d"
+        }
+      ],
+      "answer": "d",
+      "audio": {
+        "text": "En raison de travaux, la station Berri sera fermée ce week-end. Des autobus de remplacement circuleront entre les stations voisines.",
+        "speaker": "Narratrice"
+      }
+    },
+    {
+      "id": "trial-3-co-04",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Unseen listening item (TCF format: one play, four answers)."
+      },
+      "competencies": [
+        "co.intention",
+        "co.tcf"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Pourquoi Julie appelle-t-elle son collègue ?",
+      "options": [
+        {
+          "text": "Pour qu'il lui renvoie un fichier.",
+          "explanation": "Yes: « Tu pourrais me le renvoyer dans un autre format ? ».",
+          "id": "a"
+        },
+        {
+          "text": "Pour annuler la présentation.",
+          "explanation": "The presentation is still tomorrow.",
+          "id": "b"
+        },
+        {
+          "text": "Pour l'inviter à déjeuner.",
+          "explanation": "No.",
+          "id": "c"
+        },
+        {
+          "text": "Pour lui demander de présenter.",
+          "explanation": "Not asked.",
+          "id": "d"
+        }
+      ],
+      "answer": "a",
+      "audio": {
+        "text": "Salut Marc, c'est Julie. Je n'arrive pas à ouvrir le fichier de la présentation de demain. Tu pourrais me le renvoyer dans un autre format ?",
+        "speaker": "Madame Roux"
+      }
+    },
+    {
+      "id": "trial-3-co-05",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Unseen listening item (TCF format: one play, four answers)."
+      },
+      "competencies": [
+        "co.point-de-vue",
+        "co.tcf"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Quelle est l'opinion de l'invité sur les livres audio ?",
+      "options": [
+        {
+          "text": "Ce n'est pas de la lecture.",
+          "explanation": "He calls that a false debate.",
+          "id": "a"
+        },
+        {
+          "text": "Ils sont une vraie façon de lire, avec des limites pour les textes difficiles.",
+          "explanation": "Yes: « faux débat… je retiens mieux les textes difficiles sur papier ».",
+          "id": "b"
+        },
+        {
+          "text": "Ils remplacent totalement le papier.",
+          "explanation": "He still prefers paper for hard texts.",
+          "id": "c"
+        },
+        {
+          "text": "Il ne les écoute jamais.",
+          "explanation": "He listens during his commute.",
+          "id": "d"
+        }
+      ],
+      "answer": "b",
+      "audio": {
+        "text": "On oppose souvent livre audio et lecture. Pour moi, c'est un faux débat : écouter un roman pendant mon trajet, c'est toujours entrer dans une histoire. Simplement, je retiens mieux les textes difficiles sur papier.",
+        "speaker": "M. Delaunay"
+      }
+    },
+    {
+      "id": "trial-3-co-06",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Unseen listening item (TCF format: one play, four answers)."
+      },
+      "competencies": [
+        "co.inference",
+        "co.tcf"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Que laisse entendre la responsable ?",
+      "options": [
+        {
+          "text": "Le logiciel n'est pas encore arrivé.",
+          "explanation": "It arrived on Monday.",
+          "id": "a"
+        },
+        {
+          "text": "Toute l'équipe utilise le nouveau logiciel.",
+          "explanation": "Half don't.",
+          "id": "b"
+        },
+        {
+          "text": "La formation n'a pas suffi.",
+          "explanation": "Yes: Officially trained, but half still use the old tool.",
+          "id": "c"
+        },
+        {
+          "text": "Elle veut punir l'équipe.",
+          "explanation": "She understands them.",
+          "id": "d"
+        }
+      ],
+      "answer": "c",
+      "audio": {
+        "text": "Le nouveau logiciel est arrivé lundi. Officiellement, tout le monde est formé. Dans les faits, la moitié de l'équipe continue d'utiliser l'ancien tableur, et je les comprends.",
+        "speaker": "Madame Roux"
+      }
+    },
+    {
+      "id": "trial-3-co-07",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "C1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Unseen listening item (TCF format: one play, four answers)."
+      },
+      "competencies": [
+        "co.nuance",
+        "co.tcf"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Quelle est la thèse du chercheur ?",
+      "options": [
+        {
+          "text": "La technologie isole toujours.",
+          "explanation": "He says it depends on use.",
+          "id": "a"
+        },
+        {
+          "text": "Il faut interdire les téléphones.",
+          "explanation": "He finds banning less effective.",
+          "id": "b"
+        },
+        {
+          "text": "Les grands-mères utilisent trop le téléphone.",
+          "explanation": "An example, not the thesis.",
+          "id": "c"
+        },
+        {
+          "text": "L'éducation aux usages vaut mieux que l'interdiction.",
+          "explanation": "Yes: « Interdire serait plus simple que d'éduquer, mais moins efficace ».",
+          "id": "d"
+        }
+      ],
+      "answer": "d",
+      "audio": {
+        "text": "Ce n'est pas la technologie qui isole, mais l'usage qu'on en fait. Le même téléphone qui coupe un dîner de famille permet à une grand-mère de voir ses petits-enfants chaque semaine. Interdire serait plus simple que d'éduquer, mais moins efficace.",
+        "speaker": "M. Delaunay"
+      }
+    },
+    {
+      "id": "trial-3-ce-08",
+      "type": "select",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Unseen reading item (TCF format: document, question, four answers)."
+      },
+      "competencies": [
+        "ce.document-pratique",
+        "ce.tcf"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Quand peut-on déposer les vêtements ?",
+      "options": [
+        {
+          "text": "Du lundi au mercredi, de 10 h à 16 h.",
+          "explanation": "Yes, as written.",
+          "id": "a"
+        },
+        {
+          "text": "Tous les jours.",
+          "explanation": "Only Monday to Wednesday.",
+          "id": "b"
+        },
+        {
+          "text": "Le week-end.",
+          "explanation": "Not mentioned.",
+          "id": "c"
+        },
+        {
+          "text": "Le soir après 16 h.",
+          "explanation": "It closes at 16 h.",
+          "id": "d"
+        }
+      ],
+      "answer": "a",
+      "passage": "Collecte de vêtements pour l'hiver : dépôt au sous-sol de la mairie, du lundi au mercredi, de 10 h à 16 h. Vêtements propres seulement."
+    },
+    {
+      "id": "trial-3-ce-09",
+      "type": "select",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Unseen reading item (TCF format: document, question, four answers)."
+      },
+      "competencies": [
+        "ce.message",
+        "ce.tcf"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Que propose Nadia ?",
+      "options": [
+        {
+          "text": "Un restaurant samedi.",
+          "explanation": "No.",
+          "id": "a"
+        },
+        {
+          "text": "Un pique-nique dimanche.",
+          "explanation": "Yes: « on pourrait faire un pique-nique ».",
+          "id": "b"
+        },
+        {
+          "text": "Une visite de musée.",
+          "explanation": "No.",
+          "id": "c"
+        },
+        {
+          "text": "De rester à la maison.",
+          "explanation": "No.",
+          "id": "d"
+        }
+      ],
+      "answer": "b",
+      "passage": "Coucou Emma ! Il fait beau dimanche, on pourrait faire un pique-nique au parc Lafontaine ? J'apporte les sandwichs, tu prends les boissons ? Bises, Nadia"
+    },
+    {
+      "id": "trial-3-ce-10",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Unseen reading item (TCF format: document, question, four answers)."
+      },
+      "competencies": [
+        "ce.information-cle",
+        "ce.tcf"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Que doit faire un nouvel abonné ?",
+      "options": [
+        {
+          "text": "Payer un abonnement mensuel.",
+          "explanation": "Not mentioned.",
+          "id": "a"
+        },
+        {
+          "text": "Suivre un atelier obligatoire.",
+          "explanation": "Workshops are optional.",
+          "id": "b"
+        },
+        {
+          "text": "Présenter une preuve de résidence récente.",
+          "explanation": "Yes: « preuve de résidence de moins de trois mois ».",
+          "id": "c"
+        },
+        {
+          "text": "Envoyer un courriel.",
+          "explanation": "Not asked.",
+          "id": "d"
+        }
+      ],
+      "answer": "c",
+      "passage": "Bienvenue à la médiathèque ! Pour activer votre carte, présentez-vous à l'accueil avec une preuve de résidence de moins de trois mois. Votre carte vous donne accès aux livres, aux films et aux ateliers."
+    },
+    {
+      "id": "trial-3-ce-11",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Unseen reading item (TCF format: document, question, four answers)."
+      },
+      "competencies": [
+        "ce.idee-principale",
+        "ce.tcf"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Quel est le sujet principal de l'article ?",
+      "options": [
+        {
+          "text": "La vente de légumes par les écoles.",
+          "explanation": "Not mentioned.",
+          "id": "a"
+        },
+        {
+          "text": "Les toits dangereux des écoles.",
+          "explanation": "No.",
+          "id": "b"
+        },
+        {
+          "text": "Le manque d'enseignants.",
+          "explanation": "No.",
+          "id": "c"
+        },
+        {
+          "text": "Les effets positifs d'un potager scolaire.",
+          "explanation": "Yes: children taste what they grow.",
+          "id": "d"
+        }
+      ],
+      "answer": "d",
+      "passage": "Dans plusieurs écoles du quartier, les élèves cultivent un potager sur le toit. Au-delà des légumes, les enseignants observent que les enfants goûtent plus volontiers des aliments qu'ils ont eux-mêmes fait pousser."
+    },
+    {
+      "id": "trial-3-ce-12",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Unseen reading item (TCF format: document, question, four answers)."
+      },
+      "competencies": [
+        "ce.inference",
+        "ce.tcf"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Selon le règlement, que peut faire un locataire ?",
+      "options": [
+        {
+          "text": "Garder son vélo dans son appartement.",
+          "explanation": "Yes: « acceptés dans les appartements ».",
+          "id": "a"
+        },
+        {
+          "text": "Laisser son vélo dans le couloir.",
+          "explanation": "Forbidden.",
+          "id": "b"
+        },
+        {
+          "text": "Prendre l'ascenseur avec son vélo.",
+          "explanation": "Forbidden.",
+          "id": "c"
+        },
+        {
+          "text": "Garer son vélo dans le hall.",
+          "explanation": "Not allowed: use the locked room.",
+          "id": "d"
+        }
+      ],
+      "answer": "a",
+      "passage": "Règlement de l'immeuble : les vélos sont acceptés dans les appartements, mais interdits dans les couloirs et l'ascenseur. Un local à vélos fermé à clé est disponible au rez-de-chaussée."
+    },
+    {
+      "id": "trial-3-ce-13",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Unseen reading item (TCF format: document, question, four answers)."
+      },
+      "competencies": [
+        "ce.point-de-vue",
+        "ce.tcf"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Quelle est la position de l'auteur ?",
+      "options": [
+        {
+          "text": "Les musées devraient être plus chers.",
+          "explanation": "No.",
+          "id": "a"
+        },
+        {
+          "text": "La gratuité ne suffit pas à attirer le public.",
+          "explanation": "Yes: « le problème n'est pas seulement le prix ».",
+          "id": "b"
+        },
+        {
+          "text": "La gratuité est une mauvaise idée.",
+          "explanation": "He accepts it (« Fort bien »).",
+          "id": "c"
+        },
+        {
+          "text": "Les musées sont toujours vides.",
+          "explanation": "Full on free days.",
+          "id": "d"
+        }
+      ],
+      "answer": "b",
+      "passage": "On célèbre la gratuité des musées le premier dimanche du mois. Fort bien. Mais si les salles sont pleines ce jour-là et vides le reste du temps, c'est peut-être que le problème n'est pas seulement le prix : c'est aussi la façon dont on donne envie d'y entrer."
+    },
+    {
+      "id": "trial-3-ce-14",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Unseen reading item (TCF format: document, question, four answers)."
+      },
+      "competencies": [
+        "ce.intention",
+        "ce.tcf"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Quel est l'objectif de ce courriel ?",
+      "options": [
+        {
+          "text": "Refuser un poste.",
+          "explanation": "The opposite.",
+          "id": "a"
+        },
+        {
+          "text": "Demander un premier entretien.",
+          "explanation": "The interview already took place.",
+          "id": "b"
+        },
+        {
+          "text": "Confirmer son intérêt et transmettre des documents.",
+          "explanation": "Yes: interest confirmed, references attached.",
+          "id": "c"
+        },
+        {
+          "text": "Se plaindre d'un retard.",
+          "explanation": "No complaint.",
+          "id": "d"
+        }
+      ],
+      "answer": "c",
+      "passage": "Madame, suite à notre entretien de mardi, je vous confirme mon vif intérêt pour le poste. Vous trouverez ci-joint les références demandées. Je reste disponible pour tout complément d'information."
+    },
+    {
+      "id": "trial-3-ce-15",
+      "type": "select",
+      "pool": "assessment",
+      "level": "C1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Unseen reading item (TCF format: document, question, four answers)."
+      },
+      "competencies": [
+        "ce.nuance",
+        "ce.tcf"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Que reproche l'auteure aux classements des villes « où il fait bon vivre » ?",
+      "options": [
+        {
+          "text": "Ils exagèrent les salaires.",
+          "explanation": "Not said.",
+          "id": "a"
+        },
+        {
+          "text": "Ils ignorent les espaces verts.",
+          "explanation": "Green spaces are measured.",
+          "id": "b"
+        },
+        {
+          "text": "Ils sont faits par des voisins.",
+          "explanation": "No.",
+          "id": "c"
+        },
+        {
+          "text": "Ils négligent ce qui ne se mesure pas facilement.",
+          "explanation": "Yes: what makes us attached to a place escapes statistics.",
+          "id": "d"
+        }
+      ],
+      "answer": "d",
+      "passage": "Ces palmarès mesurent ce qui se compte : salaires, espaces verts, temps de trajet. Ce qui fait pourtant qu'on s'attache à un lieu, la qualité des liens de voisinage par exemple, échappe largement aux statistiques, et donc au classement."
+    }
+  ]
+}

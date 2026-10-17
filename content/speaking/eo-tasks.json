@@ -1,0 +1,421 @@
+{
+  "version": 1,
+  "review_status": "reviewed",
+  "guides": {
+    "EO-T1": {
+      "title": "Entretien dirigé (2 min)",
+      "tips": [
+        "Answer, then add one detail: why, since when, an example.",
+        "Ask the examiner to repeat if needed: « Pardon, pouvez-vous répéter ? »",
+        "Aim for 3–4 sentences per answer, not one word."
+      ],
+      "phrases": [
+        "Je m'appelle… et je viens de…",
+        "Je travaille comme… depuis…",
+        "Ce que j'aime le plus, c'est…",
+        "Plus tard, j'aimerais…"
+      ]
+    },
+    "EO-T2": {
+      "title": "Exercice en interaction (2 min de préparation + 3 min 30)",
+      "tips": [
+        "Use the 2 minutes to list your questions: price, times, conditions, place, what's included.",
+        "Open politely, ask one question at a time, react to each answer.",
+        "If the answer surprises you, ask for an alternative. Close with a summary and thanks."
+      ],
+      "phrases": [
+        "Bonjour, je vous appelle au sujet de…",
+        "Pourriez-vous me dire… ?",
+        "Est-ce que… est compris ?",
+        "Et si… , est-ce possible ?",
+        "Si je comprends bien, …"
+      ]
+    },
+    "EO-T3": {
+      "title": "Expression d'un point de vue (4 min 30)",
+      "tips": [
+        "Give your opinion in the first sentence.",
+        "Two arguments, each with an example from life.",
+        "Acknowledge the other side (« Certes… mais… »), then conclude."
+      ],
+      "phrases": [
+        "À mon avis, …",
+        "D'une part… d'autre part…",
+        "Par exemple, …",
+        "Certes…, mais…",
+        "En conclusion, …"
+      ]
+    }
+  },
+  "tasks": [
+    {
+      "id": "eo1-presentation",
+      "task": "EO-T1",
+      "level": "A2",
+      "title": "Faire connaissance",
+      "examiner": "Examinatrice",
+      "instructions": "L'examinatrice vous pose des questions sur vous : vous, votre travail ou vos études, vos loisirs, vos projets. Répondez avec des détails.",
+      "opening": "Bonjour ! Pour commencer, pouvez-vous vous présenter, s'il vous plaît ?",
+      "questions": [
+        "Qu'est-ce que vous faites dans la vie ?",
+        "Depuis combien de temps vous habitez dans votre ville ?",
+        "Qu'est-ce que vous aimez faire le week-end ?",
+        "Pourquoi est-ce que vous apprenez le français ?",
+        "Quels sont vos projets pour les prochaines années ?",
+        "Parlez-moi d'un voyage qui vous a marqué.",
+        "Comment est une journée typique pour vous ?"
+      ],
+      "competencies": [
+        "eo.parler-de-soi",
+        "eo.developper-reponse"
+      ]
+    },
+    {
+      "id": "eo2-club-sport",
+      "task": "EO-T2",
+      "level": "A2",
+      "title": "S'inscrire dans un club de sport",
+      "examiner": "Examinateur",
+      "instructions": "Vous voulez vous inscrire dans un club de sport près de chez vous. Vous téléphonez au club pour obtenir des informations (prix, horaires, activités, conditions…). L'examinateur joue le rôle de l'employé du club.",
+      "role": "employé de l'accueil du club Énergie Plus",
+      "opening": "Club Énergie Plus, bonjour ! Je vous écoute.",
+      "facts": {
+        "prix": "45 dollars par mois, ou 450 dollars pour un an ; frais d'inscription de 30 dollars, offerts ce mois-ci",
+        "horaires": "du lundi au vendredi de 6 h à 22 h, le samedi et le dimanche de 8 h à 18 h",
+        "activités": "salle de musculation, piscine, cours de yoga, de zumba et de vélo ; cours collectifs compris dans l'abonnement",
+        "conditions": "engagement de 3 mois minimum ; certificat médical non obligatoire ; une pièce d'identité suffit",
+        "essai": "une séance d'essai gratuite, sur rendez-vous",
+        "imprévu": "la piscine est fermée pour travaux jusqu'à la fin du mois prochain"
+      },
+      "targets": [
+        "le prix et ce qui est compris",
+        "les horaires",
+        "les activités ou cours proposés",
+        "les conditions d'inscription",
+        "une séance d'essai ou une solution à un problème"
+      ],
+      "competencies": [
+        "eo.question-polie",
+        "eo.obtenir-information"
+      ]
+    },
+    {
+      "id": "eo2-location-appartement",
+      "task": "EO-T2",
+      "level": "B1",
+      "title": "Visiter un appartement à louer",
+      "examiner": "Examinatrice",
+      "instructions": "Vous avez vu une annonce pour un appartement à louer. Vous appelez la propriétaire pour obtenir des informations avant de le visiter (loyer, charges, quartier, disponibilité, conditions…). L'examinatrice joue le rôle de la propriétaire.",
+      "role": "propriétaire d'un 4 et demi à louer à Montréal, quartier Rosemont",
+      "opening": "Allô, oui bonjour ? C'est pour l'annonce de l'appartement ?",
+      "facts": {
+        "loyer": "1 450 dollars par mois",
+        "charges": "chauffage et eau chaude compris ; électricité non comprise ; internet non compris",
+        "logement": "4 et demi au deuxième étage, deux chambres, balcon, laveuse et sécheuse dans l'appartement",
+        "quartier": "Rosemont, à 7 minutes à pied du métro, près d'un parc et d'une épicerie",
+        "disponibilité": "libre à partir du 1er juillet ; bail de 12 mois",
+        "conditions": "une lettre de l'employeur et deux références ; pas d'animaux",
+        "visite": "visites possibles jeudi soir après 18 h ou samedi matin",
+        "imprévu": "les animaux ne sont pas acceptés, mais un petit chat peut être discuté avec une caution supplémentaire"
+      },
+      "targets": [
+        "le loyer et les charges",
+        "le logement (pièces, équipements)",
+        "le quartier et les transports",
+        "la disponibilité et le bail",
+        "les conditions et une visite"
+      ],
+      "competencies": [
+        "eo.question-polie",
+        "eo.obtenir-information"
+      ]
+    },
+    {
+      "id": "eo2-cours-cuisine",
+      "task": "EO-T2",
+      "level": "B1",
+      "title": "Réserver un atelier de cuisine",
+      "examiner": "Examinateur",
+      "instructions": "Vous voulez offrir un atelier de cuisine à un ami pour son anniversaire. Vous appelez l'école de cuisine pour vous renseigner (dates, prix, contenu, nombre de participants, conditions…). L'examinateur joue le rôle de l'employé de l'école.",
+      "role": "conseiller de l'école de cuisine La Toque Bleue",
+      "opening": "La Toque Bleue, bonjour, que puis-je faire pour vous ?",
+      "facts": {
+        "ateliers": "cuisine québécoise, pâtisserie française, cuisine végétarienne ; 3 heures chacun",
+        "dates": "les samedis à 10 h et les mercredis à 18 h",
+        "prix": "85 dollars par personne, repas et recettes compris ; bon cadeau disponible",
+        "groupe": "8 participants maximum",
+        "conditions": "réservation 72 heures à l'avance ; annulation gratuite jusqu'à 48 heures avant",
+        "allergies": "à signaler à la réservation ; option sans gluten possible",
+        "imprévu": "l'atelier de pâtisserie de samedi prochain est complet ; il reste des places mercredi"
+      },
+      "targets": [
+        "les types d'ateliers et leur durée",
+        "les dates disponibles",
+        "le prix et ce qui est compris",
+        "le nombre de participants ou les conditions",
+        "une solution si l'atelier choisi est complet"
+      ],
+      "competencies": [
+        "eo.question-polie",
+        "eo.obtenir-information"
+      ]
+    },
+    {
+      "id": "eo3-teletravail",
+      "task": "EO-T3",
+      "level": "B1",
+      "title": "Le télétravail",
+      "examiner": "Examinatrice",
+      "instructions": "Répondez à la question et défendez votre point de vue avec des arguments et des exemples. L'examinatrice peut vous poser des questions pour vous faire préciser ou nuancer.",
+      "opening": "Selon vous, le télétravail est-il une bonne chose pour les employés ? Je vous écoute.",
+      "challenges": [
+        "Mais on dit que le télétravail isole les gens. Qu'en pensez-vous ?",
+        "Et pour les entreprises, est-ce un avantage ou un problème ?"
+      ],
+      "competencies": [
+        "eo.argumenter",
+        "eo.exemplifier"
+      ]
+    },
+    {
+      "id": "eo3-voiture-ville",
+      "task": "EO-T3",
+      "level": "B2",
+      "title": "La voiture en ville",
+      "examiner": "Examinateur",
+      "instructions": "Répondez à la question et défendez votre point de vue avec des arguments et des exemples. L'examinateur peut vous poser des questions pour vous faire préciser ou nuancer.",
+      "opening": "Faudrait-il interdire les voitures dans le centre des grandes villes ? Qu'en pensez-vous ?",
+      "challenges": [
+        "Et les personnes âgées ou les artisans, comment feraient-ils ?",
+        "Ce genre de mesure ne nuit-il pas aux commerces ?"
+      ],
+      "competencies": [
+        "eo.argumenter",
+        "eo.nuancer"
+      ]
+    },
+    {
+      "id": "eo3-reseaux-sociaux",
+      "task": "EO-T3",
+      "level": "B1",
+      "title": "Les réseaux sociaux",
+      "examiner": "Examinatrice",
+      "instructions": "Répondez à la question et défendez votre point de vue avec des arguments et des exemples. L'examinatrice peut vous poser des questions pour vous faire préciser ou nuancer.",
+      "opening": "Pensez-vous que les réseaux sociaux rapprochent les gens ou qu'ils les éloignent ?",
+      "challenges": [
+        "Vous parlez de vos amis, mais qu'en est-il des adolescents ?",
+        "Faudrait-il, selon vous, limiter leur utilisation ?"
+      ],
+      "competencies": [
+        "eo.argumenter",
+        "eo.exemplifier"
+      ]
+    },
+    {
+      "id": "eo3-trial-1",
+      "task": "EO-T3",
+      "level": "B1",
+      "pool": "assessment",
+      "title": "Vivre en ville ou à la campagne",
+      "examiner": "Examinatrice",
+      "instructions": "Répondez à la question et défendez votre point de vue avec des arguments et des exemples. L'examinatrice peut vous poser des questions pour vous faire préciser ou nuancer.",
+      "opening": "À votre avis, vaut-il mieux vivre en ville ou à la campagne ? Je vous écoute.",
+      "challenges": [
+        "Et pour élever des enfants, votre avis est-il le même ?",
+        "Mais la ville offre plus d'emplois, non ?"
+      ],
+      "competencies": [
+        "eo.argumenter",
+        "eo.exemplifier"
+      ]
+    },
+    {
+      "id": "eo2-trial-2",
+      "task": "EO-T2",
+      "level": "B1",
+      "pool": "assessment",
+      "title": "Louer une voiture pour un week-end",
+      "examiner": "Examinateur",
+      "instructions": "Vous voulez louer une voiture pour un week-end à la campagne. Vous appelez une agence de location pour obtenir des informations (prix, conditions, kilométrage, assurance…). L'examinateur joue le rôle de l'employé de l'agence.",
+      "role": "employé de l'agence de location AutoQuébec",
+      "opening": "AutoQuébec, bonjour ! Comment puis-je vous aider ?",
+      "facts": {
+        "prix": "89 dollars par jour pour une petite voiture, 119 dollars pour un VUS ; forfait week-end du vendredi 17 h au lundi 9 h : 199 dollars pour une petite voiture",
+        "kilométrage": "500 km inclus pour le week-end, puis 15 cents par kilomètre",
+        "conditions": "permis de conduire valide depuis au moins un an, carte de crédit au nom du conducteur, 21 ans minimum",
+        "assurance": "assurance de base comprise ; assurance tous risques en option à 25 dollars par jour",
+        "retour": "retour avec le plein d'essence, sinon 3 dollars le litre",
+        "imprévu": "il ne reste plus de petites voitures ce week-end ; seuls les VUS sont disponibles, au prix de la petite voiture pour s'excuser"
+      },
+      "targets": [
+        "le prix pour le week-end",
+        "le kilométrage inclus",
+        "les conditions pour louer",
+        "l'assurance",
+        "une solution si la voiture voulue n'est pas disponible"
+      ],
+      "competencies": [
+        "eo.question-polie",
+        "eo.obtenir-information"
+      ]
+    },
+    {
+      "id": "eo1-diagnostic",
+      "task": "EO-T1",
+      "level": "A2",
+      "pool": "assessment",
+      "title": "Entretien de départ",
+      "examiner": "Examinatrice",
+      "instructions": "L'examinatrice vous pose quelques questions sur vous. Répondez avec des détails : il n'y a pas de bonne ou de mauvaise réponse.",
+      "opening": "Bonjour ! Pouvez-vous vous présenter et me dire pourquoi vous préparez le TCF Canada ?",
+      "questions": [
+        "Qu'est-ce que vous faites dans la vie ?",
+        "Où habitez-vous, et qu'est-ce que vous aimez dans votre ville ?",
+        "Comment apprenez-vous le français ?",
+        "Qu'est-ce que vous ferez quand vous serez au Canada ?",
+        "Parlez-moi de votre dernier week-end."
+      ],
+      "competencies": [
+        "eo.parler-de-soi",
+        "eo.developper-reponse"
+      ]
+    },
+    {
+      "id": "eo2-belleville",
+      "task": "EO-T2",
+      "level": "B1",
+      "title": "Le Marché de Belleville : l'appel",
+      "examiner": "Examinateur",
+      "instructions": "Madame Roux, la fromagère du marché de Belleville, n'a pas reçu sa livraison de comté. Vous appelez son fournisseur, M. Delaunay, pour savoir pourquoi, quand elle arrivera, et s'il existe une solution avant midi. L'examinateur joue le rôle de M. Delaunay.",
+      "role": "M. Delaunay, fournisseur de la Fromagerie du Jura, qui livre Madame Roux le vendredi soir",
+      "opening": "Fromagerie du Jura, Delaunay, j'écoute ?",
+      "facts": {
+        "retard": "la livraison de vendredi soir n'a pas eu lieu parce que le camion est tombé en panne hier soir sur l'autoroute ; il est au garage",
+        "réparation": "le camion devrait être réparé lundi",
+        "solution": "son fils peut venir aujourd'hui avec sa voiture vers onze heures, mais il ne peut prendre que dix kilos de comté",
+        "reste": "le reste de la commande (dix kilos) sera livré mardi matin, sans frais de livraison",
+        "excuses": "il est désolé et allait justement appeler Madame Roux",
+        "imprévu": "la voiture du fils ne peut transporter que dix kilos sur les vingt commandés"
+      },
+      "targets": [
+        "pourquoi la livraison n'est pas arrivée",
+        "quand le camion sera réparé",
+        "une solution avant midi",
+        "ce qui se passe pour le reste de la commande",
+        "une confirmation à la fin de l'appel"
+      ],
+      "competencies": [
+        "eo.question-polie",
+        "eo.obtenir-information"
+      ]
+    },
+    {
+      "id": "eo1-trial-3",
+      "task": "EO-T1",
+      "level": "B1",
+      "pool": "assessment",
+      "title": "Parler de soi",
+      "examiner": "Examinateur",
+      "instructions": "L'examinateur vous pose des questions sur vous, vos habitudes et vos projets. Répondez avec des détails.",
+      "opening": "Bonjour. Pour commencer, parlez-moi un peu de vous, s'il vous plaît.",
+      "questions": [
+        "Qu'est-ce que vous aimez faire pendant votre temps libre ?",
+        "Décrivez-moi le quartier où vous habitez.",
+        "Quel métier aimeriez-vous faire dans cinq ans ?",
+        "Racontez-moi un bon souvenir d'enfance.",
+        "Pourquoi avez-vous choisi le Canada ?"
+      ],
+      "competencies": [
+        "eo.parler-de-soi",
+        "eo.developper-reponse"
+      ]
+    },
+    {
+      "id": "eo3-trial-4",
+      "task": "EO-T3",
+      "level": "B2",
+      "pool": "assessment",
+      "title": "Apprendre en ligne",
+      "examiner": "Examinatrice",
+      "instructions": "Répondez à la question et défendez votre point de vue avec des arguments et des exemples. L'examinatrice peut vous demander de préciser ou de nuancer.",
+      "opening": "Selon vous, peut-on apprendre aussi bien en ligne qu'en classe ?",
+      "challenges": [
+        "Et pour les enfants, votre réponse est-elle la même ?",
+        "Ne manque-t-il pas le contact humain avec un professeur ?"
+      ],
+      "competencies": [
+        "eo.argumenter",
+        "eo.nuancer"
+      ]
+    },
+    {
+      "id": "eo1-mock-1",
+      "task": "EO-T1",
+      "level": "B1",
+      "pool": "assessment",
+      "title": "Entretien",
+      "examiner": "Examinatrice",
+      "instructions": "L'examinatrice vous pose des questions sur vous. Répondez avec des détails.",
+      "opening": "Bonjour, installez-vous. Pouvez-vous vous présenter ?",
+      "questions": [
+        "Qu'est-ce que vous faites dans la vie ?",
+        "Qu'aimez-vous faire le week-end ?",
+        "Comment voyez-vous votre vie dans cinq ans ?",
+        "Parlez-moi d'un endroit que vous aimez.",
+        "Qu'est-ce qui a été difficile quand vous avez appris le français ?"
+      ],
+      "competencies": [
+        "eo.parler-de-soi",
+        "eo.developper-reponse"
+      ]
+    },
+    {
+      "id": "eo2-mock-1",
+      "task": "EO-T2",
+      "level": "B1",
+      "pool": "assessment",
+      "title": "S'inscrire à un cours de natation",
+      "examiner": "Examinateur",
+      "instructions": "Vous voulez inscrire votre enfant à un cours de natation. Vous appelez le centre aquatique pour obtenir des informations (niveaux, horaires, prix, inscription…). L'examinateur joue le rôle de l'employé du centre.",
+      "role": "employé du centre aquatique municipal",
+      "opening": "Centre aquatique, bonjour !",
+      "facts": {
+        "niveaux": "cours pour enfants de 4 à 12 ans, trois niveaux selon l'âge et l'aisance dans l'eau ; un test de niveau gratuit au premier cours",
+        "horaires": "le samedi matin à 9 h, 10 h ou 11 h, et le mercredi à 17 h 30",
+        "prix": "110 dollars pour une session de 10 cours ; 20 % de réduction pour un deuxième enfant",
+        "inscription": "en ligne ou à l'accueil, avec une preuve de résidence",
+        "matériel": "maillot et bonnet obligatoires ; lunettes conseillées",
+        "imprévu": "les cours du samedi sont complets pour la prochaine session ; il reste des places le mercredi"
+      },
+      "targets": [
+        "les niveaux ou l'âge",
+        "les horaires",
+        "le prix",
+        "comment s'inscrire",
+        "une solution si l'horaire voulu est complet"
+      ],
+      "competencies": [
+        "eo.question-polie",
+        "eo.obtenir-information"
+      ]
+    },
+    {
+      "id": "eo3-mock-1",
+      "task": "EO-T3",
+      "level": "B2",
+      "pool": "assessment",
+      "title": "Le tourisme de masse",
+      "examiner": "Examinatrice",
+      "instructions": "Répondez à la question et défendez votre point de vue avec des arguments et des exemples.",
+      "opening": "Faut-il limiter le nombre de touristes dans les villes très visitées ? Qu'en pensez-vous ?",
+      "challenges": [
+        "Mais beaucoup d'habitants vivent du tourisme, non ?",
+        "Comment pourrait-on concrètement limiter les visiteurs ?"
+      ],
+      "competencies": [
+        "eo.argumenter",
+        "eo.nuancer"
+      ]
+    }
+  ]
+}

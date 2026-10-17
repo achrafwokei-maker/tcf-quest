@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "exams": [
+    {
+      "id": "diagnostic",
+      "kind": "diagnostic",
+      "title": "Bilan de niveau",
+      "set": "diagnostic-1",
+      "label": "Level check: an estimate from about 25 minutes of work, not an official TCF result.",
+      "sections": [
+        {
+          "section": "CO",
+          "minutes": 7,
+          "adaptive": 8
+        },
+        {
+          "section": "CE",
+          "minutes": 10,
+          "adaptive": 8
+        },
+        {
+          "section": "EE",
+          "writing_task": "ee1-diagnostic",
+          "minutes": 12
+        },
+        {
+          "section": "EO",
+          "eo_task": "eo1-diagnostic"
+        }
+      ]
+    },
+    {
+      "id": "weekly-1",
+      "kind": "weekly",
+      "title": "Épreuve hebdomadaire 1",
+      "set": "trial-1",
+      "label": "Partial simulation: shorter than the real TCF Canada, same rules (one listening, no help, strict timers).",
+      "sections": [
+        {
+          "section": "CO",
+          "minutes": 8
+        },
+        {
+          "section": "CE",
+          "minutes": 12
+        },
+        {
+          "section": "EE",
+          "writing_task": "ee1-trial-1",
+          "minutes": 15
+        },
+        {
+          "section": "EO",
+          "eo_task": "eo3-trial-1"
+        }
+      ]
+    },
+    {
+      "id": "weekly-2",
+      "kind": "weekly",
+      "title": "Épreuve hebdomadaire 2",
+      "set": "trial-2",
+      "label": "Partial simulation: shorter than the real TCF Canada, same rules (one listening, no help, strict timers).",
+      "sections": [
+        {
+          "section": "CO",
+          "minutes": 8
+        },
+        {
+          "section": "CE",
+          "minutes": 12
+        },
+        {
+          "section": "EE",
+          "writing_task": "ee3-trial-2",
+          "minutes": 25
+        },
+        {
+          "section": "EO",
+          "eo_task": "eo2-trial-2"
+        }
+      ]
+    },
+    {
+      "id": "weekly-3",
+      "kind": "weekly",
+      "title": "Épreuve hebdomadaire 3",
+      "set": "trial-3",
+      "label": "Partial simulation: shorter than the real TCF Canada, same rules (one listening, no help, strict timers).",
+      "sections": [
+        {
+          "section": "CO",
+          "minutes": 8
+        },
+        {
+          "section": "CE",
+          "minutes": 12
+        },
+        {
+          "section": "EE",
+          "writing_task": "ee2-trial-3",
+          "minutes": 20
+        },
+        {
+          "section": "EO",
+          "eo_task": "eo1-trial-3"
+        }
+      ]
+    },
+    {
+      "id": "weekly-4",
+      "kind": "weekly",
+      "title": "Épreuve hebdomadaire 4",
+      "set": "trial-4",
+      "label": "Partial simulation: shorter than the real TCF Canada, same rules (one listening, no help, strict timers).",
+      "sections": [
+        {
+          "section": "CO",
+          "minutes": 8
+        },
+        {
+          "section": "CE",
+          "minutes": 12
+        },
+        {
+          "section": "EE",
+          "writing_task": "ee1-trial-4",
+          "minutes": 15
+        },
+        {
+          "section": "EO",
+          "eo_task": "eo3-trial-4"
+        }
+      ]
+    },
+    {
+      "id": "mock-full-1",
+      "kind": "full",
+      "title": "Simulation complète TCF Canada 1",
+      "set": "mock-1",
+      "label": "Full simulation of the TCF Canada: 4 compulsory sections, official timings (2 h 47), exam rules. Practice results, not an official score.",
+      "sections": [
+        {
+          "section": "CO",
+          "official_timing": true
+        },
+        {
+          "section": "CE",
+          "official_timing": true
+        },
+        {
+          "section": "EE",
+          "writing_tasks": [
+            "ee1-mock-1",
+            "ee2-mock-1",
+            "ee3-mock-1"
+          ],
+          "official_timing": true
+        },
+        {
+          "section": "EO",
+          "eo_task": "eo1-mock-1"
+        },
+        {
+          "section": "EO",
+          "eo_task": "eo2-mock-1"
+        },
+        {
+          "section": "EO",
+          "eo_task": "eo3-mock-1"
+        }
+      ]
+    },
+    {
+      "id": "mock-co-1",
+      "kind": "section",
+      "title": "Épreuve complète · Compréhension orale",
+      "set": "mock-1",
+      "label": "Section mock: 39 questions in 35 minutes, one listening. Uses the questions of Simulation complète 1.",
+      "sections": [
+        {
+          "section": "CO",
+          "official_timing": true
+        }
+      ]
+    },
+    {
+      "id": "mock-ce-1",
+      "kind": "section",
+      "title": "Épreuve complète · Compréhension écrite",
+      "set": "mock-1",
+      "label": "Section mock: 39 questions in 60 minutes. Uses the questions of Simulation complète 1.",
+      "sections": [
+        {
+          "section": "CE",
+          "official_timing": true
+        }
+      ]
+    },
+    {
+      "id": "mock-ee-1",
+      "kind": "section",
+      "title": "Épreuve complète · Expression écrite",
+      "set": "mock-1",
+      "label": "Section mock: three tasks in 60 minutes. Uses the tasks of Simulation complète 1.",
+      "sections": [
+        {
+          "section": "EE",
+          "writing_tasks": [
+            "ee1-mock-1",
+            "ee2-mock-1",
+            "ee3-mock-1"
+          ],
+          "official_timing": true
+        }
+      ]
+    },
+    {
+      "id": "mock-eo-1",
+      "kind": "section",
+      "title": "Épreuve complète · Expression orale",
+      "set": "mock-1",
+      "label": "Section mock: the three speaking tasks, about 12 minutes. Uses the tasks of Simulation complète 1.",
+      "sections": [
+        {
+          "section": "EO",
+          "eo_task": "eo1-mock-1"
+        },
+        {
+          "section": "EO",
+          "eo_task": "eo2-mock-1"
+        },
+        {
+          "section": "EO",
+          "eo_task": "eo3-mock-1"
+        }
+      ]
+    }
+  ]
+}

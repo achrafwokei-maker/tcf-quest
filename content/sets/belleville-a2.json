@@ -1,0 +1,564 @@
+{
+  "id": "belleville-a2",
+  "version": 2,
+  "title": "Le Marché de Belleville",
+  "review_status": "reviewed",
+  "level": "A2",
+  "context": "mission",
+  "tcf_target": {
+    "section": "EO",
+    "task": "EO-T2",
+    "purpose": "Obtain information on the phone with simple polite questions (speaking task 2, A2)."
+  },
+  "mission": {
+    "chapter": 2,
+    "story": "marche-de-belleville",
+    "objective": "Obtenir des informations au téléphone avec des questions simples et polies.",
+    "objective_en": "Get information on the phone with simple, polite questions.",
+    "minutes": 12,
+    "stage_titles": {
+      "B": "Méthode",
+      "C": "Langue",
+      "D": "Pratique",
+      "E": "Préparation",
+      "F": "Appel",
+      "G": "Retour",
+      "H": "Fin de mission"
+    }
+  },
+  "items": [
+    {
+      "id": "ba2-scene",
+      "type": "card",
+      "kind": "story",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Set the situation: who you are, who you will call, what you need."
+      },
+      "level": "A2",
+      "title": "Samedi matin, au marché de Belleville",
+      "lines": [
+        {
+          "speaker": "Narratrice",
+          "text": "Samedi matin, au marché de Belleville. Madame Roux vend du fromage. Elle a un problème.",
+          "en": "Saturday morning at the Belleville market. Madame Roux sells cheese. She has a problem."
+        },
+        {
+          "speaker": "Madame Roux",
+          "text": "Bonjour ! Mon fromage n'est pas arrivé. Le marché ouvre dans une heure. Vous pouvez téléphoner au fournisseur, s'il vous plaît ?",
+          "en": "Hello! My cheese hasn't arrived. The market opens in an hour. Can you phone the supplier, please?"
+        }
+      ]
+    },
+    {
+      "id": "ba2-objectif",
+      "type": "card",
+      "kind": "objective",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "State the mission objective and its link to the exam."
+      },
+      "level": "A2",
+      "title": "Ta mission",
+      "body": "Téléphoner au fournisseur et obtenir des informations pour Madame Roux. C'est la tâche 2 de l'expression orale : obtenir des informations.",
+      "body_en": "Phone the supplier and get information for Madame Roux. That's speaking task 2: getting information."
+    },
+    {
+      "id": "ba2-ecoute-roux",
+      "type": "listen",
+      "stage": "D",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Catch the key need in a short spoken explanation."
+      },
+      "level": "A2",
+      "competencies": [
+        "co.information-cle",
+        "co.dialogue-quotidien"
+      ],
+      "instructions": "Écoutez Madame Roux et choisissez.",
+      "instructions_en": "Listen to Madame Roux and choose.",
+      "question": "De quoi Madame Roux a-t-elle besoin ?",
+      "audio": {
+        "speaker": "Madame Roux",
+        "text": "Mon fournisseur s'appelle Monsieur Delaunay. Il livre le vendredi soir. Hier, il n'est pas venu. J'ai besoin de vingt kilos de comté avant midi."
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Vingt kilos de comté avant midi.",
+          "explanation": "Yes: « vingt kilos de comté avant midi »."
+        },
+        {
+          "id": "b",
+          "text": "Vingt kilos de comté vendredi soir.",
+          "explanation": "Friday evening is his usual delivery day, not her need now."
+        },
+        {
+          "id": "c",
+          "text": "Un nouveau fournisseur.",
+          "explanation": "She wants her usual delivery."
+        },
+        {
+          "id": "d",
+          "text": "Deux kilos de comté.",
+          "explanation": "She says « vingt » (20), not « deux » (2)."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "ba2-methode",
+      "type": "card",
+      "kind": "method",
+      "stage": "B",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Académie card: prepare before asking for information (speaking task 2)."
+      },
+      "level": "A2",
+      "title": "Méthode · Préparer ses questions",
+      "body": "À l'examen, tu as 2 minutes pour préparer tes questions.",
+      "body_en": "In the exam you get 2 minutes to prepare your questions.",
+      "points": [
+        "Qui es-tu ? À qui parles-tu ?",
+        "Qu'est-ce que tu dois savoir ? Quoi, quand, pourquoi ?",
+        "Commence par « Bonjour », termine par « Merci, bonne journée »."
+      ]
+    },
+    {
+      "id": "ba2-preparation",
+      "type": "multi",
+      "stage": "E",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Identify the information to obtain before the call (task 2 preparation)."
+      },
+      "level": "A2",
+      "competencies": [
+        "eo.preparation-t2"
+      ],
+      "instructions": "Préparation : coche ce que tu dois demander.",
+      "instructions_en": "Preparation: tick what you need to ask.",
+      "question": "Qu'est-ce que tu dois demander à Monsieur Delaunay ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pourquoi il n'est pas venu",
+          "explanation": "Needed: to understand the problem."
+        },
+        {
+          "id": "b",
+          "text": "S'il peut livrer avant midi",
+          "explanation": "Needed: her deadline is noon."
+        },
+        {
+          "id": "c",
+          "text": "Son âge",
+          "explanation": "Not useful for the delivery."
+        },
+        {
+          "id": "d",
+          "text": "Quand arrive le reste du fromage",
+          "explanation": "Needed: she wants all twenty kilos."
+        },
+        {
+          "id": "e",
+          "text": "La couleur de son camion",
+          "explanation": "Not useful for the delivery."
+        }
+      ],
+      "answers": [
+        "a",
+        "b",
+        "d"
+      ]
+    },
+    {
+      "id": "ba2-langue",
+      "type": "card",
+      "kind": "language",
+      "stage": "C",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Simple polite question forms for speaking task 2."
+      },
+      "level": "A2",
+      "title": "Langue · Poser des questions simples",
+      "points": [
+        "Vous pouvez… ?",
+        "Je voudrais savoir…",
+        "Est-ce que… ?",
+        "Pourquoi… ? / Quand… ? / À quelle heure… ?"
+      ],
+      "body": "« Je voudrais » est plus poli que « je veux ».",
+      "body_en": "« Je voudrais » is more polite than « je veux »."
+    },
+    {
+      "id": "ba2-ouverture",
+      "type": "select",
+      "stage": "D",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Open a phone call politely."
+      },
+      "level": "A2",
+      "competencies": [
+        "eo.ouverture-appel",
+        "eo.registre"
+      ],
+      "instructions": "Choisissez la meilleure phrase.",
+      "instructions_en": "Choose the best sentence.",
+      "question": "Comment commencer l'appel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bonjour Monsieur, j'appelle pour Madame Roux.",
+          "explanation": "Yes: polite, and he knows why you are calling."
+        },
+        {
+          "id": "b",
+          "text": "Allô, la livraison ?",
+          "explanation": "Too short and too familiar."
+        },
+        {
+          "id": "c",
+          "text": "Vous êtes en retard !",
+          "explanation": "Not polite: start with « Bonjour »."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "ba2-voudrais",
+      "type": "type",
+      "stage": "D",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Use the polite « je voudrais » to ask for information."
+      },
+      "level": "A2",
+      "competencies": [
+        "gram.conditionnel-politesse"
+      ],
+      "instructions": "Complétez la phrase poliment.",
+      "instructions_en": "Complete the sentence politely.",
+      "sentence": "Je ___ savoir pourquoi le camion est en retard.",
+      "base_form": "vouloir",
+      "answers": [
+        "voudrais"
+      ],
+      "hint": "Plus poli que « veux » : la forme polie de « vouloir ».",
+      "explanation": "« Je voudrais » (conditional of « vouloir ») is the polite way to ask."
+    },
+    {
+      "id": "ba2-avant-midi",
+      "type": "arrange",
+      "stage": "D",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Build a simple polite question (speaking task 2)."
+      },
+      "level": "A2",
+      "competencies": [
+        "eo.demande-polie"
+      ],
+      "instructions": "Remettez les mots dans l'ordre.",
+      "instructions_en": "Put the words in order.",
+      "translation": "Can you deliver before noon?",
+      "answers": [
+        [
+          "Vous",
+          "pouvez",
+          "livrer",
+          "avant",
+          "midi ?"
+        ]
+      ],
+      "distractors": [
+        "peut",
+        "après"
+      ],
+      "explanation": "« Vous pouvez » + infinitive « livrer ». With « vous », the verb is « pouvez »."
+    },
+    {
+      "id": "ba2-appel-1",
+      "type": "select",
+      "stage": "F",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Guided call, turn 1: greet and introduce yourself."
+      },
+      "level": "A2",
+      "competencies": [
+        "eo.ouverture-appel"
+      ],
+      "instructions": "Appel guidé · Choisissez ce que vous dites.",
+      "instructions_en": "Guided call · Choose what you say.",
+      "prompt_line": {
+        "speaker": "M. Delaunay",
+        "text": "Fromagerie du Jura, bonjour !",
+        "en": "Fromagerie du Jura, hello!"
+      },
+      "question": "Votre réponse :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Salut !",
+          "explanation": "Too familiar, and he doesn't know who you are."
+        },
+        {
+          "id": "b",
+          "text": "Bonjour Monsieur, j'appelle pour Madame Roux, au marché de Belleville.",
+          "explanation": "Yes: polite and clear."
+        },
+        {
+          "id": "c",
+          "text": "Pourquoi vous êtes en retard ?",
+          "explanation": "Say hello and who you are first."
+        }
+      ],
+      "answer": "b",
+      "reply": {
+        "speaker": "M. Delaunay",
+        "text": "Ah oui, Madame Roux ! Je suis désolé.",
+        "en": "Ah yes, Madame Roux! I'm sorry."
+      }
+    },
+    {
+      "id": "ba2-appel-2",
+      "type": "select",
+      "stage": "F",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Guided call, turn 2: ask what happened."
+      },
+      "level": "A2",
+      "competencies": [
+        "eo.question-polie"
+      ],
+      "instructions": "Appel guidé · Choisissez ce que vous dites.",
+      "instructions_en": "Guided call · Choose what you say.",
+      "question": "Votre question :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Qu'est-ce qui s'est passé ?",
+          "explanation": "Yes: a clear question about the problem."
+        },
+        {
+          "id": "b",
+          "text": "Vous avez oublié ?",
+          "explanation": "Sounds like an accusation."
+        },
+        {
+          "id": "c",
+          "text": "Vous êtes où ?",
+          "explanation": "Very informal, and it doesn't ask about the delivery."
+        }
+      ],
+      "answer": "a",
+      "reply": {
+        "speaker": "M. Delaunay",
+        "text": "Mon camion est en panne. Il est au garage.",
+        "en": "My truck has broken down. It's at the garage."
+      }
+    },
+    {
+      "id": "ba2-appel-3",
+      "type": "select",
+      "stage": "F",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Guided call, turn 3: react and ask for a solution."
+      },
+      "level": "A2",
+      "competencies": [
+        "eo.reaction-imprevu",
+        "eo.demande-polie"
+      ],
+      "instructions": "Appel guidé · Choisissez ce que vous dites.",
+      "instructions_en": "Guided call · Choose what you say.",
+      "question": "Votre question :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ce n'est pas mon problème.",
+          "explanation": "Rude, and you get no information."
+        },
+        {
+          "id": "b",
+          "text": "Au revoir.",
+          "explanation": "You stop before getting the information."
+        },
+        {
+          "id": "c",
+          "text": "Est-ce que vous pouvez livrer avant midi ?",
+          "explanation": "Yes: you ask for what Madame Roux needs."
+        }
+      ],
+      "answer": "c",
+      "reply": {
+        "speaker": "M. Delaunay",
+        "text": "Mon fils peut venir en voiture vers onze heures, avec dix kilos.",
+        "en": "My son can come by car around eleven, with ten kilos."
+      }
+    },
+    {
+      "id": "ba2-appel-4",
+      "type": "select",
+      "stage": "F",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Guided call, turn 4: follow up to get the missing information."
+      },
+      "level": "A2",
+      "competencies": [
+        "eo.relance"
+      ],
+      "instructions": "Appel guidé · Choisissez ce que vous dites.",
+      "instructions_en": "Guided call · Choose what you say.",
+      "question": "Votre question :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Et les dix autres kilos, quand est-ce que vous pouvez les livrer ?",
+          "explanation": "Yes: you ask about what is still missing."
+        },
+        {
+          "id": "b",
+          "text": "Dix kilos, c'est parfait.",
+          "explanation": "She needs twenty: ask about the rest."
+        },
+        {
+          "id": "c",
+          "text": "D'accord, merci.",
+          "explanation": "You end before getting all the information."
+        }
+      ],
+      "answer": "a",
+      "reply": {
+        "speaker": "M. Delaunay",
+        "text": "Mardi matin. Et la livraison est gratuite.",
+        "en": "Tuesday morning. And delivery is free."
+      }
+    },
+    {
+      "id": "ba2-appel-5",
+      "type": "select",
+      "stage": "F",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Guided call, turn 5: thank and close politely."
+      },
+      "level": "A2",
+      "competencies": [
+        "eo.cloture-resume"
+      ],
+      "instructions": "Appel guidé · Choisissez ce que vous dites.",
+      "instructions_en": "Guided call · Choose what you say.",
+      "question": "Pour terminer :",
+      "options": [
+        {
+          "id": "a",
+          "text": "OK.",
+          "explanation": "Too short: thank him."
+        },
+        {
+          "id": "b",
+          "text": "Merci beaucoup, Monsieur. Bonne journée !",
+          "explanation": "Yes: a polite closing."
+        },
+        {
+          "id": "c",
+          "text": "Salut !",
+          "explanation": "Too familiar for this call."
+        }
+      ],
+      "answer": "b",
+      "reply": {
+        "speaker": "M. Delaunay",
+        "text": "Bonne journée !",
+        "en": "Have a good day!"
+      }
+    },
+    {
+      "id": "ba2-compte-rendu",
+      "type": "select",
+      "stage": "G",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Report what you understood from the call."
+      },
+      "level": "A2",
+      "competencies": [
+        "co.information-cle"
+      ],
+      "instructions": "Madame Roux vous demande ce qu'il a dit.",
+      "instructions_en": "Madame Roux asks what he said.",
+      "prompt_line": {
+        "speaker": "Madame Roux",
+        "text": "Alors, qu'est-ce qu'il a dit ?",
+        "en": "So, what did he say?"
+      },
+      "question": "Quel est le bon résumé ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Son fils apporte dix kilos vers onze heures. Le reste arrive mardi matin.",
+          "explanation": "Yes: everything you found out."
+        },
+        {
+          "id": "b",
+          "text": "Il apporte vingt kilos à midi.",
+          "explanation": "Only ten kilos come today."
+        },
+        {
+          "id": "c",
+          "text": "Il ne vient pas avant mardi.",
+          "explanation": "His son comes today with ten kilos."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "ba2-fin",
+      "type": "card",
+      "kind": "outro",
+      "stage": "H",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Close the mission and connect it to the exam."
+      },
+      "level": "A2",
+      "title": "Mission accomplie",
+      "lines": [
+        {
+          "speaker": "Madame Roux",
+          "text": "Merci beaucoup ! Vous m'avez beaucoup aidée.",
+          "en": "Thank you so much! You helped me a lot."
+        }
+      ],
+      "body": "À l'examen, cette tâche se fait à l'oral, face à l'examinateur. Maintenant, faites le vrai appel à voix haute : M. Delaunay vous répond.",
+      "body_en": "In the exam this task is spoken with the examiner. Real voice calls are coming soon.",
+      "link": {
+        "label": "Faire l'appel à l'oral",
+        "to": "/oral/eo2-belleville"
+      }
+    }
+  ]
+}

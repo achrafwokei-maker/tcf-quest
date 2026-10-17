@@ -1,0 +1,26 @@
+# Dependencies and tools
+node_modules/
+.tools/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Private learner data: never commit
+data/
+*.db
+*.db-journal
+*.sqlite
+
+# Downloaded AI/voice models (large)
+models/
+
+# Secrets and OS files
+.env
+.env.*
+!.env.example
+.DS_Store

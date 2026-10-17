@@ -1,0 +1,324 @@
+{
+  "version": 1,
+  "review_status": "reviewed",
+  "templates": {
+    "EE-T1": {
+      "title": "Message (60–120 mots)",
+      "steps": [
+        "Formule d'appel adaptée au destinataire (Salut Léa, / Madame, Monsieur,)",
+        "Raison du message en une phrase",
+        "Les informations demandées : décrire, raconter ou expliquer (quoi, quand, où, pourquoi)",
+        "Une demande ou une proposition concrète",
+        "Formule de fin et signature (À bientôt, / Cordialement,)"
+      ],
+      "phrases": [
+        "Je t'écris pour…",
+        "Je me permets de vous écrire au sujet de…",
+        "Pourrais-tu… ? / Pourriez-vous… ?",
+        "Dis-moi si ça te convient.",
+        "Dans l'attente de votre réponse, …"
+      ],
+      "avoid": "Don't write a generic letter: answer every point of the instruction, in the register the recipient requires."
+    },
+    "EE-T2": {
+      "title": "Compte rendu d'expérience ou récit (120–150 mots)",
+      "steps": [
+        "Titre ou formule d'appel selon le support (article, lettre, message sur un forum)",
+        "Situation : quand, où, avec qui",
+        "Récit chronologique au passé (passé composé pour les actions, imparfait pour le décor)",
+        "Commentaire : ce que vous en pensez, pourquoi",
+        "Conclusion orientée vers le but demandé (conseiller, recommander, convaincre)"
+      ],
+      "phrases": [
+        "Le mois dernier, j'ai eu l'occasion de…",
+        "D'abord… ensuite… finalement…",
+        "Ce qui m'a le plus marqué, c'est…",
+        "Je vous recommande vivement de…",
+        "À mon avis, cela vaut la peine parce que…"
+      ],
+      "avoid": "Don't stop at the story: the task always asks for comments, opinions or a recommendation."
+    },
+    "EE-T3": {
+      "title": "Comparaison de deux points de vue (120–180 mots)",
+      "steps": [
+        "Introduction : présenter le sujet de société en une phrase",
+        "Point de vue du document 1, reformulé (pas copié)",
+        "Point de vue du document 2, reformulé, avec un connecteur d'opposition",
+        "Votre opinion personnelle, justifiée par un argument et un exemple",
+        "Conclusion courte"
+      ],
+      "phrases": [
+        "Le premier document affirme que…",
+        "En revanche, selon le second…",
+        "Alors que… / Tandis que…",
+        "Pour ma part, je pense que…",
+        "En somme, …"
+      ],
+      "avoid": "Don't copy sentences from the documents: rephrase. Keep both viewpoints before giving yours."
+    }
+  },
+  "tasks": [
+    {
+      "id": "ee1-voisin-fete",
+      "task": "EE-T1",
+      "level": "A2",
+      "title": "Une fête dans l'immeuble",
+      "prompt": "Vous organisez une petite fête chez vous samedi soir. Écrivez un message à votre voisin, M. Tremblay, pour l'informer : dites pourquoi vous faites cette fête, à quelle heure elle commence et finit, et proposez-lui de venir.",
+      "recipient": "un voisin que vous connaissez peu (vous)",
+      "competencies": [
+        "ee.message-informer",
+        "ee.registre-ouverture"
+      ]
+    },
+    {
+      "id": "ee1-amie-demenagement",
+      "task": "EE-T1",
+      "level": "B1",
+      "title": "Aide pour un déménagement",
+      "prompt": "Vous déménagez dans un nouvel appartement le mois prochain. Écrivez un message à votre amie Inès : décrivez le nouvel appartement, expliquez pourquoi vous déménagez et demandez-lui si elle peut vous aider le jour du déménagement.",
+      "recipient": "une amie (tu)",
+      "competencies": [
+        "ee.message-decrire",
+        "ee.registre-ouverture"
+      ]
+    },
+    {
+      "id": "ee1-responsable-formation",
+      "task": "EE-T1",
+      "level": "B2",
+      "title": "Absence à une formation",
+      "prompt": "Vous êtes inscrit(e) à une formation professionnelle obligatoire mardi prochain, mais vous ne pourrez pas y assister. Écrivez un message à la responsable des formations, Mme Gagnon : expliquez la raison de votre absence, proposez une solution et demandez comment rattraper le contenu.",
+      "recipient": "une responsable dans votre entreprise (vous)",
+      "competencies": [
+        "ee.message-expliquer",
+        "ee.registre-ouverture"
+      ]
+    },
+    {
+      "id": "ee2-premier-jour",
+      "task": "EE-T2",
+      "level": "A2",
+      "title": "Mon premier jour",
+      "prompt": "Sur un forum pour les nouveaux arrivants, racontez votre premier jour dans une nouvelle ville ou un nouveau travail. Dites ce qui s'est passé, ce qui a été facile ou difficile, et donnez un conseil aux nouveaux arrivants.",
+      "recipient": "les membres d'un forum",
+      "competencies": [
+        "ee.recit-passe",
+        "gram.passe-compose-imparfait"
+      ]
+    },
+    {
+      "id": "ee2-benevolat",
+      "task": "EE-T2",
+      "level": "B1",
+      "title": "Une expérience de bénévolat",
+      "prompt": "Le journal de votre quartier prépare un numéro sur l'engagement citoyen. Écrivez un article dans lequel vous racontez une expérience de bénévolat (réelle ou imaginaire), ce qu'elle vous a apporté, et encouragez les lecteurs à s'engager à leur tour.",
+      "recipient": "les lecteurs du journal du quartier",
+      "competencies": [
+        "ee.recit-commentaire",
+        "gram.passe-compose-imparfait"
+      ]
+    },
+    {
+      "id": "ee2-voyage-decevant",
+      "task": "EE-T2",
+      "level": "B2",
+      "title": "Un séjour décevant",
+      "prompt": "Un site d'avis de voyageurs vous demande de partager une expérience de séjour qui ne s'est pas passée comme prévu. Racontez ce qui s'est passé, analysez ce qui aurait pu être fait autrement et donnez des recommandations aux futurs voyageurs.",
+      "recipient": "les utilisateurs d'un site d'avis",
+      "competencies": [
+        "ee.recit-argumente",
+        "gram.conditionnel-passe"
+      ]
+    },
+    {
+      "id": "ee3-teletravail",
+      "task": "EE-T3",
+      "level": "B1",
+      "title": "Le télétravail",
+      "prompt": "Lisez les deux documents. Rédigez un texte dans lequel vous comparez les deux points de vue, puis donnez votre opinion sur le télétravail.",
+      "documents": [
+        {
+          "title": "Document 1",
+          "text": "Depuis que je travaille de chez moi trois jours par semaine, je gagne près de deux heures par jour en transport. Je suis moins fatiguée, je m'organise comme je veux et je passe plus de temps avec mes enfants. Pour moi, le télétravail devrait devenir la règle partout où c'est possible."
+        },
+        {
+          "title": "Document 2",
+          "text": "Le télétravail isole. Dans notre équipe, les nouveaux employés apprennent beaucoup moins vite, car ils ne peuvent plus poser une question à leur voisin de bureau. Les échanges informels, autour d'un café, font aussi partie du travail. Un ou deux jours par mois à la maison, d'accord ; pas davantage."
+        }
+      ],
+      "recipient": "un lecteur général",
+      "competencies": [
+        "ee.comparer-points-de-vue",
+        "gram.connecteur-opposition"
+      ]
+    },
+    {
+      "id": "ee3-voiture-centre",
+      "task": "EE-T3",
+      "level": "B2",
+      "title": "Interdire la voiture en centre-ville ?",
+      "prompt": "Lisez les deux documents. Rédigez un texte dans lequel vous comparez les deux points de vue, puis donnez votre opinion sur l'interdiction des voitures dans les centres-villes.",
+      "documents": [
+        {
+          "title": "Document 1",
+          "text": "Fermer le centre-ville aux voitures, c'est rendre la rue aux habitants. Dans les villes qui l'ont fait, l'air est plus sain, le bruit a diminué et les commerces de proximité ont vu arriver de nouveaux clients, venus à pied ou à vélo. C'est une décision courageuse mais nécessaire."
+        },
+        {
+          "title": "Document 2",
+          "text": "Une interdiction totale pénalise ceux qui n'ont pas le choix : les personnes âgées, les artisans qui transportent du matériel, les familles qui habitent en banlieue sans transport en commun efficace. Avant d'interdire, il faudrait offrir de vraies solutions de remplacement."
+        }
+      ],
+      "recipient": "un lecteur général",
+      "competencies": [
+        "ee.comparer-points-de-vue",
+        "ee.argumenter"
+      ]
+    },
+    {
+      "id": "ee3-ecrans-enfants",
+      "task": "EE-T3",
+      "level": "B1",
+      "title": "Les écrans et les enfants",
+      "prompt": "Lisez les deux documents. Rédigez un texte dans lequel vous comparez les deux points de vue, puis donnez votre opinion sur l'utilisation des écrans par les enfants.",
+      "documents": [
+        {
+          "title": "Document 1",
+          "text": "Les tablettes et les ordinateurs font partie du monde d'aujourd'hui. Bien utilisés, ils permettent aux enfants d'apprendre en s'amusant, de découvrir d'autres pays et de développer leur créativité. Les interdire, c'est préparer les enfants au monde d'hier."
+        },
+        {
+          "title": "Document 2",
+          "text": "Trop d'écrans, c'est moins de sommeil, moins de sport et moins de conversations en famille. Beaucoup d'enseignants remarquent que les élèves ont plus de mal à se concentrer. Il faut limiter strictement le temps d'écran, surtout avant l'âge de dix ans."
+        }
+      ],
+      "recipient": "un lecteur général",
+      "competencies": [
+        "ee.comparer-points-de-vue",
+        "gram.connecteur-opposition"
+      ]
+    },
+    {
+      "id": "ee1-trial-1",
+      "task": "EE-T1",
+      "level": "B1",
+      "pool": "assessment",
+      "title": "Changement de date",
+      "prompt": "Vous avez invité des collègues à un repas chez vous samedi, mais vous devez changer la date. Écrivez un message à vos collègues : expliquez pourquoi, proposez une nouvelle date et demandez-leur de confirmer leur présence.",
+      "recipient": "des collègues (vous, registre amical)",
+      "competencies": [
+        "ee.message-expliquer",
+        "ee.registre-ouverture"
+      ]
+    },
+    {
+      "id": "ee3-trial-2",
+      "task": "EE-T3",
+      "level": "B2",
+      "pool": "assessment",
+      "title": "La semaine de quatre jours",
+      "prompt": "Lisez les deux documents. Rédigez un texte dans lequel vous comparez les deux points de vue, puis donnez votre opinion sur la semaine de travail de quatre jours.",
+      "documents": [
+        {
+          "title": "Document 1",
+          "text": "Dans notre entreprise, passer à quatre jours de travail a tout changé : les employés sont plus reposés, les absences ont diminué et la productivité n'a pas baissé. Un jour de plus pour sa famille ou ses projets, c'est un vrai gain de qualité de vie."
+        },
+        {
+          "title": "Document 2",
+          "text": "La semaine de quatre jours ne convient pas à tous les métiers. Dans un hôpital ou un commerce, il faut assurer une présence continue. Concentrer le travail sur quatre jours peut aussi rendre les journées plus longues et plus fatigantes."
+        }
+      ],
+      "recipient": "un lecteur général",
+      "competencies": [
+        "ee.comparer-points-de-vue",
+        "ee.argumenter"
+      ]
+    },
+    {
+      "id": "ee1-diagnostic",
+      "task": "EE-T1",
+      "level": "A2",
+      "pool": "assessment",
+      "title": "Votre nouvelle vie",
+      "prompt": "Une amie francophone vous demande de vos nouvelles. Écrivez-lui un message : décrivez votre quotidien (travail ou études, logement), racontez quelque chose que vous avez fait récemment et proposez-lui de vous voir.",
+      "recipient": "une amie (tu)",
+      "competencies": [
+        "ee.message-decrire",
+        "ee.registre-ouverture"
+      ]
+    },
+    {
+      "id": "ee2-trial-3",
+      "task": "EE-T2",
+      "level": "B1",
+      "pool": "assessment",
+      "title": "Un atelier marquant",
+      "prompt": "Le centre communautaire de votre quartier vous demande d'écrire un court article pour son bulletin : racontez un atelier ou un cours que vous avez suivi (cuisine, langue, sport…), dites ce qui vous a plu ou déplu, et encouragez (ou non) les lecteurs à s'inscrire.",
+      "recipient": "les lecteurs du bulletin du quartier",
+      "competencies": [
+        "ee.recit-commentaire",
+        "gram.temps-du-passe"
+      ]
+    },
+    {
+      "id": "ee1-trial-4",
+      "task": "EE-T1",
+      "level": "B1",
+      "pool": "assessment",
+      "title": "Un objet oublié",
+      "prompt": "Vous avez oublié un sac dans le train hier. Écrivez un message au service des objets trouvés : décrivez le sac et son contenu, précisez le trajet et l'heure, et demandez comment le récupérer.",
+      "recipient": "le service des objets trouvés (vous)",
+      "competencies": [
+        "ee.message-decrire",
+        "ee.registre"
+      ]
+    },
+    {
+      "id": "ee1-mock-1",
+      "task": "EE-T1",
+      "level": "B1",
+      "pool": "assessment",
+      "title": "Un service à demander",
+      "prompt": "Vous partez en voyage deux semaines. Écrivez un message à votre voisine, Mme Ouellet : expliquez votre absence, demandez-lui de récupérer votre courrier et d'arroser vos plantes, et proposez de lui rendre service à votre retour.",
+      "recipient": "une voisine que vous connaissez bien (vous)",
+      "competencies": [
+        "ee.message-expliquer",
+        "ee.registre"
+      ]
+    },
+    {
+      "id": "ee2-mock-1",
+      "task": "EE-T2",
+      "level": "B1",
+      "pool": "assessment",
+      "title": "Une première expérience professionnelle",
+      "prompt": "Un site pour nouveaux arrivants publie des témoignages. Racontez votre première expérience de travail (stage, emploi, bénévolat) : ce qui s'est passé, ce que vous avez appris, et donnez des conseils à ceux qui cherchent leur premier emploi au Canada.",
+      "recipient": "les lecteurs d'un site pour nouveaux arrivants",
+      "competencies": [
+        "ee.recit-commentaire",
+        "gram.temps-du-passe"
+      ]
+    },
+    {
+      "id": "ee3-mock-1",
+      "task": "EE-T3",
+      "level": "B2",
+      "pool": "assessment",
+      "title": "Les livres numériques à l'école",
+      "prompt": "Lisez les deux documents. Rédigez un texte dans lequel vous comparez les deux points de vue, puis donnez votre opinion sur le remplacement des manuels papier par des tablettes à l'école.",
+      "documents": [
+        {
+          "title": "Document 1",
+          "text": "Avec les tablettes, les élèves n'ont plus de sacs trop lourds, les manuels sont mis à jour en un clic et les exercices interactifs rendent l'apprentissage plus vivant. L'école doit vivre avec son temps."
+        },
+        {
+          "title": "Document 2",
+          "text": "Lire sur papier favorise la concentration et la mémorisation, selon plusieurs études. Les tablettes coûtent cher, tombent en panne et multiplient les distractions. Remplacer les manuels serait une erreur."
+        }
+      ],
+      "recipient": "un lecteur général",
+      "competencies": [
+        "ee.comparer-points-de-vue",
+        "ee.argumenter"
+      ]
+    }
+  ]
+}

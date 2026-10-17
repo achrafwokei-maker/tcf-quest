@@ -1,0 +1,77 @@
+{
+  "id": "defi-a",
+  "version": 1,
+  "title": "Premier défi",
+  "review_status": "reviewed",
+  "level": "A1–A2",
+  "context": "onboarding",
+  "tcf_target": { "section": "CO", "purpose": "First mini-challenge touching the four TCF sections (onboarding, A1–A2)." },
+  "items": [
+    {
+      "id": "da-pharmacie",
+      "type": "listen",
+      "tcf_target": { "section": "CO", "purpose": "Understand a short exchange in a shop (TCF listening, first items)." },
+      "level": "A1",
+      "competencies": ["co.dialogue-quotidien", "vocab.commerces"],
+      "instructions": "Écoutez et choisissez.",
+      "instructions_en": "Listen and choose.",
+      "question": "Qu'achète la cliente ?",
+      "audio": { "text": "Bonjour ! Je voudrais une boîte de mouchoirs et du sirop pour la toux, s'il vous plaît. — Voilà. Ça fait neuf euros." },
+      "options": [
+        { "id": "a", "text": "Du sirop seulement.", "explanation": "She also asks for tissues: « une boîte de mouchoirs »." },
+        { "id": "b", "text": "Des mouchoirs et du sirop.", "explanation": "Yes: « une boîte de mouchoirs et du sirop pour la toux »." },
+        { "id": "c", "text": "Des médicaments pour la tête.", "explanation": "The syrup is « pour la toux » (for a cough), not for a headache." },
+        { "id": "d", "text": "Une boîte de chocolats.", "explanation": "« Une boîte » is right, but of tissues, not chocolates." }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "da-bibliotheque",
+      "type": "select",
+      "tcf_target": { "section": "CE", "purpose": "Read opening hours on a practical notice (TCF reading, everyday documents)." },
+      "level": "A1",
+      "competencies": ["ce.document-pratique", "vocab.jours-horaires"],
+      "instructions": "Lisez et choisissez.",
+      "instructions_en": "Read and choose.",
+      "passage": "BIBLIOTHÈQUE MUNICIPALE\nDu mardi au vendredi : 10 h – 18 h\nSamedi : 10 h – 13 h\nFermée le dimanche et le lundi.",
+      "question": "La bibliothèque est-elle ouverte le samedi après-midi ?",
+      "options": [
+        { "id": "a", "text": "Oui, jusqu'à 18 h.", "explanation": "18 h is the closing time from Tuesday to Friday." },
+        { "id": "b", "text": "Non, elle ferme à 13 h.", "explanation": "Yes: « Samedi : 10 h – 13 h »." },
+        { "id": "c", "text": "Oui, toute la journée.", "explanation": "On Saturday it is open only in the morning." },
+        { "id": "d", "text": "Elle est fermée le samedi.", "explanation": "It's closed on Sunday and Monday, not Saturday." }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "da-ouverture-amie",
+      "type": "select",
+      "tcf_target": { "section": "EE", "task": "EE-T1", "purpose": "Choose a register-appropriate opening for a message (writing task 1)." },
+      "level": "A1",
+      "competencies": ["ee.registre-ouverture"],
+      "instructions": "Choisissez la bonne formule.",
+      "instructions_en": "Choose the right opening.",
+      "question": "Vous écrivez à votre amie Julie pour l'inviter à dîner. Comment commencez-vous ?",
+      "options": [
+        { "id": "a", "text": "Madame, Monsieur,", "explanation": "Formal: for people you don't know." },
+        { "id": "b", "text": "Coucou Julie !", "explanation": "Yes: warm and natural with a friend." },
+        { "id": "c", "text": "Je vous prie d'agréer mes salutations distinguées.", "explanation": "A very formal closing, not an opening." },
+        { "id": "d", "text": "Cordialement,", "explanation": "A closing, and too formal for a friend." }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "da-informations",
+      "type": "arrange",
+      "tcf_target": { "section": "EO", "task": "EO-T2", "purpose": "Build the opening request of speaking task 2 (obtaining information)." },
+      "level": "A1",
+      "competencies": ["eo.demande-polie", "gram.conditionnel-politesse"],
+      "instructions": "Remettez les mots dans l'ordre.",
+      "instructions_en": "Put the words in order.",
+      "translation": "I would like some information, please.",
+      "answers": [["Je", "voudrais", "des", "informations,", "s'il", "vous", "plaît."]],
+      "distractors": ["une", "voulez"],
+      "explanation": "« Je voudrais » is the polite way to ask. « Informations » is plural here, so « des informations »."
+    }
+  ]
+}

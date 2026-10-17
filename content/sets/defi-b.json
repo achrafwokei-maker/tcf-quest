@@ -1,0 +1,77 @@
+{
+  "id": "defi-b",
+  "version": 1,
+  "title": "Premier défi",
+  "review_status": "reviewed",
+  "level": "B1–B2",
+  "context": "onboarding",
+  "tcf_target": { "section": "CO", "purpose": "First mini-challenge touching the four TCF sections (onboarding, B1–B2)." },
+  "items": [
+    {
+      "id": "db-cabinet-medical",
+      "type": "listen",
+      "tcf_target": { "section": "CO", "purpose": "Catch the reason behind a change in a phone message (TCF listening, dialogue items)." },
+      "level": "B1",
+      "competencies": ["co.message-telephonique", "co.cause"],
+      "instructions": "Écoutez et choisissez.",
+      "instructions_en": "Listen and choose.",
+      "question": "Pourquoi le rendez-vous change-t-il ?",
+      "audio": { "text": "Bonjour Monsieur Martin, ici le cabinet du docteur Laurent. Votre rendez-vous de mardi, quatorze heures, doit être avancé à onze heures, le docteur étant en formation l'après-midi. Merci de nous confirmer par téléphone." },
+      "options": [
+        { "id": "a", "text": "Le patient a demandé un autre horaire.", "explanation": "The change comes from the practice, not the patient." },
+        { "id": "b", "text": "Le cabinet est fermé mardi.", "explanation": "The appointment stays on Tuesday, only earlier." },
+        { "id": "c", "text": "Le docteur est en formation l'après-midi.", "explanation": "Yes: « le docteur étant en formation l'après-midi » gives the reason." },
+        { "id": "d", "text": "Le docteur est malade.", "explanation": "Illness is never mentioned: listen for the reason after « étant »." }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "db-centre-ville",
+      "type": "select",
+      "tcf_target": { "section": "CE", "purpose": "Tell apart two groups' viewpoints in a short article (TCF reading, viewpoint texts)." },
+      "level": "B2",
+      "competencies": ["ce.point-de-vue", "gram.connecteur-opposition"],
+      "instructions": "Lisez et choisissez.",
+      "instructions_en": "Read and choose.",
+      "passage": "Le conseil municipal propose d'interdire les voitures dans le centre-ville le dimanche. Les commerçants y voient une menace pour leur chiffre d'affaires ; les associations de cyclistes, au contraire, saluent une mesure qui rendra le quartier plus agréable et, selon elles, plus attractif pour les clients.",
+      "question": "Que pensent les associations de cyclistes ?",
+      "options": [
+        { "id": "a", "text": "La mesure menace les commerçants.", "explanation": "That is the shopkeepers' view, before « au contraire »." },
+        { "id": "b", "text": "La mesure pourrait aussi profiter aux commerces.", "explanation": "Yes: « plus attractif pour les clients » means good for shops too." },
+        { "id": "c", "text": "La mesure devrait s'appliquer toute la semaine.", "explanation": "The text never says this: don't add information." },
+        { "id": "d", "text": "La mesure est inutile.", "explanation": "They « saluent » (welcome) it." }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "db-ouverture-mairie",
+      "type": "select",
+      "tcf_target": { "section": "EE", "task": "EE-T1", "purpose": "Open a formal complaint to an institution (writing task 1, formal register)." },
+      "level": "B1",
+      "competencies": ["ee.registre-ouverture"],
+      "instructions": "Choisissez la bonne formule.",
+      "instructions_en": "Choose the right opening.",
+      "question": "Vous écrivez à la mairie pour vous plaindre du bruit d'un chantier. Comment commencez-vous ?",
+      "options": [
+        { "id": "a", "text": "Salut à tous !", "explanation": "Far too familiar for an institution." },
+        { "id": "b", "text": "Coucou !", "explanation": "Only for close friends and family." },
+        { "id": "c", "text": "Madame, Monsieur,", "explanation": "Yes: the standard formal opening when you don't know who will read it." },
+        { "id": "d", "text": "Bisous,", "explanation": "An informal closing, never an opening." }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "db-preciser-horaires",
+      "type": "arrange",
+      "tcf_target": { "section": "EO", "task": "EO-T2", "purpose": "Ask a precise, polite question to obtain information (speaking task 2)." },
+      "level": "B1",
+      "competencies": ["eo.question-polie", "gram.inversion"],
+      "instructions": "Remettez les mots dans l'ordre.",
+      "instructions_en": "Put the words in order.",
+      "translation": "Could you tell me the class times?",
+      "answers": [["Pourriez-vous", "me", "préciser", "les", "horaires", "du", "cours ?"]],
+      "distractors": ["pouvez", "des"],
+      "explanation": "Inversion « Pourriez-vous » + conditional = a polite question. The object pronoun « me » goes before the infinitive « préciser »."
+    }
+  ]
+}

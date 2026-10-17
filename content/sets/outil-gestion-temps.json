@@ -1,0 +1,91 @@
+{
+  "id": "outil-gestion-temps",
+  "version": 1,
+  "title": "Gérer son temps le jour J",
+  "review_status": "reviewed",
+  "level": "B1",
+  "context": "toolbox",
+  "group": "Temps",
+  "tcf_target": {
+    "section": "CE",
+    "purpose": "Boîte à outils: Gérer son temps le jour J."
+  },
+  "items": [
+    {
+      "id": "o-gestion-temps-fiche",
+      "type": "card",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Boîte à outils: Gérer son temps le jour J."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Gérer son temps le jour J",
+      "stage": "B",
+      "points": [
+        "Ce que c'est : un budget par épreuve : CO ~ 55 s par question, CE ~ 1 min 30, EE : environ 15/20/25 min pour T1/T2/T3.",
+        "Quand l'utiliser : en entraînement chronométré et à l'examen.",
+        "Quand l'éviter : ne bloquez jamais sur une question : choisissez, notez mentalement, avancez.",
+        "Exemple : En compréhension écrite, après 2 minutes sur une question, choisissez la meilleure option et passez à la suivante."
+      ]
+    },
+    {
+      "id": "o-gestion-temps-adapter",
+      "type": "type",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Boîte à outils: Gérer son temps le jour J."
+      },
+      "level": "B1",
+      "competencies": [
+        "ce.gestion-temps"
+      ],
+      "stage": "D",
+      "instructions": "Complétez la phrase.",
+      "instructions_en": "Fill in the gap.",
+      "sentence": "En CE, on a environ une minute et ___ par question.",
+      "answers": [
+        "demie"
+      ],
+      "explanation": "60 min / 39 questions ≈ 1 min 30 (une minute et demie)."
+    },
+    {
+      "id": "o-gestion-temps-pratique",
+      "type": "select",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Boîte à outils: Gérer son temps le jour J."
+      },
+      "level": "B1",
+      "competencies": [
+        "ce.gestion-temps"
+      ],
+      "stage": "E",
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Vous bloquez sur une question de CE depuis 3 minutes. Que faites-vous ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Je choisis la meilleure option et je passe.",
+          "explanation": "Yes: protect the time for easier questions."
+        },
+        {
+          "id": "b",
+          "text": "Je relis tout le texte encore deux fois.",
+          "explanation": "Costs too much time."
+        },
+        {
+          "id": "c",
+          "text": "Je laisse vide et j'attends.",
+          "explanation": "An answer is better than none."
+        },
+        {
+          "id": "d",
+          "text": "J'abandonne l'épreuve.",
+          "explanation": "No."
+        }
+      ],
+      "answer": "a"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "outil-registre",
+  "version": 1,
+  "title": "Tu ou vous ? Formel ou amical ?",
+  "review_status": "reviewed",
+  "level": "B1",
+  "context": "toolbox",
+  "group": "Registre",
+  "tcf_target": {
+    "section": "EE",
+    "task": "EE-T1",
+    "purpose": "Boîte à outils: Tu ou vous ? Formel ou amical ?."
+  },
+  "items": [
+    {
+      "id": "o-registre-fiche",
+      "type": "card",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T1",
+        "purpose": "Boîte à outils: Tu ou vous ? Formel ou amical ?."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Tu ou vous ? Formel ou amical ?",
+      "stage": "B",
+      "points": [
+        "Ce que c'est : le registre s'adapte au destinataire : ami (tu, familier), inconnu ou supérieur (vous, formel).",
+        "Quand l'utiliser : dans chaque message de la tâche 1.",
+        "Quand l'éviter : ne mélangez pas tu et vous dans le même message.",
+        "Exemple : « Salut Léa, tu viens samedi ? » / « Madame, pourriez-vous me confirmer… »"
+      ]
+    },
+    {
+      "id": "o-registre-adapter",
+      "type": "type",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T1",
+        "purpose": "Boîte à outils: Tu ou vous ? Formel ou amical ?."
+      },
+      "level": "B1",
+      "competencies": [
+        "ee.registre"
+      ],
+      "stage": "D",
+      "instructions": "Complétez la phrase.",
+      "instructions_en": "Fill in the gap.",
+      "sentence": "Madame, pourriez-___ me rappeler demain ?",
+      "answers": [
+        "vous"
+      ],
+      "explanation": "Formal recipient: « vous »."
+    },
+    {
+      "id": "o-registre-pratique",
+      "type": "select",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T1",
+        "purpose": "Boîte à outils: Tu ou vous ? Formel ou amical ?."
+      },
+      "level": "B1",
+      "competencies": [
+        "ee.registre"
+      ],
+      "stage": "E",
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Vous écrivez à un ami. Quelle formule de fin ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« À bientôt ! »",
+          "explanation": "Yes: friendly."
+        },
+        {
+          "id": "b",
+          "text": "« Veuillez agréer mes salutations distinguées. »",
+          "explanation": "Too formal."
+        },
+        {
+          "id": "c",
+          "text": "« Cordialement, Monsieur. »",
+          "explanation": "Formal."
+        },
+        {
+          "id": "d",
+          "text": "« Respectueusement. »",
+          "explanation": "Formal."
+        }
+      ],
+      "answer": "a"
+    }
+  ]
+}

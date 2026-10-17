@@ -1,0 +1,117 @@
+/*
+ * TCF Quest design tokens: game style (2026-10-16).
+ * Light = bright game UI over night art (references 2 and 6).
+ * Dark  = Paris at night (references 3 and 5).
+ * Every colour, font, radius and motion value in the app comes from here.
+ */
+
+:root {
+  /* Surfaces */
+  --bg: #eeedfb;               /* soft lavender page (ref 6) */
+  --surface: #ffffff;          /* cards and sheets (ref 2) */
+  --surface-2: #f5f4fd;        /* wells, inputs, tracks */
+  --glass: rgb(255 255 255 / 0.62);
+  --glass-border: rgb(255 255 255 / 0.75);
+  --line: #e2e0f3;
+
+  /* Night (hero, map, avatar stage): same in both themes */
+  --night-1: #0f1033;
+  --night-2: #23185a;
+  --night-3: #3a2a85;
+
+  /* Text */
+  --ink: #1b1840;
+  --ink-soft: #545079;
+  --ink-faint: #8f8cad;
+  --on-color: #ffffff;
+
+  /* Game palette: bright, saturated, used for icons, cards and states */
+  --violet: #7356ff;
+  --blue: #2f8cff;
+  --cyan: #26c6f2;
+  --gold: #ffbf2e;
+  --orange: #ff8a3d;
+  --pink: #ff5fa2;
+  --green: #2fcf7c;
+  --red: #ff5a5f;
+  --locked: #a9a7bf;
+
+  /* One colour per chapter */
+  --region-1: var(--green);    /* Normandie: Le Premier Pas */
+  --region-2: var(--orange);   /* Paris, Belleville: La Vie Quotidienne */
+  --region-3: var(--blue);     /* Lyon: La Cité des Idées */
+  --region-4: var(--pink);     /* Strasbourg: Le Labyrinthe des Arguments */
+  --region-5: var(--gold);     /* Pyrénées: La Maîtrise */
+  --accent: var(--violet);
+
+  /* Meaning */
+  --success: #1fa866;
+  --warning: #d98a00;
+  --danger: #e5484d;
+  --focus: #2f8cff;
+
+  /* Type */
+  --font-display: "Anton", "Impact", "Arial Narrow", sans-serif;   /* poster titles (ref 1) */
+  --font-body: "Nunito Variable", "Nunito", system-ui, sans-serif;  /* friendly, very readable */
+
+  /* Shape: soft, chunky, game-like */
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --radius-xl: 34px;
+  --shadow-card: 0 1px 0 rgb(255 255 255 / 0.8) inset, 0 12px 30px -14px rgb(52 36 140 / 0.35);
+  --shadow-pop: 0 14px 30px -10px rgb(115 86 255 / 0.55);
+
+  /* Motion: lively but short; nothing blocks the learner */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 140ms;
+  --dur-base: 240ms;
+  --dur-slow: 520ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d0c26;
+    --surface: #1a1842;
+    --surface-2: #232052;
+    --glass: rgb(40 34 100 / 0.55);
+    --glass-border: rgb(255 255 255 / 0.12);
+    --line: #2e2a66;
+    --ink: #f4f2ff;
+    --ink-soft: #c3bfe8;
+    --ink-faint: #8d89bd;
+    --locked: #5b5888;
+    --success: #47dd8f;
+    --warning: #ffc54d;
+    --danger: #ff7a7f;
+    --focus: #6fb3ff;
+    --shadow-card: 0 1px 0 rgb(255 255 255 / 0.06) inset, 0 14px 34px -14px rgb(0 0 0 / 0.7);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0d0c26;
+  --surface: #1a1842;
+  --surface-2: #232052;
+  --glass: rgb(40 34 100 / 0.55);
+  --glass-border: rgb(255 255 255 / 0.12);
+  --line: #2e2a66;
+  --ink: #f4f2ff;
+  --ink-soft: #c3bfe8;
+  --ink-faint: #8d89bd;
+  --locked: #5b5888;
+  --success: #47dd8f;
+  --warning: #ffc54d;
+  --danger: #ff7a7f;
+  --focus: #6fb3ff;
+  --shadow-card: 0 1px 0 rgb(255 255 255 / 0.06) inset, 0 14px 34px -14px rgb(0 0 0 / 0.7);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+  }
+}

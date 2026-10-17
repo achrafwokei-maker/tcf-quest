@@ -1,0 +1,678 @@
+{
+  "id": "trial-1",
+  "version": 1,
+  "title": "Épreuve hebdomadaire 1",
+  "review_status": "reviewed",
+  "level": "A2–B2",
+  "context": "exam",
+  "tcf_target": {
+    "section": "CO",
+    "purpose": "Weekly partial simulation: unseen listening and reading items, progressive difficulty, exam rules."
+  },
+  "items": [
+    {
+      "id": "t1-co-gare",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Short announcement: catch the key information (TCF listening)."
+      },
+      "competencies": [
+        "co.information-cle",
+        "co.annonce"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Que doivent faire les voyageurs pour Québec ?",
+      "audio": {
+        "text": "Votre attention, s'il vous plaît. Le train de 14 h 10 à destination de Québec partira de la voie 6, et non de la voie 3. Les voyageurs pour Québec sont priés de se rendre voie 6.",
+        "speaker": "Narratrice"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Aller à la voie 6.",
+          "explanation": "Yes: « partira de la voie 6, et non de la voie 3 »."
+        },
+        {
+          "id": "b",
+          "text": "Attendre voie 3.",
+          "explanation": "Voie 3 is the old platform."
+        },
+        {
+          "id": "c",
+          "text": "Prendre le train de 16 h 10.",
+          "explanation": "The time doesn't change: 14 h 10."
+        },
+        {
+          "id": "d",
+          "text": "Acheter un nouveau billet.",
+          "explanation": "Tickets aren't mentioned."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "t1-co-boulangerie",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Everyday dialogue: understand what the customer buys."
+      },
+      "competencies": [
+        "co.dialogue-quotidien",
+        "vocab.commerces"
+      ],
+      "instructions": "Écoutez le dialogue et répondez à la question.",
+      "question": "Combien la cliente paie-t-elle ?",
+      "audio": {
+        "text": "Bonjour madame, qu'est-ce que je vous sers ? — Une baguette et deux croissants, s'il vous plaît. — Les croissants sont à un dollar cinquante. Ça fait cinq dollars en tout. — Voilà, merci !",
+        "speaker": "Madame Roux"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "1,50 $.",
+          "explanation": "That's the price of one croissant."
+        },
+        {
+          "id": "b",
+          "text": "5 $.",
+          "explanation": "Yes: « Ça fait cinq dollars en tout »."
+        },
+        {
+          "id": "c",
+          "text": "3 $.",
+          "explanation": "That's the two croissants only."
+        },
+        {
+          "id": "d",
+          "text": "6,50 $.",
+          "explanation": "No such total is said."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "t1-co-repondeur",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Phone message: understand the reason for the call."
+      },
+      "competencies": [
+        "co.message-telephonique",
+        "co.cause"
+      ],
+      "instructions": "Écoutez le message et répondez à la question.",
+      "question": "Pourquoi le garage appelle-t-il ?",
+      "audio": {
+        "text": "Bonjour monsieur Diallo, c'est le garage Lavoie. Votre voiture est prête, mais nous avons remarqué que les pneus avant sont très usés. Rappelez-nous avant 17 heures pour nous dire si vous voulez qu'on les change aujourd'hui.",
+        "speaker": "M. Delaunay"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "La voiture ne sera pas prête aujourd'hui.",
+          "explanation": "The car is ready: « Votre voiture est prête »."
+        },
+        {
+          "id": "b",
+          "text": "Le garage ferme à 17 heures.",
+          "explanation": "17 h is the deadline to call back, not the closing time."
+        },
+        {
+          "id": "c",
+          "text": "Il faut une décision sur un travail en plus.",
+          "explanation": "Yes: they ask whether to change the worn tyres today."
+        },
+        {
+          "id": "d",
+          "text": "Le client a oublié de payer.",
+          "explanation": "Payment isn't mentioned."
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "t1-co-radio-meteo",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Radio bulletin: understand a consequence."
+      },
+      "competencies": [
+        "co.information-cle",
+        "co.consequence"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Qu'est-ce qui est recommandé aux automobilistes ?",
+      "audio": {
+        "text": "Une tempête de neige est attendue cette nuit sur la région de Montréal, avec jusqu'à trente centimètres. Les autorités demandent aux automobilistes d'éviter les déplacements non essentiels demain matin et de privilégier les transports en commun.",
+        "speaker": "Narratrice"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Partir très tôt demain matin.",
+          "explanation": "The opposite: avoid trips tomorrow morning."
+        },
+        {
+          "id": "b",
+          "text": "Rester sur les grandes routes.",
+          "explanation": "Roads aren't compared."
+        },
+        {
+          "id": "c",
+          "text": "Changer leurs pneus cette nuit.",
+          "explanation": "Tyres aren't mentioned."
+        },
+        {
+          "id": "d",
+          "text": "Ne prendre la voiture qu'en cas de nécessité.",
+          "explanation": "Yes: « éviter les déplacements non essentiels »."
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "id": "t1-co-entretien-benevole",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Interview: identify the speaker's motivation."
+      },
+      "competencies": [
+        "co.intention",
+        "co.point-de-vue"
+      ],
+      "instructions": "Écoutez l'entretien et répondez à la question.",
+      "question": "Pourquoi Nadia fait-elle du bénévolat ?",
+      "audio": {
+        "text": "Je donne trois heures par semaine à la banque alimentaire du quartier. Au début, c'était surtout pour rencontrer des gens, parce que je venais d'arriver. Maintenant, j'y vais parce que je vois concrètement que ça aide des familles, et ça, ça me motive vraiment.",
+        "speaker": "Madame Roux"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Aujourd'hui, surtout pour être utile aux familles.",
+          "explanation": "Yes: « maintenant… ça aide des familles… ça me motive »."
+        },
+        {
+          "id": "b",
+          "text": "Pour trouver un emploi.",
+          "explanation": "Work isn't mentioned."
+        },
+        {
+          "id": "c",
+          "text": "Uniquement pour rencontrer des gens.",
+          "explanation": "That was the reason at the beginning only: a classic distractor."
+        },
+        {
+          "id": "d",
+          "text": "Parce que son école l'oblige.",
+          "explanation": "No obligation is mentioned."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "t1-co-reunion-parents",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Longer monologue: understand an implicit attitude."
+      },
+      "competencies": [
+        "co.inference",
+        "co.point-de-vue"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Quelle est l'attitude de la directrice face au nouveau calendrier ?",
+      "audio": {
+        "text": "Le ministère nous impose de commencer l'année une semaine plus tôt. Je comprends l'objectif, mais je constate qu'on nous a prévenus en juin, sans aucune consultation. Nous appliquerons la décision, bien sûr, mais j'aurais aimé que les familles et les enseignants aient leur mot à dire.",
+        "speaker": "Narratrice"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle refuse de l'appliquer.",
+          "explanation": "She will apply it: « Nous appliquerons la décision »."
+        },
+        {
+          "id": "b",
+          "text": "Elle l'accepte en regrettant la méthode.",
+          "explanation": "Yes: she applies it but regrets the lack of consultation."
+        },
+        {
+          "id": "c",
+          "text": "Elle est enthousiaste.",
+          "explanation": "Her tone is critical, not enthusiastic."
+        },
+        {
+          "id": "d",
+          "text": "Elle pense qu'il est trop tard pour commencer.",
+          "explanation": "Her criticism is the lack of consultation, not the date itself."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "t1-co-chronique-sommeil",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Radio column: identify the main idea."
+      },
+      "competencies": [
+        "co.idee-principale",
+        "co.information-cle"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Quelle est l'idée principale de la chronique ?",
+      "audio": {
+        "text": "On répète souvent qu'il faut dormir huit heures. Or, les études montrent surtout que la régularité compte autant que la durée : se coucher et se lever à des heures stables améliore la qualité du sommeil, même si l'on dort un peu moins. Bref, mieux vaut un horaire constant qu'une grasse matinée le dimanche.",
+        "speaker": "M. Delaunay"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Il faut absolument dormir huit heures.",
+          "explanation": "That's the common belief the column questions."
+        },
+        {
+          "id": "b",
+          "text": "Faire la grasse matinée aide à récupérer.",
+          "explanation": "The column says the opposite."
+        },
+        {
+          "id": "c",
+          "text": "Des horaires réguliers sont essentiels pour bien dormir.",
+          "explanation": "Yes: « la régularité compte autant que la durée »."
+        },
+        {
+          "id": "d",
+          "text": "Dormir moins est meilleur pour la santé.",
+          "explanation": "It says you may sleep a bit less and still sleep well, not that less is better."
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "t1-co-debat-transport",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Debate: distinguish two speakers' positions."
+      },
+      "competencies": [
+        "co.point-de-vue",
+        "co.inference"
+      ],
+      "instructions": "Écoutez le débat et répondez à la question.",
+      "question": "Sur quoi les deux intervenants sont-ils d'accord ?",
+      "audio": {
+        "text": "— Le tramway coûtera cher, c'est vrai, mais il réduira les embouteillages pour des décennies. — Je ne conteste pas qu'il faille améliorer les transports. Simplement, pour le même prix, on pourrait doubler le nombre d'autobus dès l'an prochain.",
+        "speaker": "Narratrice"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Le tramway est la meilleure solution.",
+          "explanation": "Only the first speaker thinks so."
+        },
+        {
+          "id": "b",
+          "text": "Il faut doubler le nombre d'autobus.",
+          "explanation": "Only the second speaker proposes it."
+        },
+        {
+          "id": "c",
+          "text": "Le projet ne coûtera pas cher.",
+          "explanation": "Both accept it is expensive."
+        },
+        {
+          "id": "d",
+          "text": "Les transports doivent être améliorés.",
+          "explanation": "Yes: the second says « Je ne conteste pas qu'il faille améliorer les transports »."
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "id": "t1-ce-affiche-piscine",
+      "type": "select",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Practical notice: find a specific detail."
+      },
+      "competencies": [
+        "ce.document-pratique",
+        "vocab.jours-horaires"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "passage": "PISCINE MUNICIPALE — Horaires d'été. Bain libre : du lundi au vendredi, de 12 h à 20 h. Samedi et dimanche : de 10 h à 18 h. Fermeture exceptionnelle le lundi 1er juillet. Bonnet de bain obligatoire.",
+      "question": "Quand peut-on nager le samedi ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "De 10 h à 18 h.",
+          "explanation": "Yes: « Samedi et dimanche : de 10 h à 18 h »."
+        },
+        {
+          "id": "b",
+          "text": "De 12 h à 20 h.",
+          "explanation": "That's Monday to Friday."
+        },
+        {
+          "id": "c",
+          "text": "Jamais : c'est fermé.",
+          "explanation": "Only Monday 1 July is closed."
+        },
+        {
+          "id": "d",
+          "text": "Seulement le matin.",
+          "explanation": "It's open until 18 h."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "t1-ce-courriel-voisin",
+      "type": "select",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Short message: understand the request."
+      },
+      "competencies": [
+        "ce.message",
+        "ce.intention"
+      ],
+      "instructions": "Lisez le message et répondez à la question.",
+      "passage": "Bonjour Karim, je pars en vacances du 3 au 10 août. Est-ce que tu pourrais arroser mes plantes deux fois pendant mon absence ? Je te laisserai la clé chez la gardienne. Merci mille fois ! Sophie",
+      "question": "Que demande Sophie à Karim ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "De garder sa clé pendant un an.",
+          "explanation": "The key is left with the caretaker, for the holidays only."
+        },
+        {
+          "id": "b",
+          "text": "De s'occuper de ses plantes.",
+          "explanation": "Yes: « arroser mes plantes deux fois »."
+        },
+        {
+          "id": "c",
+          "text": "De partir en vacances avec elle.",
+          "explanation": "She leaves alone; she asks for help."
+        },
+        {
+          "id": "d",
+          "text": "D'appeler la gardienne.",
+          "explanation": "He only picks up the key there."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "t1-ce-annonce-emploi",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Job ad: identify a requirement."
+      },
+      "competencies": [
+        "ce.document-pratique",
+        "ce.information-cle"
+      ],
+      "instructions": "Lisez l'annonce et répondez à la question.",
+      "passage": "Librairie du Plateau recherche un(e) libraire à temps partiel (20 h/semaine, dont un samedi sur deux). Expérience en vente souhaitée mais non exigée. Bilinguisme français-anglais indispensable. Envoyez votre CV avant le 15 mars.",
+      "question": "Quelle condition est obligatoire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Avoir déjà travaillé dans la vente.",
+          "explanation": "« souhaitée mais non exigée »: wished, not required."
+        },
+        {
+          "id": "b",
+          "text": "Travailler tous les samedis.",
+          "explanation": "One Saturday out of two."
+        },
+        {
+          "id": "c",
+          "text": "Parler français et anglais.",
+          "explanation": "Yes: « indispensable »."
+        },
+        {
+          "id": "d",
+          "text": "Travailler à temps plein.",
+          "explanation": "It's part-time: 20 h a week."
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "t1-ce-article-velo",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Short article: identify the main idea."
+      },
+      "competencies": [
+        "ce.idee-principale",
+        "ce.information-cle"
+      ],
+      "instructions": "Lisez l'article et répondez à la question.",
+      "passage": "Depuis l'ouverture de la nouvelle piste cyclable sur la rue Saint-Denis, le nombre de cyclistes a augmenté de 40 % en un an. Les commerçants, inquiets au départ de perdre des places de stationnement, constatent aujourd'hui une fréquentation stable, voire en hausse.",
+      "question": "Que montre cet article ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La piste cyclable a fait baisser les ventes.",
+          "explanation": "Sales are stable or rising."
+        },
+        {
+          "id": "b",
+          "text": "Les commerçants sont toujours très inquiets.",
+          "explanation": "They were worried « au départ », not now."
+        },
+        {
+          "id": "c",
+          "text": "On a créé plus de places de stationnement.",
+          "explanation": "Parking spaces were reduced, not created."
+        },
+        {
+          "id": "d",
+          "text": "La piste est un succès sans nuire aux commerces.",
+          "explanation": "Yes: +40 % cyclists, stable or higher customer numbers."
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "id": "t1-ce-reglement-bibliotheque",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Rules: apply a condition to a situation."
+      },
+      "competencies": [
+        "ce.document-pratique",
+        "ce.inference"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "passage": "Bibliothèque Mile-End. Les livres sont prêtés pour trois semaines. Le prêt peut être renouvelé une fois, en ligne, sauf si un autre abonné a réservé le document. Les DVD sont prêtés pour une semaine et ne peuvent pas être renouvelés.",
+      "question": "Léa a emprunté un livre que personne n'a réservé. Que peut-elle faire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le garder six semaines au total en le renouvelant en ligne.",
+          "explanation": "Yes: three weeks, renewable once, online, when nobody has reserved it."
+        },
+        {
+          "id": "b",
+          "text": "Le renouveler autant de fois qu'elle veut.",
+          "explanation": "Only once."
+        },
+        {
+          "id": "c",
+          "text": "Le garder une semaine seulement.",
+          "explanation": "One week is for DVDs."
+        },
+        {
+          "id": "d",
+          "text": "Le renouveler uniquement sur place.",
+          "explanation": "Renewal is « en ligne »."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "t1-ce-tribune-teletravail",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Opinion piece: identify the author's position."
+      },
+      "competencies": [
+        "ce.point-de-vue",
+        "gram.connecteur-opposition"
+      ],
+      "instructions": "Lisez le texte et répondez à la question.",
+      "passage": "On présente souvent le télétravail comme une liberté retrouvée. Certes, il supprime les trajets et offre de la souplesse. Mais à force de faire disparaître la frontière entre bureau et domicile, il transforme chaque soirée en temps potentiellement travaillé. La vraie liberté passe donc moins par le lieu de travail que par un droit clair à la déconnexion.",
+      "question": "Quelle est la position de l'auteur ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le télétravail devrait être interdit.",
+          "explanation": "He never asks for a ban."
+        },
+        {
+          "id": "b",
+          "text": "Il faut garantir un droit à la déconnexion.",
+          "explanation": "Yes: his conclusion with « donc »."
+        },
+        {
+          "id": "c",
+          "text": "Le télétravail n'a aucun avantage.",
+          "explanation": "He recognises its advantages: « Certes… »."
+        },
+        {
+          "id": "d",
+          "text": "Les trajets sont le principal problème du travail.",
+          "explanation": "Trajets are only mentioned as an advantage of remote work."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "t1-ce-rapport-alimentation",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Informative text: understand an implicit relation."
+      },
+      "competencies": [
+        "ce.inference",
+        "ce.information-cle"
+      ],
+      "instructions": "Lisez le texte et répondez à la question.",
+      "passage": "Selon une enquête récente, les ménages qui planifient leurs repas pour la semaine jettent en moyenne deux fois moins de nourriture que les autres. Les chercheurs précisent toutefois que ce lien ne prouve pas à lui seul que la planification soit la cause de cette différence : ces ménages font aussi plus souvent leurs courses avec une liste.",
+      "question": "Que précisent les chercheurs ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La planification est la seule cause du moindre gaspillage.",
+          "explanation": "They say the link alone doesn't prove it."
+        },
+        {
+          "id": "b",
+          "text": "Les listes de courses augmentent le gaspillage.",
+          "explanation": "Nothing suggests that."
+        },
+        {
+          "id": "c",
+          "text": "Un lien est observé, mais la cause n'est pas démontrée.",
+          "explanation": "Yes: « ce lien ne prouve pas à lui seul que la planification soit la cause »."
+        },
+        {
+          "id": "d",
+          "text": "L'enquête est fausse.",
+          "explanation": "They nuance it; they don't reject it."
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "t1-ce-lettre-mairie",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Formal letter: identify the purpose."
+      },
+      "competencies": [
+        "ce.intention",
+        "ce.registre"
+      ],
+      "instructions": "Lisez la lettre et répondez à la question.",
+      "passage": "Madame la Mairesse, au nom de l'association des résidents de la rue Fabre, je me permets de vous signaler que les travaux annoncés pour mai n'ont toujours pas commencé, alors que la chaussée se dégrade rapidement. Nous souhaiterions connaître le nouveau calendrier et, si possible, être reçus pour en discuter. Veuillez agréer…",
+      "question": "Quel est l'objectif principal de cette lettre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Remercier la mairie pour les travaux terminés.",
+          "explanation": "The works haven't started."
+        },
+        {
+          "id": "b",
+          "text": "Annoncer le début des travaux.",
+          "explanation": "It's the residents writing to the mayor, not an announcement."
+        },
+        {
+          "id": "c",
+          "text": "Demander l'annulation des travaux.",
+          "explanation": "They want the works to happen."
+        },
+        {
+          "id": "d",
+          "text": "Obtenir des informations et un rendez-vous.",
+          "explanation": "Yes: « connaître le nouveau calendrier… être reçus »."
+        }
+      ],
+      "answer": "d"
+    }
+  ]
+}

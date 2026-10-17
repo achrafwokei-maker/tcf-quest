@@ -1,0 +1,237 @@
+{
+  "id": "acad-eo3",
+  "version": 1,
+  "title": "Académie · Expression orale, tâche 3",
+  "review_status": "reviewed",
+  "level": "B1–B2",
+  "context": "academy",
+  "group": "EO-T3",
+  "tcf_target": {
+    "section": "EO",
+    "task": "EO-T3",
+    "purpose": "Académie TCF: strategy for EO-T3, with guided, independent and timed practice."
+  },
+  "items": [
+    {
+      "id": "aeo3-methode",
+      "type": "card",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Défendre un point de vue en 4 min 30",
+      "stage": "B",
+      "points": [
+        "Première phrase : votre opinion claire (« À mon avis, … »).",
+        "Deux arguments, chacun avec un exemple concret tiré de la vie (« Par exemple, dans mon quartier… »).",
+        "Une concession pour nuancer : « Certes…, mais… ».",
+        "Réagissez aux relances de l'examinateur : il veut voir si vous pouvez préciser, pas changer d'avis.",
+        "Conclusion courte qui reprend votre position."
+      ]
+    },
+    {
+      "id": "aeo3-exemple",
+      "type": "card",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "language",
+      "title": "Connecteurs utiles",
+      "stage": "C",
+      "points": [
+        "D'abord / ensuite / enfin",
+        "D'une part… d'autre part…",
+        "Par exemple / prenons le cas de…",
+        "Certes… mais… / Il est vrai que… cependant…",
+        "En conclusion / Pour toutes ces raisons…"
+      ]
+    },
+    {
+      "id": "aeo3-guide-1",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Concession structure."
+      },
+      "level": "B1",
+      "competencies": [
+        "eo.argumenter",
+        "eo.nuancer"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quelle phrase introduit une concession ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« Certes, la voiture est pratique, mais elle pollue beaucoup. »",
+          "explanation": "Yes: « Certes… mais »."
+        },
+        {
+          "id": "b",
+          "text": "« La voiture pollue. »",
+          "explanation": "A plain statement."
+        },
+        {
+          "id": "c",
+          "text": "« Donc la voiture est pratique. »",
+          "explanation": "« Donc » concludes."
+        },
+        {
+          "id": "d",
+          "text": "« Par exemple, ma voiture. »",
+          "explanation": "An example, not a concession."
+        }
+      ],
+      "answer": "a",
+      "stage": "D",
+      "hint": "Look for « certes »."
+    },
+    {
+      "id": "aeo3-guide-2",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Choose a concrete example."
+      },
+      "level": "B1",
+      "competencies": [
+        "eo.exemplifier",
+        "eo.argumenter"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quel exemple soutient le mieux l'argument « Le télétravail fait gagner du temps » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« Ma sœur gagnait deux heures de transport par jour quand elle travaillait chez elle. »",
+          "explanation": "Yes: concrete, related."
+        },
+        {
+          "id": "b",
+          "text": "« Le temps, c'est important. »",
+          "explanation": "Too general."
+        },
+        {
+          "id": "c",
+          "text": "« J'aime mon bureau. »",
+          "explanation": "Unrelated."
+        },
+        {
+          "id": "d",
+          "text": "« Beaucoup de gens travaillent. »",
+          "explanation": "Unrelated."
+        }
+      ],
+      "answer": "a",
+      "stage": "D",
+      "hint": "The best example is specific and directly linked."
+    },
+    {
+      "id": "aeo3-auto-1",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Respond to a challenge."
+      },
+      "level": "B2",
+      "competencies": [
+        "eo.reaction-relance",
+        "eo.nuancer"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "L'examinateur relance : « Mais on dit que cela isole les gens. » Quelle réponse est la meilleure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« C'est vrai pour certains, notamment les nouveaux employés. C'est pourquoi je défends un modèle hybride, avec deux jours au bureau. »",
+          "explanation": "Yes: acknowledges, nuances, keeps a position."
+        },
+        {
+          "id": "b",
+          "text": "« Non. »",
+          "explanation": "No development."
+        },
+        {
+          "id": "c",
+          "text": "« Vous avez raison, je change d'avis. »",
+          "explanation": "No need to abandon your view."
+        },
+        {
+          "id": "d",
+          "text": "« Je ne sais pas. »",
+          "explanation": "No answer."
+        }
+      ],
+      "answer": "a",
+      "stage": "E"
+    },
+    {
+      "id": "aeo3-chrono",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Timed: open with a clear opinion."
+      },
+      "level": "B1",
+      "competencies": [
+        "eo.argumenter",
+        "eo.structure"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quelle première phrase est la meilleure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« À mon avis, il faut limiter les voitures en centre-ville, pour deux raisons. »",
+          "explanation": "Yes: clear opinion + announces the plan."
+        },
+        {
+          "id": "b",
+          "text": "« Euh… c'est compliqué. »",
+          "explanation": "No position."
+        },
+        {
+          "id": "c",
+          "text": "« Les voitures existent depuis longtemps. »",
+          "explanation": "Off-topic start."
+        },
+        {
+          "id": "d",
+          "text": "« Je n'ai pas de voiture. »",
+          "explanation": "Personal, no opinion."
+        }
+      ],
+      "answer": "a",
+      "stage": "F",
+      "time_limit_s": 30
+    },
+    {
+      "id": "aeo3-application",
+      "type": "card",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "outro",
+      "title": "À vous : le point de vue réel",
+      "stage": "H",
+      "body": "Défendez votre opinion sur le télétravail pendant 4 min 30, avec les relances de l'examinatrice.",
+      "link": {
+        "label": "Faire la tâche 3",
+        "to": "/oral/eo3-teletravail"
+      }
+    }
+  ]
+}

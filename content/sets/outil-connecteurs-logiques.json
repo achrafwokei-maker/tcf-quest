@@ -1,0 +1,91 @@
+{
+  "id": "outil-connecteurs-logiques",
+  "version": 1,
+  "title": "Cause, conséquence, addition",
+  "review_status": "reviewed",
+  "level": "B1",
+  "context": "toolbox",
+  "group": "Connecteurs",
+  "tcf_target": {
+    "section": "EE",
+    "purpose": "Boîte à outils: Cause, conséquence, addition."
+  },
+  "items": [
+    {
+      "id": "o-connecteurs-logiques-fiche",
+      "type": "card",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: Cause, conséquence, addition."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Cause, conséquence, addition",
+      "stage": "B",
+      "points": [
+        "Ce que c'est : car, parce que, puisque / donc, c'est pourquoi, ainsi / de plus, en outre.",
+        "Quand l'utiliser : pour enchaîner vos idées en tâche 2 et 3.",
+        "Quand l'éviter : ne commencez pas une phrase par « car ».",
+        "Exemple : « Le loyer est élevé ; c'est pourquoi beaucoup partagent un appartement. »"
+      ]
+    },
+    {
+      "id": "o-connecteurs-logiques-adapter",
+      "type": "type",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: Cause, conséquence, addition."
+      },
+      "level": "B1",
+      "competencies": [
+        "ee.connecteurs"
+      ],
+      "stage": "D",
+      "instructions": "Complétez la phrase.",
+      "instructions_en": "Fill in the gap.",
+      "sentence": "Il pleuvait, ___ nous sommes restés à la maison.",
+      "answers": [
+        "donc"
+      ],
+      "explanation": "« donc »: consequence."
+    },
+    {
+      "id": "o-connecteurs-logiques-pratique",
+      "type": "select",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: Cause, conséquence, addition."
+      },
+      "level": "B1",
+      "competencies": [
+        "ee.connecteurs"
+      ],
+      "stage": "E",
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quel connecteur ajoute un argument ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "De plus",
+          "explanation": "Yes: addition."
+        },
+        {
+          "id": "b",
+          "text": "Pourtant",
+          "explanation": "Opposition."
+        },
+        {
+          "id": "c",
+          "text": "Car",
+          "explanation": "Cause."
+        },
+        {
+          "id": "d",
+          "text": "Bref",
+          "explanation": "Summary."
+        }
+      ],
+      "answer": "a"
+    }
+  ]
+}

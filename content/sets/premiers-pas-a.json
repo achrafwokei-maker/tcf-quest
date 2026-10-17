@@ -1,0 +1,91 @@
+{
+  "id": "premiers-pas-a",
+  "version": 1,
+  "title": "Premiers pas",
+  "review_status": "reviewed",
+  "level": "A1–A2",
+  "context": "practice",
+  "tcf_target": { "section": "CO", "purpose": "First taste of the four TCF sections at A1–A2, using the exercise engine." },
+  "items": [
+    {
+      "id": "ppa-boulangerie",
+      "type": "listen",
+      "tcf_target": { "section": "CO", "purpose": "Understand a short everyday dialogue (TCF listening, first items)." },
+      "level": "A1",
+      "competencies": ["co.dialogue-quotidien", "vocab.commerces"],
+      "instructions": "Écoutez et choisissez.",
+      "instructions_en": "Listen and choose.",
+      "question": "Qu'achète le client ?",
+      "audio": { "text": "Bonjour ! Deux croissants, s'il vous plaît. — Voilà. Ça fait deux euros quarante." },
+      "options": [
+        { "id": "a", "text": "Deux croissants.", "explanation": "Yes: « Deux croissants, s'il vous plaît »." },
+        { "id": "b", "text": "Deux cafés.", "explanation": "No coffee is mentioned." },
+        { "id": "c", "text": "Un croissant et un café.", "explanation": "The customer asks for two croissants, nothing else." },
+        { "id": "d", "text": "Deux baguettes.", "explanation": "« Deux » is right, but it's croissants, not baguettes." }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "ppa-salle-de-sport",
+      "type": "select",
+      "tcf_target": { "section": "CE", "purpose": "Find practical information in a short notice (TCF reading, everyday documents)." },
+      "level": "A1",
+      "competencies": ["ce.document-pratique", "vocab.jours-horaires"],
+      "instructions": "Lisez et choisissez.",
+      "instructions_en": "Read and choose.",
+      "passage": "SALLE DE SPORT FORME+\nFermé le lundi.\nOuvert de 7 h à 21 h du mardi au samedi.\nDimanche : de 9 h à 13 h.",
+      "question": "Peut-on aller à la salle de sport le lundi ?",
+      "options": [
+        { "id": "a", "text": "Oui, de 7 h à 21 h.", "explanation": "Those are the hours from Tuesday to Saturday." },
+        { "id": "b", "text": "Non, elle est fermée.", "explanation": "Yes: « Fermé le lundi »." },
+        { "id": "c", "text": "Oui, le matin seulement.", "explanation": "Mornings only is the Sunday rule." },
+        { "id": "d", "text": "Seulement avec un abonnement.", "explanation": "The notice says nothing about memberships." }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "ppa-ouverture-ami",
+      "type": "select",
+      "tcf_target": { "section": "EE", "task": "EE-T1", "purpose": "Choose a register-appropriate opening for a message (writing task 1)." },
+      "level": "A1",
+      "competencies": ["ee.registre-ouverture"],
+      "instructions": "Choisissez la bonne formule.",
+      "instructions_en": "Choose the right opening.",
+      "question": "Vous écrivez un message à votre ami Marc. Comment commencez-vous ?",
+      "options": [
+        { "id": "a", "text": "Salut Marc !", "explanation": "Yes: friendly and natural for a friend." },
+        { "id": "b", "text": "Madame, Monsieur,", "explanation": "Too formal: this is for someone you don't know." },
+        { "id": "c", "text": "Monsieur le Directeur,", "explanation": "Very formal, for a director." },
+        { "id": "d", "text": "Cordialement,", "explanation": "This is a closing, not an opening." }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "ppa-cafe-poli",
+      "type": "arrange",
+      "tcf_target": { "section": "EO", "task": "EO-T2", "purpose": "Build the polite request formula used to obtain things in speaking task 2." },
+      "level": "A1",
+      "competencies": ["eo.demande-polie", "gram.conditionnel-politesse"],
+      "instructions": "Remettez les mots dans l'ordre.",
+      "instructions_en": "Put the words in order.",
+      "translation": "I would like a coffee, please.",
+      "answers": [["Je", "voudrais", "un", "café,", "s'il", "vous", "plaît."]],
+      "distractors": ["veux", "une"],
+      "explanation": "« Je voudrais » (conditional) is the polite way to ask. « café » is masculine, so « un café »."
+    },
+    {
+      "id": "ppa-habiter",
+      "type": "type",
+      "tcf_target": { "section": "EO", "task": "EO-T1", "purpose": "Talk about yourself: where you live (speaking task 1)." },
+      "level": "A1",
+      "competencies": ["gram.present-er", "eo.parler-de-soi"],
+      "instructions": "Complétez la phrase.",
+      "instructions_en": "Complete the sentence.",
+      "sentence": "Nous ___ à Paris depuis deux ans.",
+      "base_form": "habiter",
+      "answers": ["habitons"],
+      "hint": "With « nous », regular -er verbs end in -ons.",
+      "explanation": "Present tense of « habiter » with « nous »: nous habitons."
+    }
+  ]
+}

@@ -1,0 +1,1334 @@
+{
+  "id": "diagnostic-1",
+  "version": 1,
+  "title": "Bilan de niveau",
+  "review_status": "reviewed",
+  "level": "A1–C1",
+  "context": "exam",
+  "tcf_target": {
+    "section": "CO",
+    "purpose": "Four-skill level check: adaptive listening and reading, short writing and speaking tasks."
+  },
+  "items": [
+    {
+      "id": "dg-co-a1-cafe",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "A1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Very short request: identify the order."
+      },
+      "competencies": [
+        "co.dialogue-quotidien",
+        "vocab.commerces"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Que commande l'homme ?",
+      "audio": {
+        "text": "Bonjour, un café et un jus d'orange, s'il vous plaît.",
+        "speaker": "M. Delaunay"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Un café et un jus d'orange.",
+          "explanation": "Yes: « un café et un jus d'orange »."
+        },
+        {
+          "id": "b",
+          "text": "Deux cafés.",
+          "explanation": "Only one coffee."
+        },
+        {
+          "id": "c",
+          "text": "Un thé.",
+          "explanation": "Tea isn't mentioned."
+        },
+        {
+          "id": "d",
+          "text": "Un jus de pomme.",
+          "explanation": "It's orange juice."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "dg-co-a1-heure",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "A1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Very short message: catch a time."
+      },
+      "competencies": [
+        "co.information-cle",
+        "vocab.jours-horaires"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "À quelle heure est le rendez-vous ?",
+      "audio": {
+        "text": "Ton rendez-vous chez le médecin, c'est demain à dix heures.",
+        "speaker": "Madame Roux"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "À 2 heures.",
+          "explanation": "No: « dix heures »."
+        },
+        {
+          "id": "b",
+          "text": "À 10 heures.",
+          "explanation": "Yes: « à dix heures »."
+        },
+        {
+          "id": "c",
+          "text": "À 12 heures.",
+          "explanation": "Not said."
+        },
+        {
+          "id": "d",
+          "text": "Aujourd'hui.",
+          "explanation": "It's tomorrow."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "dg-co-a2-meteo",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Weather forecast: morning vs afternoon."
+      },
+      "competencies": [
+        "co.information-cle",
+        "co.annonce"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Quel temps fera-t-il demain après-midi ?",
+      "audio": {
+        "text": "Demain matin, il fera beau, mais l'après-midi, la pluie arrivera sur toute la région.",
+        "speaker": "Narratrice"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Il fera beau.",
+          "explanation": "That's the morning."
+        },
+        {
+          "id": "b",
+          "text": "Il neigera.",
+          "explanation": "Snow isn't mentioned."
+        },
+        {
+          "id": "c",
+          "text": "Il pleuvra.",
+          "explanation": "Yes: « l'après-midi, la pluie arrivera »."
+        },
+        {
+          "id": "d",
+          "text": "Il fera très chaud.",
+          "explanation": "Not said."
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "dg-co-a2-magasin",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Shop dialogue: understand the reason."
+      },
+      "competencies": [
+        "co.dialogue-quotidien",
+        "co.information-cle"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Pourquoi la cliente ne prend-elle pas la veste ?",
+      "audio": {
+        "text": "— Elle vous plaît, cette veste ? — Oui, beaucoup, mais elle est trop petite. Vous l'avez en taille 40 ? — Désolé, il n'y en a plus.",
+        "speaker": "Madame Roux"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle est trop chère.",
+          "explanation": "Price isn't mentioned."
+        },
+        {
+          "id": "b",
+          "text": "La couleur ne lui plaît pas.",
+          "explanation": "She likes it a lot."
+        },
+        {
+          "id": "c",
+          "text": "Elle préfère une robe.",
+          "explanation": "No."
+        },
+        {
+          "id": "d",
+          "text": "Sa taille n'est plus disponible.",
+          "explanation": "Yes: « il n'y en a plus » in size 40."
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "id": "dg-co-a2-message",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Phone message: understand a suggestion."
+      },
+      "competencies": [
+        "co.message-telephonique",
+        "co.information-cle"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Que propose Thomas ?",
+      "audio": {
+        "text": "Salut, c'est Thomas. Il fait beau, ça te dit d'aller au parc cet après-midi ? Rappelle-moi !",
+        "speaker": "M. Delaunay"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "D'aller au parc.",
+          "explanation": "Yes: « aller au parc cet après-midi »."
+        },
+        {
+          "id": "b",
+          "text": "D'aller au cinéma.",
+          "explanation": "No: the park."
+        },
+        {
+          "id": "c",
+          "text": "De se voir demain.",
+          "explanation": "It's this afternoon."
+        },
+        {
+          "id": "d",
+          "text": "De rester à la maison.",
+          "explanation": "No."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "dg-co-b1-annonce",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Airport announcement: understand what to do."
+      },
+      "competencies": [
+        "co.annonce",
+        "co.consequence"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Que doivent faire les passagers du vol pour Paris ?",
+      "audio": {
+        "text": "Les passagers du vol AC 870 à destination de Paris sont informés que l'embarquement est retardé d'une heure en raison d'un problème technique. Un bon repas leur sera remis au comptoir de la porte 12.",
+        "speaker": "Narratrice"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Embarquer immédiatement.",
+          "explanation": "Boarding is delayed by an hour."
+        },
+        {
+          "id": "b",
+          "text": "Aller chercher un bon repas à la porte 12.",
+          "explanation": "Yes: « Un bon repas leur sera remis au comptoir de la porte 12 »."
+        },
+        {
+          "id": "c",
+          "text": "Changer de vol.",
+          "explanation": "Not asked."
+        },
+        {
+          "id": "d",
+          "text": "Rentrer chez eux.",
+          "explanation": "No."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "dg-co-b1-collegue",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Request between colleagues: identify the intention."
+      },
+      "competencies": [
+        "co.intention",
+        "co.dialogue-quotidien"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Que veut la collègue ?",
+      "audio": {
+        "text": "Dis, tu pourrais me remplacer à la réunion de jeudi ? Ma fille a un spectacle à l'école et je ne voudrais pas le manquer. Je te rendrai la pareille !",
+        "speaker": "Madame Roux"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Qu'il vienne au spectacle.",
+          "explanation": "The show is her daughter's."
+        },
+        {
+          "id": "b",
+          "text": "Annuler la réunion.",
+          "explanation": "No."
+        },
+        {
+          "id": "c",
+          "text": "Qu'il assiste à la réunion à sa place.",
+          "explanation": "Yes: « me remplacer à la réunion »."
+        },
+        {
+          "id": "d",
+          "text": "Changer la date du spectacle.",
+          "explanation": "No."
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "dg-co-b1-temoignage",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Testimony: overall opinion despite a drawback."
+      },
+      "competencies": [
+        "co.point-de-vue",
+        "co.intention"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Que pense Samir de son nouveau travail ?",
+      "audio": {
+        "text": "Mon nouveau poste est plus loin de chez moi, c'est vrai, mais l'ambiance est excellente et j'apprends énormément. Je ne regrette pas du tout mon choix.",
+        "speaker": "M. Delaunay"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Il le regrette à cause du trajet.",
+          "explanation": "He mentions the distance but « ne regrette pas du tout »."
+        },
+        {
+          "id": "b",
+          "text": "Il veut changer encore.",
+          "explanation": "No."
+        },
+        {
+          "id": "c",
+          "text": "Il trouve l'ambiance difficile.",
+          "explanation": "The atmosphere is « excellente »."
+        },
+        {
+          "id": "d",
+          "text": "Il en est très satisfait.",
+          "explanation": "Yes: good atmosphere, learning, no regret."
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "id": "dg-co-b2-chronique",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Radio column: main idea against a common belief."
+      },
+      "competencies": [
+        "co.idee-principale",
+        "co.inference"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Quelle est l'idée principale ?",
+      "audio": {
+        "text": "On présente souvent la lecture sur écran comme l'ennemie du livre papier. Pourtant, les données montrent que ceux qui lisent beaucoup en ligne achètent aussi plus de livres. Plutôt qu'une concurrence, il faudrait parler de pratiques qui se nourrissent l'une l'autre.",
+        "speaker": "Narratrice"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Lecture sur écran et livres papier se complètent.",
+          "explanation": "Yes: « des pratiques qui se nourrissent l'une l'autre »."
+        },
+        {
+          "id": "b",
+          "text": "Les écrans font disparaître les livres.",
+          "explanation": "That's the common idea it rejects."
+        },
+        {
+          "id": "c",
+          "text": "On lit moins qu'avant.",
+          "explanation": "Not said."
+        },
+        {
+          "id": "d",
+          "text": "Les livres en ligne sont plus chers.",
+          "explanation": "Price isn't discussed."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "dg-co-b2-entretien",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Interview: implicit self-criticism."
+      },
+      "competencies": [
+        "co.inference",
+        "co.point-de-vue"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Que laisse entendre l'architecte ?",
+      "audio": {
+        "text": "Le projet a gagné tous les prix, et j'en suis fière. Cela dit, si c'était à refaire, je consulterais davantage les habitants dès le départ : un bâtiment primé n'est pas forcément un bâtiment aimé.",
+        "speaker": "Madame Roux"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Le projet est un échec complet.",
+          "explanation": "She is proud of it."
+        },
+        {
+          "id": "b",
+          "text": "Les habitants n'ont pas été assez associés.",
+          "explanation": "Yes: she would consult residents more."
+        },
+        {
+          "id": "c",
+          "text": "Les prix étaient injustes.",
+          "explanation": "No."
+        },
+        {
+          "id": "d",
+          "text": "Elle ne referait rien autrement.",
+          "explanation": "She would change her approach."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "dg-co-c1-debat",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "C1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Debate: nuanced position with concession."
+      },
+      "competencies": [
+        "co.inference",
+        "co.nuance"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Quelle est la position du second intervenant ?",
+      "audio": {
+        "text": "— Taxer les produits sucrés, c'est protéger la santé publique. — Je ne nie pas l'objectif. Je doute simplement qu'une taxe, qui pèse surtout sur les ménages modestes, soit l'outil le plus juste, alors que l'éducation alimentaire produit des effets plus durables.",
+        "speaker": "M. Delaunay"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Il conteste l'objectif de santé publique.",
+          "explanation": "« Je ne nie pas l'objectif »."
+        },
+        {
+          "id": "b",
+          "text": "Il approuve la taxe sans réserve.",
+          "explanation": "He doubts it."
+        },
+        {
+          "id": "c",
+          "text": "Il partage l'objectif mais doute de la justice et de l'efficacité de la taxe.",
+          "explanation": "Yes: same goal, other tool."
+        },
+        {
+          "id": "d",
+          "text": "Il veut supprimer l'éducation alimentaire.",
+          "explanation": "He prefers it."
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "dg-co-c1-conference",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "C1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Lecture: thesis behind an example."
+      },
+      "competencies": [
+        "co.idee-principale",
+        "co.inference"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Que soutient la conférencière ?",
+      "audio": {
+        "text": "Mesurer la richesse d'un pays par son seul produit intérieur brut revient à confondre l'activité et le bien-être : une catastrophe qui oblige à reconstruire fait croître le PIB, sans que personne ne s'en trouve mieux. D'où l'intérêt d'indicateurs complémentaires.",
+        "speaker": "Narratrice"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Le PIB est un indicateur parfait.",
+          "explanation": "She criticises it."
+        },
+        {
+          "id": "b",
+          "text": "Les catastrophes enrichissent les pays.",
+          "explanation": "That's an example of the PIB's limit, not her thesis."
+        },
+        {
+          "id": "c",
+          "text": "Il faut supprimer le PIB.",
+          "explanation": "She wants complements, not removal."
+        },
+        {
+          "id": "d",
+          "text": "Le PIB doit être complété par d'autres mesures du bien-être.",
+          "explanation": "Yes: « D'où l'intérêt d'indicateurs complémentaires »."
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "id": "dg-ce-a1-panneau",
+      "type": "select",
+      "pool": "assessment",
+      "level": "A1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Very short notice: find a day."
+      },
+      "competencies": [
+        "ce.document-pratique",
+        "vocab.jours-horaires"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Quand la boulangerie est-elle fermée ?",
+      "passage": "BOULANGERIE — Ouvert du mardi au dimanche, de 7 h à 19 h. Fermé le lundi.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le lundi.",
+          "explanation": "Yes: « Fermé le lundi »."
+        },
+        {
+          "id": "b",
+          "text": "Le dimanche.",
+          "explanation": "It's open on Sunday."
+        },
+        {
+          "id": "c",
+          "text": "Le mardi.",
+          "explanation": "It's open."
+        },
+        {
+          "id": "d",
+          "text": "Tous les soirs à 17 h.",
+          "explanation": "It closes at 19 h."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "dg-ce-a1-sms",
+      "type": "select",
+      "pool": "assessment",
+      "level": "A1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Very short text message."
+      },
+      "competencies": [
+        "ce.message",
+        "ce.information-cle"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Où est Léo ?",
+      "passage": "Je suis à la gare. J'arrive dans 10 minutes ! Léo",
+      "options": [
+        {
+          "id": "a",
+          "text": "À la maison.",
+          "explanation": "No: « à la gare »."
+        },
+        {
+          "id": "b",
+          "text": "À la gare.",
+          "explanation": "Yes."
+        },
+        {
+          "id": "c",
+          "text": "Au travail.",
+          "explanation": "No."
+        },
+        {
+          "id": "d",
+          "text": "À l'école.",
+          "explanation": "No."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "dg-ce-a2-invitation",
+      "type": "select",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Invitation: find what is asked."
+      },
+      "competencies": [
+        "ce.message",
+        "ce.information-cle"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Que doivent apporter les invités ?",
+      "passage": "Chers amis, pour mes 30 ans, je vous invite samedi à 19 h chez moi. J'ai prévu le repas, apportez simplement quelque chose à boire ! Merci de répondre avant jeudi. Clara",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un plat.",
+          "explanation": "Clara prepares the meal."
+        },
+        {
+          "id": "b",
+          "text": "Un cadeau.",
+          "explanation": "Not asked."
+        },
+        {
+          "id": "c",
+          "text": "Une boisson.",
+          "explanation": "Yes: « apportez simplement quelque chose à boire »."
+        },
+        {
+          "id": "d",
+          "text": "Rien du tout.",
+          "explanation": "They bring a drink."
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "dg-ce-a2-horaire",
+      "type": "select",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Timetable: apply information to a situation."
+      },
+      "competencies": [
+        "ce.document-pratique",
+        "ce.inference"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Paul arrive à l'arrêt à 8 h 20. Quand passe le prochain bus ?",
+      "passage": "Ligne 24 — départs le matin : 8 h 05, 8 h 15, 8 h 30, 8 h 45, puis toutes les 30 minutes.",
+      "options": [
+        {
+          "id": "a",
+          "text": "8 h 15.",
+          "explanation": "It's already gone at 8 h 20."
+        },
+        {
+          "id": "b",
+          "text": "8 h 45.",
+          "explanation": "There's an earlier one."
+        },
+        {
+          "id": "c",
+          "text": "9 h 00.",
+          "explanation": "The next is at 8 h 30."
+        },
+        {
+          "id": "d",
+          "text": "8 h 30.",
+          "explanation": "Yes: the next departure after 8 h 20."
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "id": "dg-ce-a2-recette",
+      "type": "select",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Recipe: avoid number distractors."
+      },
+      "competencies": [
+        "ce.document-pratique",
+        "ce.information-cle"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Combien de temps faut-il laisser le gâteau au four ?",
+      "passage": "Gâteau au yaourt : mélanger les ingrédients, verser dans un moule, puis cuire 35 minutes à 180 degrés. Laisser refroidir 10 minutes avant de servir.",
+      "options": [
+        {
+          "id": "a",
+          "text": "35 minutes.",
+          "explanation": "Yes: « cuire 35 minutes »."
+        },
+        {
+          "id": "b",
+          "text": "10 minutes.",
+          "explanation": "That's the cooling time."
+        },
+        {
+          "id": "c",
+          "text": "180 minutes.",
+          "explanation": "180 is the temperature."
+        },
+        {
+          "id": "d",
+          "text": "45 minutes.",
+          "explanation": "That adds cooling time."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "dg-ce-b1-courriel",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Formal notice: identify the purpose."
+      },
+      "competencies": [
+        "ce.intention",
+        "ce.information-cle"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Pourquoi le propriétaire écrit-il ?",
+      "passage": "Madame, je vous informe que des travaux de peinture auront lieu dans le hall de l'immeuble du 4 au 8 mars. L'accès restera possible, mais l'ascenseur sera hors service le 6 mars. Merci de votre compréhension.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pour augmenter le loyer.",
+          "explanation": "Rent isn't mentioned."
+        },
+        {
+          "id": "b",
+          "text": "Pour prévenir de travaux et d'une gêne.",
+          "explanation": "Yes: painting works and the lift out of service."
+        },
+        {
+          "id": "c",
+          "text": "Pour demander de l'aide.",
+          "explanation": "No."
+        },
+        {
+          "id": "d",
+          "text": "Pour fermer l'immeuble.",
+          "explanation": "Access remains possible."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "dg-ce-b1-article",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Short article: main idea."
+      },
+      "competencies": [
+        "ce.idee-principale",
+        "ce.information-cle"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Que dit l'article ?",
+      "passage": "De plus en plus d'entreprises proposent à leurs employés de venir travailler à vélo en leur offrant une prime mensuelle. Selon une étude, ces employés sont moins souvent malades et arrivent plus détendus au travail.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le vélo est interdit dans les entreprises.",
+          "explanation": "The opposite."
+        },
+        {
+          "id": "b",
+          "text": "Les employés cyclistes paient une prime.",
+          "explanation": "They receive it."
+        },
+        {
+          "id": "c",
+          "text": "Encourager le vélo a des effets positifs sur les employés.",
+          "explanation": "Yes: fewer sick days, more relaxed."
+        },
+        {
+          "id": "d",
+          "text": "Les employés préfèrent la voiture.",
+          "explanation": "Not said."
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "dg-ce-b1-regles",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Rules: apply two conditions."
+      },
+      "competencies": [
+        "ce.document-pratique",
+        "ce.inference"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Inès a 16 ans. Peut-elle s'inscrire seule ?",
+      "passage": "Inscription au club de natation : à partir de 14 ans. Les moins de 18 ans doivent présenter une autorisation signée par un parent.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, sans aucun document.",
+          "explanation": "Under 18 needs a signed authorisation."
+        },
+        {
+          "id": "b",
+          "text": "Non, elle est trop jeune.",
+          "explanation": "The minimum age is 14."
+        },
+        {
+          "id": "c",
+          "text": "Seulement à 18 ans.",
+          "explanation": "No."
+        },
+        {
+          "id": "d",
+          "text": "Oui, avec une autorisation d'un parent.",
+          "explanation": "Yes: 14+ and under 18 with parental authorisation."
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "id": "dg-ce-b2-tribune",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Opinion piece: position after a concession."
+      },
+      "competencies": [
+        "ce.point-de-vue",
+        "ce.inference"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Quelle est la position de l'auteure ?",
+      "passage": "On reproche aux jeunes de ne plus lire. Mais lisent-ils moins, ou autrement ? Messages, articles, forums : jamais une génération n'a autant lu au quotidien. Ce qui recule, c'est la lecture longue et suivie, et c'est elle que l'école devrait protéger.",
+      "options": [
+        {
+          "id": "a",
+          "text": "La lecture longue recule et doit être protégée.",
+          "explanation": "Yes: her conclusion."
+        },
+        {
+          "id": "b",
+          "text": "Les jeunes ne lisent plus du tout.",
+          "explanation": "She says they read a lot daily."
+        },
+        {
+          "id": "c",
+          "text": "Les forums remplacent bien les livres.",
+          "explanation": "She worries about long reading."
+        },
+        {
+          "id": "d",
+          "text": "L'école doit interdire les téléphones.",
+          "explanation": "Not said."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "dg-ce-b2-rapport",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Report: understand a nuance."
+      },
+      "competencies": [
+        "ce.inference",
+        "ce.information-cle"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Que conclut le rapport ?",
+      "passage": "Les villes qui ont réduit la vitesse à 30 km/h ont vu baisser le nombre d'accidents graves. Le rapport souligne toutefois que la baisse a été plus forte là où la mesure s'accompagnait d'aménagements de la chaussée.",
+      "options": [
+        {
+          "id": "a",
+          "text": "La vitesse n'a aucun effet.",
+          "explanation": "Serious accidents fell."
+        },
+        {
+          "id": "b",
+          "text": "Les aménagements renforcent l'effet de la baisse de vitesse.",
+          "explanation": "Yes: stronger drop with road changes."
+        },
+        {
+          "id": "c",
+          "text": "Les accidents ont augmenté.",
+          "explanation": "They decreased."
+        },
+        {
+          "id": "d",
+          "text": "Il faut revenir à 50 km/h.",
+          "explanation": "Not said."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "dg-ce-c1-essai",
+      "type": "select",
+      "pool": "assessment",
+      "level": "C1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Essay extract: abstract argument."
+      },
+      "competencies": [
+        "ce.inference",
+        "ce.nuance"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Que reproche l'auteur à la notion de « méritocratie » ?",
+      "passage": "La méritocratie se présente comme un idéal de justice : chacun obtiendrait la place qu'il mérite. Encore faudrait-il que tous partent de la même ligne. Faute de quoi, elle risque de transformer des avantages hérités en mérites individuels, et de rendre les inégalités d'autant plus acceptables qu'elles paraissent justifiées.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle est totalement injuste par nature.",
+          "explanation": "He criticises it under unequal starting points."
+        },
+        {
+          "id": "b",
+          "text": "Elle supprime toutes les inégalités.",
+          "explanation": "The opposite risk."
+        },
+        {
+          "id": "c",
+          "text": "Elle peut légitimer des inégalités héritées.",
+          "explanation": "Yes: inherited advantages presented as merit."
+        },
+        {
+          "id": "d",
+          "text": "Elle n'existe pas.",
+          "explanation": "He discusses its effects."
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "dg-ce-c1-editorial",
+      "type": "select",
+      "pool": "assessment",
+      "level": "C1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Editorial: identify an ironic tone."
+      },
+      "competencies": [
+        "ce.point-de-vue",
+        "ce.nuance"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Quel est le ton de l'éditorialiste ?",
+      "passage": "Le gouvernement promet, pour la troisième fois en dix ans, une « grande réforme » du logement. On saluera l'ambition. On attendra, avec la patience que l'expérience impose, de voir les premiers chantiers sortir de terre.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Enthousiaste.",
+          "explanation": "« la patience que l'expérience impose » shows doubt."
+        },
+        {
+          "id": "b",
+          "text": "Indifférent.",
+          "explanation": "He clearly comments."
+        },
+        {
+          "id": "c",
+          "text": "Violemment hostile.",
+          "explanation": "The tone is restrained."
+        },
+        {
+          "id": "d",
+          "text": "Ironique et sceptique.",
+          "explanation": "Yes: polite praise, then doubt based on past promises."
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "id": "dg-co-a1-nom",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "A1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Level check: extend the staircase at the extremes."
+      },
+      "competencies": [
+        "co.information-cle"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Comment s'appelle la femme ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sophie.",
+          "explanation": "Yes: « je m'appelle Sophie »."
+        },
+        {
+          "id": "b",
+          "text": "Sylvie.",
+          "explanation": "No."
+        },
+        {
+          "id": "c",
+          "text": "Sarah.",
+          "explanation": "No."
+        },
+        {
+          "id": "d",
+          "text": "Julie.",
+          "explanation": "No."
+        }
+      ],
+      "answer": "a",
+      "audio": {
+        "text": "Bonjour, je m'appelle Sophie.",
+        "speaker": "Madame Roux"
+      }
+    },
+    {
+      "id": "dg-co-a1-prix",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "A1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Level check: extend the staircase at the extremes."
+      },
+      "competencies": [
+        "co.information-cle"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Combien coûte la baguette ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 $.",
+          "explanation": "No."
+        },
+        {
+          "id": "b",
+          "text": "2 $.",
+          "explanation": "Yes: « deux dollars »."
+        },
+        {
+          "id": "c",
+          "text": "10 $.",
+          "explanation": "No."
+        },
+        {
+          "id": "d",
+          "text": "12 $.",
+          "explanation": "No."
+        }
+      ],
+      "answer": "b",
+      "audio": {
+        "text": "La baguette, c'est deux dollars.",
+        "speaker": "M. Delaunay"
+      }
+    },
+    {
+      "id": "dg-co-c1-chronique",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "C1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Level check: extend the staircase at the extremes."
+      },
+      "competencies": [
+        "co.nuance"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Que soutient la chroniqueuse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La lenteur est un luxe de riches.",
+          "explanation": "The view she rejects."
+        },
+        {
+          "id": "b",
+          "text": "Il faut acheter plus.",
+          "explanation": "No."
+        },
+        {
+          "id": "c",
+          "text": "Ralentir peut aussi être une source d'économies.",
+          "explanation": "Yes: her « au contraire » point."
+        },
+        {
+          "id": "d",
+          "text": "La fatigue n'a pas d'importance.",
+          "explanation": "No."
+        }
+      ],
+      "answer": "c",
+      "audio": {
+        "text": "On présente la lenteur comme un luxe réservé à ceux qui en ont les moyens. Je crois au contraire que ralentir, c'est souvent dépenser moins : moins de trajets, moins d'achats impulsifs, moins de fatigue.",
+        "speaker": "Narratrice"
+      }
+    },
+    {
+      "id": "dg-co-c1-festival",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "C1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Level check: extend the staircase at the extremes."
+      },
+      "competencies": [
+        "co.inference"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Que reproche le second intervenant ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le festival a attiré trop peu de monde.",
+          "explanation": "100 000 people."
+        },
+        {
+          "id": "b",
+          "text": "Les habitants ont adoré.",
+          "explanation": "They had noise."
+        },
+        {
+          "id": "c",
+          "text": "Les ventes ont augmenté partout.",
+          "explanation": "They fell in the centre."
+        },
+        {
+          "id": "d",
+          "text": "Le succès ne profite pas à tout le monde.",
+          "explanation": "Yes: « Un succès pour qui ? »."
+        }
+      ],
+      "answer": "d",
+      "audio": {
+        "text": "— Ce festival a attiré cent mille personnes, c'est un succès. — Un succès pour qui ? Les commerçants du centre ont vu leurs ventes baisser, et les habitants ont eu trois jours de bruit.",
+        "speaker": "M. Delaunay"
+      }
+    },
+    {
+      "id": "dg-ce-a1-menu",
+      "type": "select",
+      "pool": "assessment",
+      "level": "A1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Level check: extend the staircase at the extremes."
+      },
+      "competencies": [
+        "ce.document-pratique"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Que boit-on avec le menu ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un jus de pomme.",
+          "explanation": "Yes: as written."
+        },
+        {
+          "id": "b",
+          "text": "Un café.",
+          "explanation": "No."
+        },
+        {
+          "id": "c",
+          "text": "De l'eau.",
+          "explanation": "No."
+        },
+        {
+          "id": "d",
+          "text": "Un thé.",
+          "explanation": "No."
+        }
+      ],
+      "answer": "a",
+      "passage": "Menu du midi : soupe, sandwich et un jus de pomme."
+    },
+    {
+      "id": "dg-ce-a1-porte",
+      "type": "select",
+      "pool": "assessment",
+      "level": "A1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Level check: extend the staircase at the extremes."
+      },
+      "competencies": [
+        "ce.document-pratique"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Que faut-il faire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pousser la porte.",
+          "explanation": "The opposite."
+        },
+        {
+          "id": "b",
+          "text": "Ne pas pousser la porte.",
+          "explanation": "Yes: as written."
+        },
+        {
+          "id": "c",
+          "text": "Fermer la porte à clé.",
+          "explanation": "No."
+        },
+        {
+          "id": "d",
+          "text": "Sonner.",
+          "explanation": "No."
+        }
+      ],
+      "answer": "b",
+      "passage": "Porte automatique. Ne pas pousser."
+    },
+    {
+      "id": "dg-ce-c1-essai-2",
+      "type": "select",
+      "pool": "assessment",
+      "level": "C1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Level check: extend the staircase at the extremes."
+      },
+      "competencies": [
+        "ce.nuance"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Quelle est l'idée de l'auteur ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Internet suffit pour savoir.",
+          "explanation": "He says it doesn't."
+        },
+        {
+          "id": "b",
+          "text": "Il y a trop peu d'informations.",
+          "explanation": "Millions."
+        },
+        {
+          "id": "c",
+          "text": "Relier les informations reste l'essentiel.",
+          "explanation": "Yes: his last sentence."
+        },
+        {
+          "id": "d",
+          "text": "Il faut éviter Internet.",
+          "explanation": "Not said."
+        }
+      ],
+      "answer": "c",
+      "passage": "On confond souvent information et connaissance. Disposer en un clic de millions de faits ne dispense pas de l'effort de les relier entre eux ; c'est même cet effort, devenu plus rare, qui fait désormais la différence."
+    },
+    {
+      "id": "dg-ce-c1-tribune",
+      "type": "select",
+      "pool": "assessment",
+      "level": "C1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Level check: extend the staircase at the extremes."
+      },
+      "competencies": [
+        "ce.inference"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "question": "Que sous-entend l'auteure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "C'est un vrai lieu de détente.",
+          "explanation": "Ironic."
+        },
+        {
+          "id": "b",
+          "text": "Il manque des magasins.",
+          "explanation": "« On y trouve tout »."
+        },
+        {
+          "id": "c",
+          "text": "Les bancs sont trop nombreux.",
+          "explanation": "There are none."
+        },
+        {
+          "id": "d",
+          "text": "Ce « lieu de vie » sert surtout à faire consommer.",
+          "explanation": "Yes: ironic remark about benches."
+        }
+      ],
+      "answer": "d",
+      "passage": "Le centre commercial se présente comme un « lieu de vie ». On y trouve tout, sauf un banc où s'asseoir sans consommer."
+    }
+  ]
+}

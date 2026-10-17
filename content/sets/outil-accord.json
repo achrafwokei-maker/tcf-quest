@@ -1,0 +1,92 @@
+{
+  "id": "outil-accord",
+  "version": 1,
+  "title": "Accords sujet-verbe et adjectifs",
+  "review_status": "reviewed",
+  "level": "B1",
+  "context": "toolbox",
+  "group": "Grammaire",
+  "tcf_target": {
+    "section": "EE",
+    "purpose": "Boîte à outils: Accords sujet-verbe et adjectifs."
+  },
+  "items": [
+    {
+      "id": "o-accord-fiche",
+      "type": "card",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: Accords sujet-verbe et adjectifs."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Accords sujet-verbe et adjectifs",
+      "stage": "B",
+      "points": [
+        "Ce que c'est : le verbe s'accorde avec son sujet ; l'adjectif avec le nom (genre et nombre).",
+        "Quand l'utiliser : à chaque relecture : c'est souvent ce qui fait perdre des points.",
+        "Quand l'éviter : attention au sujet éloigné : « Les enfants de ma voisine sont… »",
+        "Exemple : « Les employés étaient gentils. » / « une ville animée »"
+      ]
+    },
+    {
+      "id": "o-accord-adapter",
+      "type": "type",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: Accords sujet-verbe et adjectifs."
+      },
+      "level": "B1",
+      "competencies": [
+        "gram.accord"
+      ],
+      "stage": "D",
+      "instructions": "Complétez la phrase.",
+      "instructions_en": "Fill in the gap.",
+      "sentence": "Les cours de yoga ___ compris dans le prix.",
+      "answers": [
+        "sont"
+      ],
+      "base_form": "être",
+      "explanation": "Plural subject « les cours » → « sont »."
+    },
+    {
+      "id": "o-accord-pratique",
+      "type": "select",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: Accords sujet-verbe et adjectifs."
+      },
+      "level": "B1",
+      "competencies": [
+        "gram.accord"
+      ],
+      "stage": "E",
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quelle phrase est correcte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« Les gens est accueillants. »",
+          "explanation": "« les gens » is plural."
+        },
+        {
+          "id": "b",
+          "text": "« Les gens sont accueillants. »",
+          "explanation": "Yes."
+        },
+        {
+          "id": "c",
+          "text": "« Les gens sont accueillant. »",
+          "explanation": "Adjective agreement missing."
+        },
+        {
+          "id": "d",
+          "text": "« Les gens êtes accueillants. »",
+          "explanation": "Wrong person."
+        }
+      ],
+      "answer": "b"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "outil-conditionnel-politesse",
+  "version": 1,
+  "title": "Le conditionnel de politesse",
+  "review_status": "reviewed",
+  "level": "B1",
+  "context": "toolbox",
+  "group": "Grammaire",
+  "tcf_target": {
+    "section": "EO",
+    "task": "EO-T2",
+    "purpose": "Boîte à outils: Le conditionnel de politesse."
+  },
+  "items": [
+    {
+      "id": "o-conditionnel-politesse-fiche",
+      "type": "card",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Boîte à outils: Le conditionnel de politesse."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Le conditionnel de politesse",
+      "stage": "B",
+      "points": [
+        "Ce que c'est : je voudrais, pourriez-vous, j'aimerais, serait-il possible de…",
+        "Quand l'utiliser : pour demander poliment (tâche 2, messages formels).",
+        "Quand l'éviter : pas besoin de le répéter dans chaque phrase : variez.",
+        "Exemple : « Serait-il possible de visiter l'appartement jeudi ? »"
+      ]
+    },
+    {
+      "id": "o-conditionnel-politesse-adapter",
+      "type": "type",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Boîte à outils: Le conditionnel de politesse."
+      },
+      "level": "B1",
+      "competencies": [
+        "gram.conditionnel-politesse"
+      ],
+      "stage": "D",
+      "instructions": "Complétez la phrase.",
+      "instructions_en": "Fill in the gap.",
+      "sentence": "Bonjour, je ___ réserver une table pour deux.",
+      "answers": [
+        "voudrais",
+        "souhaiterais",
+        "aimerais"
+      ],
+      "base_form": "vouloir",
+      "explanation": "Polite request: « je voudrais »."
+    },
+    {
+      "id": "o-conditionnel-politesse-pratique",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Boîte à outils: Le conditionnel de politesse."
+      },
+      "level": "B1",
+      "competencies": [
+        "gram.conditionnel-politesse"
+      ],
+      "stage": "E",
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quelle demande est la plus polie ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« Donnez-moi le prix. »",
+          "explanation": "Imperative: too direct."
+        },
+        {
+          "id": "b",
+          "text": "« Pourriez-vous m'indiquer le prix ? »",
+          "explanation": "Yes: conditional."
+        },
+        {
+          "id": "c",
+          "text": "« Le prix ! »",
+          "explanation": "Rude."
+        },
+        {
+          "id": "d",
+          "text": "« Je veux le prix. »",
+          "explanation": "Too direct."
+        }
+      ],
+      "answer": "b"
+    }
+  ]
+}

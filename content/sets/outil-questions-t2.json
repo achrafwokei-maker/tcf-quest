@@ -1,0 +1,95 @@
+{
+  "id": "outil-questions-t2",
+  "version": 1,
+  "title": "Poser des questions (tâche 2)",
+  "review_status": "reviewed",
+  "level": "B1",
+  "context": "toolbox",
+  "group": "Cadres de réponse",
+  "tcf_target": {
+    "section": "EO",
+    "task": "EO-T2",
+    "purpose": "Boîte à outils: Poser des questions (tâche 2)."
+  },
+  "items": [
+    {
+      "id": "o-questions-t2-fiche",
+      "type": "card",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Boîte à outils: Poser des questions (tâche 2)."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Poser des questions (tâche 2)",
+      "stage": "B",
+      "points": [
+        "Ce que c'est : trois formes de question : est-ce que, inversion, question indirecte.",
+        "Quand l'utiliser : pour varier et rester poli au téléphone.",
+        "Quand l'éviter : n'utilisez pas « est-ce que » dans une question indirecte.",
+        "Exemple : « Pourriez-vous me dire à quelle heure vous fermez ? »"
+      ]
+    },
+    {
+      "id": "o-questions-t2-adapter",
+      "type": "type",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Boîte à outils: Poser des questions (tâche 2)."
+      },
+      "level": "B1",
+      "competencies": [
+        "eo.question-polie"
+      ],
+      "stage": "D",
+      "instructions": "Complétez la phrase.",
+      "instructions_en": "Fill in the gap.",
+      "sentence": "Je voudrais savoir ___ le parking est gratuit.",
+      "answers": [
+        "si"
+      ],
+      "explanation": "Indirect yes/no question: « savoir si »."
+    },
+    {
+      "id": "o-questions-t2-pratique",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Boîte à outils: Poser des questions (tâche 2)."
+      },
+      "level": "B1",
+      "competencies": [
+        "eo.question-polie"
+      ],
+      "stage": "E",
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quelle question est correcte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« Je voudrais savoir quand est-ce que vous ouvrez. »",
+          "explanation": "No « est-ce que » after « savoir »."
+        },
+        {
+          "id": "b",
+          "text": "« Je voudrais savoir quand vous ouvrez. »",
+          "explanation": "Yes."
+        },
+        {
+          "id": "c",
+          "text": "« Je voudrais savoir quand ouvrez-vous. »",
+          "explanation": "No inversion in indirect questions."
+        },
+        {
+          "id": "d",
+          "text": "« Je voudrais savoir que vous ouvrez. »",
+          "explanation": "« que » doesn't ask."
+        }
+      ],
+      "answer": "b"
+    }
+  ]
+}

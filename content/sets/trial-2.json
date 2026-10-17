@@ -1,0 +1,678 @@
+{
+  "id": "trial-2",
+  "version": 1,
+  "title": "Épreuve hebdomadaire 2",
+  "review_status": "reviewed",
+  "level": "A2–B2",
+  "context": "exam",
+  "tcf_target": {
+    "section": "CO",
+    "purpose": "Weekly partial simulation: unseen listening and reading items, progressive difficulty, exam rules."
+  },
+  "items": [
+    {
+      "id": "t2-co-supermarche",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Short announcement: catch the key information."
+      },
+      "competencies": [
+        "co.information-cle",
+        "co.annonce"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Qu'annonce-t-on aux clients ?",
+      "audio": {
+        "text": "Chers clients, notre magasin fermera ses portes dans quinze minutes. Merci de vous diriger vers les caisses. Nous vous rappelons que nous sommes ouverts demain dès 8 heures.",
+        "speaker": "Narratrice"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Le magasin va bientôt fermer.",
+          "explanation": "Yes: « fermera ses portes dans quinze minutes »."
+        },
+        {
+          "id": "b",
+          "text": "Les caisses sont fermées.",
+          "explanation": "Customers are asked to go to them."
+        },
+        {
+          "id": "c",
+          "text": "Le magasin est fermé demain.",
+          "explanation": "It opens tomorrow at 8."
+        },
+        {
+          "id": "d",
+          "text": "Il y a des promotions.",
+          "explanation": "No sale is mentioned."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "t2-co-rendez-vous",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Everyday dialogue: find the agreed time."
+      },
+      "competencies": [
+        "co.dialogue-quotidien",
+        "vocab.jours-horaires"
+      ],
+      "instructions": "Écoutez le dialogue et répondez à la question.",
+      "question": "Quand Paul et Lina se retrouvent-ils ?",
+      "audio": {
+        "text": "— On se voit jeudi pour le cinéma ? — Jeudi, je travaille tard. Vendredi, ça te va ? — D'accord, vendredi à 19 heures devant le cinéma. — Parfait !",
+        "speaker": "M. Delaunay"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Jeudi à 19 heures.",
+          "explanation": "Thursday doesn't suit Lina."
+        },
+        {
+          "id": "b",
+          "text": "Vendredi à 19 heures.",
+          "explanation": "Yes: « vendredi à 19 heures »."
+        },
+        {
+          "id": "c",
+          "text": "Vendredi soir tard.",
+          "explanation": "« Tard » refers to Thursday's work."
+        },
+        {
+          "id": "d",
+          "text": "Ils ne se voient pas.",
+          "explanation": "They agree on Friday."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "t2-co-message-dentiste",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Phone message: understand what to do."
+      },
+      "competencies": [
+        "co.message-telephonique",
+        "co.information-cle"
+      ],
+      "instructions": "Écoutez le message et répondez à la question.",
+      "question": "Que doit faire madame Ortiz ?",
+      "audio": {
+        "text": "Bonjour madame Ortiz, ici la clinique dentaire du Parc. Nous vous rappelons votre rendez-vous de lundi à 9 h 30. Merci d'apporter votre carte d'assurance, car elle n'est pas encore dans votre dossier. Si vous ne pouvez pas venir, prévenez-nous au moins 24 heures à l'avance.",
+        "speaker": "Madame Roux"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Rappeler pour prendre un rendez-vous.",
+          "explanation": "The appointment already exists."
+        },
+        {
+          "id": "b",
+          "text": "Arriver 24 heures à l'avance.",
+          "explanation": "24 h is the notice to cancel."
+        },
+        {
+          "id": "c",
+          "text": "Apporter sa carte d'assurance lundi.",
+          "explanation": "Yes: « Merci d'apporter votre carte d'assurance »."
+        },
+        {
+          "id": "d",
+          "text": "Envoyer son dossier par courriel.",
+          "explanation": "Not asked."
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "t2-co-guide-musee",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Guide's explanation: understand a rule."
+      },
+      "competencies": [
+        "co.information-cle",
+        "co.consigne"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Qu'est-ce qui est interdit dans l'exposition ?",
+      "audio": {
+        "text": "Bienvenue au musée. Vous pouvez prendre des photos dans toutes les salles, mais sans flash, pour protéger les tableaux. Les sacs à dos doivent être laissés au vestiaire, qui est gratuit. La visite guidée commence dans dix minutes au premier étage.",
+        "speaker": "Narratrice"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Prendre des photos.",
+          "explanation": "Photos are allowed, without flash."
+        },
+        {
+          "id": "b",
+          "text": "Aller au premier étage.",
+          "explanation": "The guided tour starts there."
+        },
+        {
+          "id": "c",
+          "text": "Utiliser le vestiaire.",
+          "explanation": "The cloakroom is free and backpacks must go there."
+        },
+        {
+          "id": "d",
+          "text": "Utiliser le flash.",
+          "explanation": "Yes: « mais sans flash »."
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "id": "t2-co-temoignage-demenagement",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Testimony: identify a change of opinion."
+      },
+      "competencies": [
+        "co.point-de-vue",
+        "co.intention"
+      ],
+      "instructions": "Écoutez le témoignage et répondez à la question.",
+      "question": "Que pense Marc de sa vie à la campagne aujourd'hui ?",
+      "audio": {
+        "text": "Quand on a quitté Montréal pour la campagne, j'avais peur de m'ennuyer. Les premiers mois ont été difficiles, c'est vrai. Mais aujourd'hui, avec le jardin, les voisins et le calme, je ne retournerais en ville pour rien au monde.",
+        "speaker": "M. Delaunay"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Il est très content d'y vivre.",
+          "explanation": "Yes: he wouldn't go back to the city for anything."
+        },
+        {
+          "id": "b",
+          "text": "Il s'ennuie beaucoup.",
+          "explanation": "That was his fear at the start."
+        },
+        {
+          "id": "c",
+          "text": "Il veut retourner en ville.",
+          "explanation": "« pour rien au monde »: never."
+        },
+        {
+          "id": "d",
+          "text": "Il trouve ses voisins difficiles.",
+          "explanation": "Neighbours are listed as a plus."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "t2-co-conference-langues",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Lecture extract: identify the main idea."
+      },
+      "competencies": [
+        "co.idee-principale",
+        "co.inference"
+      ],
+      "instructions": "Écoutez le document et répondez à la question.",
+      "question": "Quelle idée la conférencière défend-elle ?",
+      "audio": {
+        "text": "On croit souvent qu'il faut un don pour apprendre les langues. Ce que montrent les recherches, c'est que la régularité de l'exposition et la pratique active, parler, écrire, se tromper, comptent bien plus que l'âge ou le talent. Autrement dit, la méthode l'emporte sur les prédispositions.",
+        "speaker": "Narratrice"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Il faut un talent particulier pour apprendre une langue.",
+          "explanation": "That's the belief she rejects."
+        },
+        {
+          "id": "b",
+          "text": "La pratique régulière compte plus que le talent.",
+          "explanation": "Yes: « la méthode l'emporte sur les prédispositions »."
+        },
+        {
+          "id": "c",
+          "text": "Les adultes ne peuvent plus apprendre.",
+          "explanation": "Age matters less than practice, according to her."
+        },
+        {
+          "id": "d",
+          "text": "Il faut éviter de se tromper.",
+          "explanation": "Making mistakes is part of active practice."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "t2-co-interview-chef",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Interview: understand nuance and implicit meaning."
+      },
+      "competencies": [
+        "co.inference",
+        "co.point-de-vue"
+      ],
+      "instructions": "Écoutez l'entretien et répondez à la question.",
+      "question": "Que pense la cheffe des guides gastronomiques ?",
+      "audio": {
+        "text": "Les étoiles, bien sûr que ça fait plaisir, je ne vais pas faire semblant. Mais mon vrai baromètre, ce sont les clients qui reviennent chaque mois. Une étoile peut disparaître l'année suivante ; un client fidèle, lui, vous dit vraiment si vous faites bien votre travail.",
+        "speaker": "Madame Roux"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Ils n'ont aucune importance pour elle.",
+          "explanation": "She admits they please her."
+        },
+        {
+          "id": "b",
+          "text": "Ils sont le meilleur juge de son travail.",
+          "explanation": "She says loyal customers are."
+        },
+        {
+          "id": "c",
+          "text": "Ils comptent moins que la fidélité des clients.",
+          "explanation": "Yes: « mon vrai baromètre, ce sont les clients qui reviennent »."
+        },
+        {
+          "id": "d",
+          "text": "Elle a perdu son étoile cette année.",
+          "explanation": "That's a general remark, not her case."
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "t2-co-debat-ecrans",
+      "type": "listen",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Debate: identify a concession."
+      },
+      "competencies": [
+        "co.point-de-vue",
+        "gram.connecteur-opposition"
+      ],
+      "instructions": "Écoutez le débat et répondez à la question.",
+      "question": "Qu'admet la deuxième personne ?",
+      "audio": {
+        "text": "— Interdire les téléphones à l'école, c'est simplement rendre aux élèves leur capacité d'attention. — Je vous accorde que les téléphones distraient en classe. Mais les interdire complètement, y compris à la récréation, c'est priver les jeunes d'apprendre à les utiliser raisonnablement.",
+        "speaker": "M. Delaunay"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": "Qu'il faut les interdire partout.",
+          "explanation": "She refuses a total ban."
+        },
+        {
+          "id": "b",
+          "text": "Que la récréation est trop courte.",
+          "explanation": "Not discussed."
+        },
+        {
+          "id": "c",
+          "text": "Que les élèves utilisent bien leur téléphone.",
+          "explanation": "She wants them to learn to use them reasonably."
+        },
+        {
+          "id": "d",
+          "text": "Que les téléphones distraient en classe.",
+          "explanation": "Yes: « Je vous accorde que les téléphones distraient en classe »."
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "id": "t2-ce-panneau-parc",
+      "type": "select",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Notice: understand a rule."
+      },
+      "competencies": [
+        "ce.document-pratique",
+        "ce.information-cle"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "passage": "PARC LAFONTAINE. Chiens acceptés en laisse. Barbecue autorisé uniquement dans les zones indiquées. Baignade interdite dans l'étang. Parc ouvert de 6 h à minuit.",
+      "question": "Qu'est-ce qui est interdit dans le parc ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Se baigner dans l'étang.",
+          "explanation": "Yes: « Baignade interdite dans l'étang »."
+        },
+        {
+          "id": "b",
+          "text": "Venir avec un chien en laisse.",
+          "explanation": "Allowed: « Chiens acceptés en laisse »."
+        },
+        {
+          "id": "c",
+          "text": "Faire un barbecue.",
+          "explanation": "Allowed in the marked areas."
+        },
+        {
+          "id": "d",
+          "text": "Venir à 7 h du matin.",
+          "explanation": "The park opens at 6 h."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "t2-ce-sms-collegue",
+      "type": "select",
+      "pool": "assessment",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Short message: understand the situation."
+      },
+      "competencies": [
+        "ce.message",
+        "ce.information-cle"
+      ],
+      "instructions": "Lisez le message et répondez à la question.",
+      "passage": "Salut Amélie, je suis bloquée dans le métro à cause d'une panne. Je vais arriver avec environ trente minutes de retard. Tu peux commencer la réunion sans moi ? Je t'envoie mes notes par courriel. Inès",
+      "question": "Pourquoi Inès écrit-elle ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle annule la réunion.",
+          "explanation": "She asks Amélie to start without her."
+        },
+        {
+          "id": "b",
+          "text": "Elle va être en retard.",
+          "explanation": "Yes: about thirty minutes late."
+        },
+        {
+          "id": "c",
+          "text": "Elle a perdu ses notes.",
+          "explanation": "She will send them."
+        },
+        {
+          "id": "d",
+          "text": "Elle invite Amélie dans le métro.",
+          "explanation": "No."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "t2-ce-offre-cours",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Course offer: compare options."
+      },
+      "competencies": [
+        "ce.document-pratique",
+        "ce.inference"
+      ],
+      "instructions": "Lisez le document et répondez à la question.",
+      "passage": "Centre communautaire — Cours de francisation. Cours du jour : lundi au jeudi, 9 h–12 h, gratuits pour les résidents permanents. Cours du soir : mardi et jeudi, 18 h 30–21 h, 120 $ par session. Inscription sur place avec une pièce d'identité.",
+      "question": "Un résident permanent qui travaille la journée veut suivre un cours. Que choisit-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le cours du jour, gratuit.",
+          "explanation": "He works during the day."
+        },
+        {
+          "id": "b",
+          "text": "Le cours du soir, gratuit.",
+          "explanation": "Only day classes are free for permanent residents."
+        },
+        {
+          "id": "c",
+          "text": "Le cours du soir, payant.",
+          "explanation": "Yes: evening classes fit, and they cost 120 $ per session."
+        },
+        {
+          "id": "d",
+          "text": "Aucun cours ne lui convient.",
+          "explanation": "The evening course fits his schedule."
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "t2-ce-article-jardins",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Article: identify the main idea."
+      },
+      "competencies": [
+        "ce.idee-principale",
+        "ce.information-cle"
+      ],
+      "instructions": "Lisez l'article et répondez à la question.",
+      "passage": "Les jardins communautaires se multiplient dans les quartiers. Au-delà des légumes récoltés, leurs membres insistent surtout sur les liens créés : des voisins qui ne se parlaient pas se retrouvent chaque semaine, échangent des conseils et organisent même des repas ensemble.",
+      "question": "Selon l'article, quel est le principal intérêt des jardins communautaires ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Économiser de l'argent sur les légumes.",
+          "explanation": "The vegetables are secondary: « Au-delà des légumes »."
+        },
+        {
+          "id": "b",
+          "text": "Apprendre à cuisiner.",
+          "explanation": "Meals are an example of the social link."
+        },
+        {
+          "id": "c",
+          "text": "Remplacer les parcs.",
+          "explanation": "Not mentioned."
+        },
+        {
+          "id": "d",
+          "text": "Créer des liens entre voisins.",
+          "explanation": "Yes: « insistent surtout sur les liens créés »."
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "id": "t2-ce-contrat-location",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Contract clause: apply a condition."
+      },
+      "competencies": [
+        "ce.document-pratique",
+        "ce.inference"
+      ],
+      "instructions": "Lisez l'extrait et répondez à la question.",
+      "passage": "Location de vélos. Tarif : 15 $ la demi-journée, 25 $ la journée. Le vélo doit être rendu avant 19 h ; après 19 h, une journée supplémentaire est facturée. Casque fourni gratuitement.",
+      "question": "Sam loue un vélo pour la journée et le rend à 20 h. Combien paie-t-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "50 $.",
+          "explanation": "Yes: one day (25 $) + one extra day (25 $)."
+        },
+        {
+          "id": "b",
+          "text": "25 $.",
+          "explanation": "He returns it after 19 h, so an extra day is charged."
+        },
+        {
+          "id": "c",
+          "text": "40 $.",
+          "explanation": "That's a day plus a half-day, which the rules don't mention."
+        },
+        {
+          "id": "d",
+          "text": "15 $.",
+          "explanation": "That's the half-day price."
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "id": "t2-ce-editorial-tourisme",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Editorial: identify the author's position."
+      },
+      "competencies": [
+        "ce.point-de-vue",
+        "ce.inference"
+      ],
+      "instructions": "Lisez le texte et répondez à la question.",
+      "passage": "Le tourisme fait vivre notre village, personne ne le conteste. Encore faudrait-il qu'il ne le vide pas de ses habitants. Quand une maison sur trois devient une location de courte durée, les familles ne trouvent plus à se loger et l'école ferme. Réguler ces locations n'est pas s'opposer au tourisme ; c'est permettre qu'il reste un village à visiter.",
+      "question": "Quelle est la position de l'auteur ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il faut interdire le tourisme.",
+          "explanation": "He says regulating is not opposing tourism."
+        },
+        {
+          "id": "b",
+          "text": "Il faut encadrer les locations de courte durée.",
+          "explanation": "Yes: « Réguler ces locations… c'est permettre qu'il reste un village »."
+        },
+        {
+          "id": "c",
+          "text": "Le tourisme n'apporte rien au village.",
+          "explanation": "« Le tourisme fait vivre notre village »."
+        },
+        {
+          "id": "d",
+          "text": "L'école doit accueillir des touristes.",
+          "explanation": "The school closes for lack of families."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "id": "t2-ce-etude-marche",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Informative text: understand a nuance."
+      },
+      "competencies": [
+        "ce.inference",
+        "ce.information-cle"
+      ],
+      "instructions": "Lisez le texte et répondez à la question.",
+      "passage": "Marcher trente minutes par jour réduirait le risque de maladies cardiovasculaires. Les auteurs de l'étude restent prudents : les participants qui marchaient le plus avaient aussi, en moyenne, une alimentation plus équilibrée, ce qui pourrait expliquer une partie des résultats.",
+      "question": "Pourquoi les auteurs restent-ils prudents ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la marche est dangereuse.",
+          "explanation": "Nothing says so."
+        },
+        {
+          "id": "b",
+          "text": "Parce que l'étude n'a eu aucun résultat.",
+          "explanation": "There is a result; they nuance it."
+        },
+        {
+          "id": "c",
+          "text": "Parce qu'un autre facteur pourrait expliquer une partie des résultats.",
+          "explanation": "Yes: a healthier diet among the walkers."
+        },
+        {
+          "id": "d",
+          "text": "Parce que trente minutes ne suffisent pas.",
+          "explanation": "The duration isn't questioned."
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "id": "t2-ce-courrier-assurance",
+      "type": "select",
+      "pool": "assessment",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CE",
+        "purpose": "Formal letter: understand the decision and its reason."
+      },
+      "competencies": [
+        "ce.intention",
+        "ce.registre"
+      ],
+      "instructions": "Lisez la lettre et répondez à la question.",
+      "passage": "Madame, nous avons bien reçu votre demande de remboursement du 12 février. Après examen, nous ne pouvons y donner suite en l'état, la facture fournie ne mentionnant pas le détail des soins. Dès réception d'une facture détaillée, votre dossier sera traité dans un délai de dix jours ouvrables.",
+      "question": "Que signifie cette lettre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La demande est définitivement refusée.",
+          "explanation": "« en l'état »: for now; it will be processed once the detailed invoice arrives."
+        },
+        {
+          "id": "b",
+          "text": "La cliente sera remboursée dans dix jours sans rien faire.",
+          "explanation": "She must send a detailed invoice first."
+        },
+        {
+          "id": "c",
+          "text": "La demande est arrivée trop tard.",
+          "explanation": "No deadline problem is mentioned."
+        },
+        {
+          "id": "d",
+          "text": "Il manque un document pour traiter la demande.",
+          "explanation": "Yes: a detailed invoice is missing."
+        }
+      ],
+      "answer": "d"
+    }
+  ]
+}

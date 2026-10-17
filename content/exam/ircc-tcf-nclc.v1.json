@@ -1,0 +1,19 @@
+{
+  "id": "ircc-tcf-canada-to-nclc",
+  "version": 1,
+  "checked_on": "2026-10-16",
+  "source": { "name": "IRCC – Express Entry: Language test results", "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-test.html", "page_modified": "2026-10-16" },
+  "notes": [
+    "Used only to show 'estimated NCLC' next to practice estimates. TCF Quest never gives eligibility advice.",
+    "Results must be less than 2 years old when the Express Entry profile is created and when the PR application is submitted (IRCC)."
+  ],
+  "levels": [
+    { "nclc": 10, "and_above": true, "speaking": [16, 20], "listening": [549, 699], "reading": [549, 699], "writing": [16, 20] },
+    { "nclc": 9, "speaking": [14, 15], "listening": [523, 548], "reading": [524, 548], "writing": [14, 15] },
+    { "nclc": 8, "speaking": [12, 13], "listening": [503, 522], "reading": [499, 523], "writing": [12, 13] },
+    { "nclc": 7, "speaking": [10, 11], "listening": [458, 502], "reading": [453, 498], "writing": [10, 11] },
+    { "nclc": 6, "speaking": [7, 9], "listening": [398, 457], "reading": [406, 452], "writing": [7, 9] },
+    { "nclc": 5, "speaking": [6, 6], "listening": [369, 397], "reading": [375, 405], "writing": [6, 6] },
+    { "nclc": 4, "speaking": [4, 5], "listening": [331, 368], "reading": [342, 374], "writing": [4, 5] }
+  ]
+}

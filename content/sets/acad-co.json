@@ -1,0 +1,265 @@
+{
+  "id": "acad-co",
+  "version": 1,
+  "title": "Académie · Compréhension orale",
+  "review_status": "reviewed",
+  "level": "A2–B2",
+  "context": "academy",
+  "group": "CO",
+  "tcf_target": {
+    "section": "CO",
+    "purpose": "Académie TCF: strategy for CO, with guided, independent and timed practice."
+  },
+  "items": [
+    {
+      "id": "aco-methode",
+      "type": "card",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Une seule écoute : la méthode",
+      "stage": "B",
+      "points": [
+        "Avant l'audio : lisez la question et devinez ce qu'il faut entendre (une heure ? une raison ? un avis ?).",
+        "Pendant : écoutez l'idée principale, puis le détail demandé. Ne notez pas tout.",
+        "Méfiez-vous des mots entendus mot pour mot : le bon choix est souvent une reformulation.",
+        "Les pièges : l'ancienne information (« au début… »), la mauvaise personne, un chiffre voisin.",
+        "Si vous hésitez, éliminez d'abord ce qui n'est pas dit, puis choisissez et passez à la suite."
+      ]
+    },
+    {
+      "id": "aco-exemple",
+      "type": "card",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "language",
+      "title": "Exemple de piège",
+      "stage": "C",
+      "body": "Audio : « Au départ, je voulais un appartement en ville, mais finalement j'ai choisi une maison à la campagne. » Question : Où habite-t-elle ? « En ville » a été entendu… mais c'est l'ancienne idée. La bonne réponse : à la campagne."
+    },
+    {
+      "id": "aco-guide-1",
+      "type": "listen",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "One play: separate old and new information."
+      },
+      "level": "A2",
+      "competencies": [
+        "co.information-cle",
+        "co.distracteur"
+      ],
+      "instructions": "Écoutez et choisissez.",
+      "question": "Quand le cours a-t-il lieu ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Mardi.",
+          "explanation": "Mardi was the old day."
+        },
+        {
+          "id": "b",
+          "text": "Jeudi.",
+          "explanation": "Yes: « finalement, ce sera jeudi »."
+        },
+        {
+          "id": "c",
+          "text": "Tous les jours.",
+          "explanation": "Not said."
+        },
+        {
+          "id": "d",
+          "text": "Lundi.",
+          "explanation": "Not said."
+        }
+      ],
+      "answer": "b",
+      "stage": "D",
+      "hint": "Listen for « finalement »: the old day is a trap.",
+      "audio": {
+        "text": "Le cours de yoga devait avoir lieu mardi, mais finalement, ce sera jeudi, à la même heure.",
+        "speaker": "Narratrice"
+      }
+    },
+    {
+      "id": "aco-guide-2",
+      "type": "listen",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Identify the purpose of a call."
+      },
+      "level": "B1",
+      "competencies": [
+        "co.intention",
+        "co.distracteur"
+      ],
+      "instructions": "Écoutez et choisissez.",
+      "question": "Pourquoi l'homme appelle-t-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pour réserver une table.",
+          "explanation": "He already has a reservation."
+        },
+        {
+          "id": "b",
+          "text": "Pour annuler sa réservation.",
+          "explanation": "He keeps it."
+        },
+        {
+          "id": "c",
+          "text": "Pour changer le nombre de personnes.",
+          "explanation": "Yes: four instead of two."
+        },
+        {
+          "id": "d",
+          "text": "Pour se plaindre.",
+          "explanation": "No complaint."
+        }
+      ],
+      "answer": "c",
+      "stage": "D",
+      "hint": "He doesn't cancel: listen to the number of people.",
+      "audio": {
+        "text": "Bonsoir, j'ai réservé une table pour deux personnes ce soir, à 20 heures. Est-ce qu'on pourrait être quatre finalement ?",
+        "speaker": "M. Delaunay"
+      }
+    },
+    {
+      "id": "aco-auto-1",
+      "type": "listen",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Overall opinion after a concession."
+      },
+      "level": "B1",
+      "competencies": [
+        "co.point-de-vue",
+        "co.distracteur"
+      ],
+      "instructions": "Écoutez et choisissez.",
+      "question": "Que pense-t-elle du film ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle l'a adoré du début à la fin.",
+          "explanation": "She found the start slow."
+        },
+        {
+          "id": "b",
+          "text": "Elle l'a trouvé ennuyeux.",
+          "explanation": "The ending changed her mind."
+        },
+        {
+          "id": "c",
+          "text": "Elle l'a finalement apprécié.",
+          "explanation": "Yes: « la fin m'a vraiment convaincue »."
+        },
+        {
+          "id": "d",
+          "text": "Elle ne l'a pas vu.",
+          "explanation": "She saw it."
+        }
+      ],
+      "answer": "c",
+      "stage": "E",
+      "audio": {
+        "text": "Le début du film était un peu lent, je l'avoue, mais la fin m'a vraiment convaincue. Je le recommande.",
+        "speaker": "Madame Roux"
+      }
+    },
+    {
+      "id": "aco-auto-2",
+      "type": "listen",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Implicit meaning: postponement and its cause."
+      },
+      "level": "B2",
+      "competencies": [
+        "co.inference",
+        "co.distracteur"
+      ],
+      "instructions": "Écoutez et choisissez.",
+      "question": "Que comprend-on ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le projet est abandonné.",
+          "explanation": "It's postponed, not abandoned."
+        },
+        {
+          "id": "b",
+          "text": "Le projet est reporté faute d'argent.",
+          "explanation": "Yes: the budget isn't ready, so later."
+        },
+        {
+          "id": "c",
+          "text": "Le projet commence demain.",
+          "explanation": "No."
+        },
+        {
+          "id": "d",
+          "text": "Le projet est terminé.",
+          "explanation": "No."
+        }
+      ],
+      "answer": "b",
+      "stage": "E",
+      "audio": {
+        "text": "On aurait aimé lancer le chantier ce printemps, mais tant que le budget n'est pas voté, on ne peut rien faire. Ce sera sans doute pour l'automne.",
+        "speaker": "Narratrice"
+      }
+    },
+    {
+      "id": "aco-chrono",
+      "type": "listen",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "Timed: numbers and categories."
+      },
+      "level": "B1",
+      "competencies": [
+        "co.information-cle",
+        "co.distracteur"
+      ],
+      "instructions": "Écoutez et choisissez.",
+      "question": "Combien coûte le billet pour un étudiant ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "20 $.",
+          "explanation": "That's the full price."
+        },
+        {
+          "id": "b",
+          "text": "12 $.",
+          "explanation": "Yes: « douze dollars pour les étudiants »."
+        },
+        {
+          "id": "c",
+          "text": "8 $.",
+          "explanation": "Not said."
+        },
+        {
+          "id": "d",
+          "text": "Gratuit.",
+          "explanation": "Free is for under-12s."
+        }
+      ],
+      "answer": "b",
+      "stage": "F",
+      "time_limit_s": 45,
+      "audio": {
+        "text": "L'entrée coûte vingt dollars, douze dollars pour les étudiants, et c'est gratuit pour les moins de douze ans.",
+        "speaker": "Narratrice"
+      }
+    }
+  ]
+}

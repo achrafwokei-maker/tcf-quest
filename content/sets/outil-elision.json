@@ -1,0 +1,91 @@
+{
+  "id": "outil-elision",
+  "version": 1,
+  "title": "L'élision : j', l', qu', s'il",
+  "review_status": "reviewed",
+  "level": "B1",
+  "context": "toolbox",
+  "group": "Grammaire",
+  "tcf_target": {
+    "section": "EE",
+    "purpose": "Boîte à outils: L'élision : j', l', qu', s'il."
+  },
+  "items": [
+    {
+      "id": "o-elision-fiche",
+      "type": "card",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: L'élision : j', l', qu', s'il."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "L'élision : j', l', qu', s'il",
+      "stage": "B",
+      "points": [
+        "Ce que c'est : devant une voyelle ou un h muet, je → j', le/la → l', que → qu', si il → s'il.",
+        "Quand l'utiliser : toujours, à l'écrit comme à l'oral.",
+        "Quand l'éviter : pas d'élision devant un h aspiré (le héros) ni avec « si elle ».",
+        "Exemple : « J'habite ici. » / « Je pense qu'il viendra. » / « S'il pleut… »"
+      ]
+    },
+    {
+      "id": "o-elision-adapter",
+      "type": "type",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: L'élision : j', l', qu', s'il."
+      },
+      "level": "B1",
+      "competencies": [
+        "orth.orthographe"
+      ],
+      "stage": "D",
+      "instructions": "Complétez la phrase.",
+      "instructions_en": "Fill in the gap.",
+      "sentence": "Je ___ aime beaucoup ce quartier.",
+      "answers": [
+        "l'"
+      ],
+      "explanation": "« le » + vowel → « l' »."
+    },
+    {
+      "id": "o-elision-pratique",
+      "type": "select",
+      "tcf_target": {
+        "section": "EE",
+        "purpose": "Boîte à outils: L'élision : j', l', qu', s'il."
+      },
+      "level": "B1",
+      "competencies": [
+        "orth.orthographe"
+      ],
+      "stage": "E",
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quelle phrase est correcte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« Si il fait beau, on sort. »",
+          "explanation": "« si il » → « s'il »."
+        },
+        {
+          "id": "b",
+          "text": "« S'il fait beau, on sort. »",
+          "explanation": "Yes."
+        },
+        {
+          "id": "c",
+          "text": "« Si'l fait beau, on sort. »",
+          "explanation": "Wrong apostrophe."
+        },
+        {
+          "id": "d",
+          "text": "« Sil fait beau, on sort. »",
+          "explanation": "Missing apostrophe."
+        }
+      ],
+      "answer": "b"
+    }
+  ]
+}

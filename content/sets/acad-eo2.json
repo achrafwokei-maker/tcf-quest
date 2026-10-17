@@ -1,0 +1,235 @@
+{
+  "id": "acad-eo2",
+  "version": 1,
+  "title": "Académie · Expression orale, tâche 2",
+  "review_status": "reviewed",
+  "level": "A2–B1",
+  "context": "academy",
+  "group": "EO-T2",
+  "tcf_target": {
+    "section": "EO",
+    "task": "EO-T2",
+    "purpose": "Académie TCF: strategy for EO-T2, with guided, independent and timed practice."
+  },
+  "items": [
+    {
+      "id": "aeo2-methode",
+      "type": "card",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "method",
+      "title": "Obtenir des informations en 3 min 30",
+      "stage": "B",
+      "points": [
+        "Préparation (2 min) : listez 6 à 8 questions selon une grille : prix, horaires, lieu, conditions, ce qui est compris, alternatives.",
+        "Ouverture polie : « Bonjour, je vous appelle au sujet de… »",
+        "Une question à la fois, et réagissez à chaque réponse (« D'accord », « Ah, c'est dommage ! »).",
+        "Variez les formes : est-ce que, inversion (« Pourriez-vous… ? »), question indirecte (« Je voudrais savoir si… »).",
+        "Face à un imprévu, demandez une solution. Terminez par un résumé et des remerciements."
+      ]
+    },
+    {
+      "id": "aeo2-exemple",
+      "type": "card",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "language",
+      "title": "Trois façons de demander",
+      "stage": "C",
+      "points": [
+        "Est-ce que le cours est ouvert aux débutants ?",
+        "Le cours est-il ouvert aux débutants ?",
+        "Je voudrais savoir si le cours est ouvert aux débutants."
+      ]
+    },
+    {
+      "id": "aeo2-guide-1",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Indirect question form."
+      },
+      "level": "A2",
+      "competencies": [
+        "eo.question-polie",
+        "gram.question-indirecte"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Quelle question indirecte est correcte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« Je voudrais savoir si la piscine est ouverte le dimanche. »",
+          "explanation": "Yes: « si » + indicative."
+        },
+        {
+          "id": "b",
+          "text": "« Je voudrais savoir est-ce que la piscine est ouverte. »",
+          "explanation": "No « est-ce que » in indirect questions."
+        },
+        {
+          "id": "c",
+          "text": "« Je voudrais savoir la piscine est-elle ouverte. »",
+          "explanation": "No inversion in indirect questions."
+        },
+        {
+          "id": "d",
+          "text": "« Je voudrais savoir que la piscine est ouverte. »",
+          "explanation": "« que » doesn't ask."
+        }
+      ],
+      "answer": "a",
+      "stage": "D",
+      "hint": "Indirect yes/no questions use « si »."
+    },
+    {
+      "id": "aeo2-guide-2",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Handle a surprise."
+      },
+      "level": "B1",
+      "competencies": [
+        "eo.reaction-imprevu",
+        "eo.interaction"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "On vous dit que le cours est complet. Quelle réaction est la meilleure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« Bon, au revoir. »",
+          "explanation": "Ends without a solution."
+        },
+        {
+          "id": "b",
+          "text": "« Ah, c'est dommage ! Est-ce qu'il y a une liste d'attente ou un autre horaire ? »",
+          "explanation": "Yes: reacts and asks for an alternative."
+        },
+        {
+          "id": "c",
+          "text": "« Ce n'est pas possible ! »",
+          "explanation": "Not constructive."
+        },
+        {
+          "id": "d",
+          "text": "« D'accord. »",
+          "explanation": "Misses the chance to solve it."
+        }
+      ],
+      "answer": "b",
+      "stage": "D",
+      "hint": "React, then ask for an alternative."
+    },
+    {
+      "id": "aeo2-auto-1",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Complete the preparation grid."
+      },
+      "level": "B1",
+      "competencies": [
+        "eo.preparation-t2",
+        "eo.obtenir-information"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Vous louez un vélo. Quelle question oubliez-vous dans cette liste : prix, horaires, caution ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le casque est-il fourni ?",
+          "explanation": "Yes: what's included is a key category."
+        },
+        {
+          "id": "b",
+          "text": "Quelle est votre couleur préférée ?",
+          "explanation": "Irrelevant."
+        },
+        {
+          "id": "c",
+          "text": "Vous aimez le vélo ?",
+          "explanation": "Personal, not information."
+        },
+        {
+          "id": "d",
+          "text": "Il fait beau ?",
+          "explanation": "Small talk."
+        }
+      ],
+      "answer": "a",
+      "stage": "E"
+    },
+    {
+      "id": "aeo2-chrono",
+      "type": "select",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Timed: close with a summary."
+      },
+      "level": "B1",
+      "competencies": [
+        "eo.cloture-resume",
+        "eo.interaction"
+      ],
+      "instructions": "Choisissez la bonne réponse.",
+      "question": "Comment clore l'échange ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "« Si je comprends bien, c'est 45 $ par mois, sans engagement. Merci beaucoup pour ces informations, bonne journée ! »",
+          "explanation": "Yes: summary + thanks."
+        },
+        {
+          "id": "b",
+          "text": "« OK. »",
+          "explanation": "Too abrupt."
+        },
+        {
+          "id": "c",
+          "text": "Raccrocher.",
+          "explanation": "No closure."
+        },
+        {
+          "id": "d",
+          "text": "« Je vous rappellerai peut-être, ou pas. »",
+          "explanation": "Impolite."
+        }
+      ],
+      "answer": "a",
+      "stage": "F",
+      "time_limit_s": 30
+    },
+    {
+      "id": "aeo2-application",
+      "type": "card",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Strategy lesson (Académie TCF)."
+      },
+      "level": "B1",
+      "kind": "outro",
+      "title": "À vous : l'appel réel",
+      "stage": "H",
+      "body": "Préparez-vous 2 minutes puis appelez le club de sport : 3 min 30 pour obtenir toutes les informations.",
+      "link": {
+        "label": "Faire la tâche 2",
+        "to": "/oral/eo2-club-sport"
+      }
+    }
+  ]
+}
