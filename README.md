@@ -9,7 +9,7 @@ A personal, story-driven trainer for the **TCF Canada** French exam. It measures
 Requirements: macOS on Apple Silicon, Node.js 20+, Git, and [Ollama](https://ollama.com) with the `qwen3:8b` model (`ollama pull qwen3:8b`).
 
 ```bash
-git clone https://github.com/<your-username>/tcf-quest.git && cd tcf-quest
+git clone https://github.com/achrafwokei-maker/tcf-quest.git && cd tcf-quest
 scripts/setup.sh       # first time only: installs everything inside this folder
 scripts/setup_tts.sh   # optional (~3 GB): natural French voices + local speech recognition
 scripts/dev.sh         # starts the app; open http://localhost:5173 in Chrome or Safari
