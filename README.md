@@ -22,9 +22,20 @@ scripts/test.sh        # runs all automated checks
 - **Adaptive engine**: weak points tracked by concept and confirmed fixed only on unseen questions; a daily plan built from your evidence, exam date and available time.
 - **Speaking and writing** for all three TCF tasks, with a local AI examiner and rubric feedback (unofficial estimates, no pronunciation scoring).
 - **Strict exam mode**: one listening, no hints, real timings; post-exam report with possible causes and next week's focus.
+- **Vocabulary cards** by TCF function, a few a day with spaced repetition; **Strategy** (Académie) and **Lessons** (Boîte à outils) for every task.
+- Day and night themes.
 - Everything runs on your Mac with free models; no account, no cloud, no data leaves the computer.
 
 Everything listens on `127.0.0.1` only; nothing is reachable from other devices.
+
+## If something doesn't work
+
+| Symptom | Fix |
+| --- | --- |
+| "The local server is not running" | Start it with `scripts/dev.sh` and keep that window open. |
+| Writing/speaking feedback says "couldn't give feedback" | Open the Ollama app, check `ollama list` shows `qwen3:8b`, then press "Try again". |
+| Robotic voice, or "natural voices are not running" | Run `scripts/setup_tts.sh` once, then restart `scripts/dev.sh`. |
+| Microphone refused | Allow the microphone for `localhost` in the browser's address bar (use Chrome or Safari). You can always type instead. |
 
 ## Your data
 

@@ -130,13 +130,18 @@ Status key: ✅ DONE · 🟡 PARTIAL · ❌ MISSING · 🔧 NEEDS CORRECTION
   - Detours branch off the current checkpoint. Tapping a checkpoint opens it directly.
   - Full road on Mon Aventure, a 4-checkpoint preview on Today, and onboarding ends on the road.
   - Dead links fixed: Listening/Reading hubs (`/pratique/CO`, `/pratique/CE`), skill tiles, Professeur cards (real voice and recogniser status). No "Phase N" placeholders left.
+- **Vocabulary ✅ 2026-10-17**:
+  - 72 original expression cards in 9 functions tied to TCF tasks (polite requests, opinion, nuance, storytelling, cause, formal messages, phone, managing a conversation, daily life).
+  - Spaced repetition (1, 2, 4, 8, 16, 32 days; at most 15 reviews and 8 new cards a day). New cards favour the tasks of your weak points and the last assessment's focus.
+  - Screen: `/vocabulaire` (audio, reveal, 4 grades, keyboard 1–4). It's offered as a quick detour on the journey after the briefing.
+  - It's a memory aid, self-graded: it never touches skill estimates or weak points (tested). 5 tests.
+- **Quality guard ✅**: an automatic test checks that every in-app link in the code and content points at a real route (and that the guard rejects a made-up one); a backend test checks that every route the journey sends you to exists. Checked as a new learner: all 17 screens load with no errors, and 16 screens have no horizontal scroll at phone width.
 
 ## Remaining limits (honest list)
 
 - Real-microphone capture and the natural voices need **The learner's own test** (the browser pane blocks microphones, and Claude can't hear audio). Voice ratings are still pending (target ≥ 4/5).
 - Writing/speaking AI scores are unofficial and **uncalibrated**: teacher-marked samples would allow calibration.
 - **One** full mock and four weekly trials: enough for about a month of weekly practice. More reserved content is needed for longer preparation (the generators in `scripts/content/` make this quick).
-- Not built: vocabulary spaced-repetition cards grouped by function. Toolbox grammar exists; vocabulary is covered inside lessons only.
 - P2 deferred and documented: 3D avatars, passport evolution, more story chapters, cosmetic rewards.
 
 ## Gap table (audit snapshot of 2026-10-17; see the milestones above for what changed)

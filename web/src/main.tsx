@@ -24,6 +24,7 @@ import { SpeakingPage } from "./pages/SpeakingPage";
 import { EOSessionPage } from "./pages/EOPage";
 import { ExamList, ExamRunner } from "./pages/ExamPage";
 import { LibraryPage } from "./pages/LibraryPage";
+import { VocabPage } from "./pages/VocabPage";
 
 function App() {
   const [state, reload] = useAsync(api.profile);
@@ -63,6 +64,7 @@ function App() {
           intro="Everything that trains TCF listening: strategies, practice sets and story missions. Exam-style listening is in Examens." />} />
         <Route path="pratique/CE" element={<LibraryPage section="CE" eyebrow="Compréhension écrite" title="Reading"
           intro="Everything that trains TCF reading: strategies, practice sets and lessons. Exam-style reading is in Examens." />} />
+        <Route path="vocabulaire" element={<VocabPage />} />
         <Route path="outils" element={<LibraryPage context="toolbox" eyebrow="Boîte à outils" title="Frameworks, connectors, grammar"
           intro="Short lessons: what it is, when to use it, when not to, an example, then you adapt it and practise. Your weak points bring the right lesson to your plan." />} />
         <Route path="ecrit/:taskId" element={<WritingStudio />} />

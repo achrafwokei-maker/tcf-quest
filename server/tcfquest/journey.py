@@ -169,6 +169,12 @@ def _side_missions(ctx: Ctx) -> list[dict]:
                     "minutes": max(2, round(n * 0.5)), "state": "available", "route": "/set/revisions",
                     "action": {"type": "start_reviews"},
                     "reason": "Your own mistakes, back at the right moment" + (" (including a new question to confirm a fix)" if retests else "") + "."})
+    from . import vocab
+    vo = vocab.overview(ctx.conn, ctx.today)
+    if vo["session_size"] and ctx.profile and ctx.profile["onboarded_at"]:      # shown only after the briefing
+        out.append({"ref": "side:vocab", "kind": "review", "title": f"{vo['session_size']} words", "minutes": max(2, round(vo["session_size"] * 0.4)),
+                    "state": "available", "route": "/vocabulaire",
+                    "reason": f"{vo['due']} to review and {vo['new_today']} new expressions you'll use in the TCF."})
     lesson = next((c for c in ctx.cands.values() if c["factors"].get("lesson", 0) >= 3), None)
     if lesson:
         out.append({"ref": f"set:{lesson['set'].id}", "kind": "lesson", "title": lesson["set"].title, "minutes": lesson["minutes"],
@@ -285,7 +291,7 @@ def continue_step(conn: sqlite3.Connection, today: date | None = None) -> dict:
         if later and next_main(later):
             cur, main = later, next_main(later)
     # 2. A short recovery side mission first, then straight back to the main route.
-    side = next((s for s in j["side_missions"] if s["kind"] == "review"), None)
+    side = next((s for s in j["side_missions"] if s["ref"] == "side:reviews"), None)
     if side and main and main["kind"] not in ("diagnostic",):
         out = pack(cur, side, "", main)
         out["where"] = f"Chapter {cur['n']} · {cur['title']} · quick detour"

@@ -119,3 +119,17 @@ def test_journey_never_changes_learning_records(client):
     client.get("/api/journey"); client.get("/api/journey/continue")
     assert [tuple(r) for r in c.execute("SELECT * FROM skill_profile ORDER BY skill")] == before
     assert c.execute("SELECT COUNT(*) FROM attempt").fetchone()[0] == 0
+
+
+def test_every_journey_route_exists_in_the_app(client):
+    import re
+    paths = re.findall(r'<Route\s+(?:index|path="([^"]*)")', (Path(__file__).resolve().parents[2] / "web/src/main.tsx").read_text())
+    patterns = [re.compile("^/" + re.sub(r":[A-Za-z]+", "[^/]+", p) + "$") for p in paths if p and p != "*"]
+    onboard(client)
+    conn().execute("UPDATE mistake SET next_review = date('now')")
+    j = client.get("/api/journey").json()
+    routes = [x["route"] for c in j["chapters"] for x in c["nodes"] + ([c["boss"]] if c["boss"] else [])] + [s["route"] for s in j["side_missions"]]
+    cont = client.get("/api/journey/continue").json()
+    if cont["node"]:
+        routes.append(cont["node"]["route"])
+    assert routes and all(any(p.match(r) for p in patterns) for r in routes), [r for r in routes if not any(p.match(r) for p in patterns)]

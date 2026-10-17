@@ -2,6 +2,10 @@
 
 Read this first when resuming. Newest entry on top.
 
+## Final state (2026-10-17)
+
+App complete against `docs/CORE_FUNCTIONAL_GAPS.md`: M1–M13, the journey road, day/night themes, vocabulary cards, dead-link guard. 195 backend + 23 frontend tests. Public repo: github.com/achrafwokei-maker/tcf-quest (clean one-commit history; the private `phase-1-foundation` branch keeps the full history). Needs the owner's own try-out: microphone and voice ratings. Possible later work: more reserved mocks, teacher-marked samples to calibrate AI scores, README screenshots.
+
 ## Next work (2026-10-17)
 
 Gap audit approved: `docs/CORE_FUNCTIONAL_GAPS.md` is the authoritative checklist. **M1 done** (concept weaknesses + unseen retests + item metadata). **M2 done** (CEFR range + confidence per skill). **M3 done** (planner v1 on Home). **M4 done** (writing studio + AI rubric feedback). **M5 done** (speaking pipeline; real mic to be tried by the learner in Chrome/Safari). **M6 done** (EO T1–T3 with AI examiner). **M7 done** (strict exam engine + 2 weekly trials). **M8 done** (adaptive level check + report). **M9 done** (post-exam analysis + weekly focus). **M10 done** (Académie, Boîte à outils, lesson-aware planner). **M11 done** (question bank + QC). **M12 done** (full mock + section mocks). **M13 done** (12-step acceptance test + fresh-learner browser run; 182 backend tests). All core milestones M1–M13 complete. **Journey done** (one adventure with Continue my journey, 6 TCF chapters, side missions; 189 backend tests). Next: the learner tests mic + voices in his own browser; then content growth (more mocks, vocabulary cards) per `CORE_FUNCTIONAL_GAPS.md` → Remaining limits.

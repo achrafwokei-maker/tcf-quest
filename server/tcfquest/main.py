@@ -12,7 +12,7 @@ from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Request, R
 from pydantic import BaseModel, Field
 
 from . import (ai, avatar, content, db, estimates, feedback, notebook, onboarding, planner, reviews, sessions, tts,
-               exam, journey, speaking, speaking_ai, speech, weakness, writing, writing_ai)
+               exam, journey, speaking, speaking_ai, speech, vocab, weakness, writing, writing_ai)
 
 SKILLS = ("listening", "reading", "speaking", "writing")
 
@@ -827,3 +827,27 @@ def journey_map(conn: sqlite3.Connection = Depends(get_db)):
 @app.get("/api/journey/continue")
 def journey_continue(conn: sqlite3.Connection = Depends(get_db)):
     return journey.continue_step(conn)
+
+
+# ---------- vocabulary cards (spaced repetition, retention aid only) ----------
+
+class VocabGradeIn(BaseModel):
+    grade: Literal["again", "hard", "good", "easy"]
+
+
+@app.get("/api/vocab")
+def vocab_overview(conn: sqlite3.Connection = Depends(get_db)):
+    return vocab.overview(conn)
+
+
+@app.get("/api/vocab/session")
+def vocab_session(conn: sqlite3.Connection = Depends(get_db)):
+    return {"cards": vocab.session(conn), **{k: v for k, v in vocab.overview(conn).items() if k in ("due", "new_today")}}
+
+
+@app.post("/api/vocab/{card_id}/grade")
+def vocab_grade(card_id: str, body: VocabGradeIn, conn: sqlite3.Connection = Depends(get_db)):
+    try:
+        return vocab.grade(conn, card_id, body.grade)
+    except KeyError:
+        raise HTTPException(404, "Unknown card")

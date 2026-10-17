@@ -1,0 +1,990 @@
+{
+  "version": 1,
+  "review_status": "reviewed",
+  "functions": [
+    {
+      "id": "demander",
+      "label": "Demander poliment",
+      "task": "EO-T2",
+      "blurb": "Polite requests and questions on the phone or in person."
+    },
+    {
+      "id": "opinion",
+      "label": "Donner son opinion",
+      "task": "EO-T3",
+      "blurb": "Stating and defending a point of view."
+    },
+    {
+      "id": "nuancer",
+      "label": "Nuancer et opposer",
+      "task": "EE-T3",
+      "blurb": "Comparing two viewpoints and adding nuance."
+    },
+    {
+      "id": "raconter",
+      "label": "Raconter",
+      "task": "EE-T2",
+      "blurb": "Telling an experience in order, with time markers."
+    },
+    {
+      "id": "cause",
+      "label": "Cause et conséquence",
+      "task": "EE-T3",
+      "blurb": "Explaining why something happens and what follows."
+    },
+    {
+      "id": "formel",
+      "label": "Écrire un message formel",
+      "task": "EE-T1",
+      "blurb": "Openings, closings and requests in formal messages."
+    },
+    {
+      "id": "telephone",
+      "label": "Au téléphone",
+      "task": "EO-T2",
+      "blurb": "Opening, handling and closing a phone call."
+    },
+    {
+      "id": "echange",
+      "label": "Gérer l'échange",
+      "task": "EO-T1",
+      "blurb": "Rephrasing, buying time and clarifying in a conversation."
+    },
+    {
+      "id": "quotidien",
+      "label": "La vie quotidienne",
+      "task": "CO",
+      "blurb": "Everyday words for housing, work and services, often heard in listening items."
+    }
+  ],
+  "cards": [
+    {
+      "id": "demander-01",
+      "function": "demander",
+      "fr": "pourriez-vous",
+      "en": "could you (polite request)",
+      "example": "Pourriez-vous me dire à quelle heure vous ouvrez ?",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Demander poliment: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "demander-02",
+      "function": "demander",
+      "fr": "je voudrais savoir si",
+      "en": "I would like to know whether",
+      "example": "Je voudrais savoir si le cours est ouvert aux débutants.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Demander poliment: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "demander-03",
+      "function": "demander",
+      "fr": "serait-il possible de",
+      "en": "would it be possible to",
+      "example": "Serait-il possible de visiter l'appartement jeudi ?",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Demander poliment: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "demander-04",
+      "function": "demander",
+      "fr": "auriez-vous",
+      "en": "would you have",
+      "example": "Auriez-vous une chambre libre pour ce week-end ?",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Demander poliment: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "demander-05",
+      "function": "demander",
+      "fr": "est-ce que ... est compris",
+      "en": "is ... included",
+      "example": "Est-ce que le petit-déjeuner est compris dans le prix ?",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Demander poliment: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "demander-06",
+      "function": "demander",
+      "fr": "un renseignement",
+      "en": "a piece of information",
+      "example": "Je vous appelle pour un renseignement.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Demander poliment: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "demander-07",
+      "function": "demander",
+      "fr": "je me permets de",
+      "en": "I take the liberty of (formal)",
+      "example": "Je me permets de vous contacter au sujet de votre annonce.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Demander poliment: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "demander-08",
+      "function": "demander",
+      "fr": "auriez-vous l'amabilité de",
+      "en": "would you be so kind as to",
+      "example": "Auriez-vous l'amabilité de me rappeler demain ?",
+      "level": "B2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Demander poliment: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "opinion-01",
+      "function": "opinion",
+      "fr": "à mon avis",
+      "en": "in my opinion",
+      "example": "À mon avis, le télétravail présente plus d'avantages que d'inconvénients.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Donner son opinion: vocabulary used in TCF EO-T3."
+      }
+    },
+    {
+      "id": "opinion-02",
+      "function": "opinion",
+      "fr": "je pense que",
+      "en": "I think that",
+      "example": "Je pense que les transports publics devraient être gratuits.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Donner son opinion: vocabulary used in TCF EO-T3."
+      }
+    },
+    {
+      "id": "opinion-03",
+      "function": "opinion",
+      "fr": "selon moi",
+      "en": "according to me",
+      "example": "Selon moi, il faut limiter le temps d'écran des enfants.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Donner son opinion: vocabulary used in TCF EO-T3."
+      }
+    },
+    {
+      "id": "opinion-04",
+      "function": "opinion",
+      "fr": "pour ma part",
+      "en": "for my part",
+      "example": "Pour ma part, je préfère travailler au bureau.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Donner son opinion: vocabulary used in TCF EO-T3."
+      }
+    },
+    {
+      "id": "opinion-05",
+      "function": "opinion",
+      "fr": "je suis convaincu(e) que",
+      "en": "I am convinced that",
+      "example": "Je suis convaincue que la formation continue est essentielle.",
+      "level": "B2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Donner son opinion: vocabulary used in TCF EO-T3."
+      }
+    },
+    {
+      "id": "opinion-06",
+      "function": "opinion",
+      "fr": "il me semble que",
+      "en": "it seems to me that",
+      "example": "Il me semble que cette mesure est trop rapide.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Donner son opinion: vocabulary used in TCF EO-T3."
+      }
+    },
+    {
+      "id": "opinion-07",
+      "function": "opinion",
+      "fr": "je suis tout à fait d'accord",
+      "en": "I completely agree",
+      "example": "Je suis tout à fait d'accord avec cette idée.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Donner son opinion: vocabulary used in TCF EO-T3."
+      }
+    },
+    {
+      "id": "opinion-08",
+      "function": "opinion",
+      "fr": "je ne partage pas cet avis",
+      "en": "I don't share that view",
+      "example": "Je ne partage pas cet avis, car les coûts sont trop élevés.",
+      "level": "B2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T3",
+        "purpose": "Donner son opinion: vocabulary used in TCF EO-T3."
+      }
+    },
+    {
+      "id": "nuancer-01",
+      "function": "nuancer",
+      "fr": "en revanche",
+      "en": "on the other hand",
+      "example": "Le premier texte est optimiste ; en revanche, le second est critique.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Nuancer et opposer: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "nuancer-02",
+      "function": "nuancer",
+      "fr": "cependant",
+      "en": "however",
+      "example": "Le projet est ambitieux ; cependant, son coût reste élevé.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Nuancer et opposer: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "nuancer-03",
+      "function": "nuancer",
+      "fr": "alors que",
+      "en": "whereas",
+      "example": "Certains aiment la ville alors que d'autres préfèrent la campagne.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Nuancer et opposer: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "nuancer-04",
+      "function": "nuancer",
+      "fr": "certes ... mais",
+      "en": "admittedly ... but",
+      "example": "Certes, la voiture est pratique, mais elle pollue.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Nuancer et opposer: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "nuancer-05",
+      "function": "nuancer",
+      "fr": "bien que (+ subjonctif)",
+      "en": "although",
+      "example": "Bien que ce soit cher, cela vaut la peine.",
+      "level": "B2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Nuancer et opposer: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "nuancer-06",
+      "function": "nuancer",
+      "fr": "malgré",
+      "en": "despite",
+      "example": "Malgré le froid, nous sommes sortis.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Nuancer et opposer: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "nuancer-07",
+      "function": "nuancer",
+      "fr": "pourtant",
+      "en": "yet / and yet",
+      "example": "Il a étudié ; pourtant, il a échoué.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Nuancer et opposer: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "nuancer-08",
+      "function": "nuancer",
+      "fr": "néanmoins",
+      "en": "nevertheless",
+      "example": "Le plan est simple ; néanmoins, il demande du temps.",
+      "level": "B2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Nuancer et opposer: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "raconter-01",
+      "function": "raconter",
+      "fr": "d'abord",
+      "en": "first",
+      "example": "D'abord, je suis allé à la banque.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T2",
+        "purpose": "Raconter: vocabulary used in TCF EE-T2."
+      }
+    },
+    {
+      "id": "raconter-02",
+      "function": "raconter",
+      "fr": "ensuite",
+      "en": "then",
+      "example": "Ensuite, j'ai pris le métro.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T2",
+        "purpose": "Raconter: vocabulary used in TCF EE-T2."
+      }
+    },
+    {
+      "id": "raconter-03",
+      "function": "raconter",
+      "fr": "finalement",
+      "en": "finally",
+      "example": "Finalement, tout s'est bien passé.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T2",
+        "purpose": "Raconter: vocabulary used in TCF EE-T2."
+      }
+    },
+    {
+      "id": "raconter-04",
+      "function": "raconter",
+      "fr": "pendant que",
+      "en": "while",
+      "example": "Pendant que je cuisinais, mon ami est arrivé.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T2",
+        "purpose": "Raconter: vocabulary used in TCF EE-T2."
+      }
+    },
+    {
+      "id": "raconter-05",
+      "function": "raconter",
+      "fr": "à ce moment-là",
+      "en": "at that moment",
+      "example": "À ce moment-là, le téléphone a sonné.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T2",
+        "purpose": "Raconter: vocabulary used in TCF EE-T2."
+      }
+    },
+    {
+      "id": "raconter-06",
+      "function": "raconter",
+      "fr": "le lendemain",
+      "en": "the next day",
+      "example": "Le lendemain, nous sommes retournés au marché.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T2",
+        "purpose": "Raconter: vocabulary used in TCF EE-T2."
+      }
+    },
+    {
+      "id": "raconter-07",
+      "function": "raconter",
+      "fr": "soudain",
+      "en": "suddenly",
+      "example": "Soudain, il s'est mis à pleuvoir.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T2",
+        "purpose": "Raconter: vocabulary used in TCF EE-T2."
+      }
+    },
+    {
+      "id": "raconter-08",
+      "function": "raconter",
+      "fr": "au bout de",
+      "en": "after (a length of time)",
+      "example": "Au bout de deux heures, le bus est enfin arrivé.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T2",
+        "purpose": "Raconter: vocabulary used in TCF EE-T2."
+      }
+    },
+    {
+      "id": "cause-01",
+      "function": "cause",
+      "fr": "parce que",
+      "en": "because",
+      "example": "Je suis en retard parce que le bus n'est pas passé.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Cause et conséquence: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "cause-02",
+      "function": "cause",
+      "fr": "à cause de",
+      "en": "because of (negative)",
+      "example": "À cause de la neige, le train est annulé.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Cause et conséquence: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "cause-03",
+      "function": "cause",
+      "fr": "grâce à",
+      "en": "thanks to",
+      "example": "Grâce à cette formation, j'ai trouvé un emploi.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Cause et conséquence: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "cause-04",
+      "function": "cause",
+      "fr": "donc",
+      "en": "so / therefore",
+      "example": "Il pleut, donc nous restons à la maison.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Cause et conséquence: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "cause-05",
+      "function": "cause",
+      "fr": "c'est pourquoi",
+      "en": "that is why",
+      "example": "Le loyer est élevé ; c'est pourquoi beaucoup partagent un appartement.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Cause et conséquence: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "cause-06",
+      "function": "cause",
+      "fr": "puisque",
+      "en": "since (known reason)",
+      "example": "Puisque tu as le temps, aide-moi.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Cause et conséquence: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "cause-07",
+      "function": "cause",
+      "fr": "par conséquent",
+      "en": "as a result",
+      "example": "Les ventes ont baissé ; par conséquent, l'entreprise recrute moins.",
+      "level": "B2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Cause et conséquence: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "cause-08",
+      "function": "cause",
+      "fr": "en raison de",
+      "en": "due to (formal)",
+      "example": "En raison de travaux, la rue est fermée.",
+      "level": "B2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T3",
+        "purpose": "Cause et conséquence: vocabulary used in TCF EE-T3."
+      }
+    },
+    {
+      "id": "formel-01",
+      "function": "formel",
+      "fr": "madame, monsieur,",
+      "en": "Dear Sir or Madam,",
+      "example": "Madame, Monsieur, je vous écris au sujet de ma réservation.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T1",
+        "purpose": "Écrire un message formel: vocabulary used in TCF EE-T1."
+      }
+    },
+    {
+      "id": "formel-02",
+      "function": "formel",
+      "fr": "je vous écris pour",
+      "en": "I am writing to you to",
+      "example": "Je vous écris pour signaler un problème.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T1",
+        "purpose": "Écrire un message formel: vocabulary used in TCF EE-T1."
+      }
+    },
+    {
+      "id": "formel-03",
+      "function": "formel",
+      "fr": "je vous prie de bien vouloir",
+      "en": "please kindly (formal)",
+      "example": "Je vous prie de bien vouloir me confirmer la date.",
+      "level": "B2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T1",
+        "purpose": "Écrire un message formel: vocabulary used in TCF EE-T1."
+      }
+    },
+    {
+      "id": "formel-04",
+      "function": "formel",
+      "fr": "dans l'attente de votre réponse",
+      "en": "awaiting your reply",
+      "example": "Dans l'attente de votre réponse, je vous remercie.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T1",
+        "purpose": "Écrire un message formel: vocabulary used in TCF EE-T1."
+      }
+    },
+    {
+      "id": "formel-05",
+      "function": "formel",
+      "fr": "cordialement",
+      "en": "kind regards",
+      "example": "Cordialement, Sara Martin",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T1",
+        "purpose": "Écrire un message formel: vocabulary used in TCF EE-T1."
+      }
+    },
+    {
+      "id": "formel-06",
+      "function": "formel",
+      "fr": "veuillez agréer, madame, monsieur, mes salutations distinguées",
+      "en": "yours faithfully",
+      "example": "Veuillez agréer, Madame, Monsieur, mes salutations distinguées.",
+      "level": "B2",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T1",
+        "purpose": "Écrire un message formel: vocabulary used in TCF EE-T1."
+      }
+    },
+    {
+      "id": "formel-07",
+      "function": "formel",
+      "fr": "ci-joint",
+      "en": "attached",
+      "example": "Vous trouverez ci-joint mon curriculum vitæ.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T1",
+        "purpose": "Écrire un message formel: vocabulary used in TCF EE-T1."
+      }
+    },
+    {
+      "id": "formel-08",
+      "function": "formel",
+      "fr": "suite à",
+      "en": "following (formal)",
+      "example": "Suite à notre conversation, je vous confirme mon intérêt.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EE",
+        "task": "EE-T1",
+        "purpose": "Écrire un message formel: vocabulary used in TCF EE-T1."
+      }
+    },
+    {
+      "id": "telephone-01",
+      "function": "telephone",
+      "fr": "allô, ici",
+      "en": "hello, this is",
+      "example": "Allô, ici Sara Martin, je vous appelle au sujet de l'annonce.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Au téléphone: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "telephone-02",
+      "function": "telephone",
+      "fr": "je vous appelle au sujet de",
+      "en": "I'm calling about",
+      "example": "Je vous appelle au sujet de ma commande.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Au téléphone: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "telephone-03",
+      "function": "telephone",
+      "fr": "pouvez-vous répéter",
+      "en": "can you repeat",
+      "example": "Pardon, pouvez-vous répéter, s'il vous plaît ?",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Au téléphone: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "telephone-04",
+      "function": "telephone",
+      "fr": "ne quittez pas",
+      "en": "please hold",
+      "example": "Ne quittez pas, je vous passe le service.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Au téléphone: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "telephone-05",
+      "function": "telephone",
+      "fr": "laisser un message",
+      "en": "to leave a message",
+      "example": "Je voudrais laisser un message pour M. Roux.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Au téléphone: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "telephone-06",
+      "function": "telephone",
+      "fr": "rappeler",
+      "en": "to call back",
+      "example": "Pouvez-vous me rappeler avant midi ?",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Au téléphone: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "telephone-07",
+      "function": "telephone",
+      "fr": "si je comprends bien",
+      "en": "if I understand correctly",
+      "example": "Si je comprends bien, la livraison arrive mardi.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Au téléphone: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "telephone-08",
+      "function": "telephone",
+      "fr": "merci pour ces informations",
+      "en": "thank you for this information",
+      "example": "Merci pour ces informations, bonne journée !",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T2",
+        "purpose": "Au téléphone: vocabulary used in TCF EO-T2."
+      }
+    },
+    {
+      "id": "echange-01",
+      "function": "echange",
+      "fr": "autrement dit",
+      "en": "in other words",
+      "example": "Autrement dit, vous préférez rester en ville.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Gérer l'échange: vocabulary used in TCF EO-T1."
+      }
+    },
+    {
+      "id": "echange-02",
+      "function": "echange",
+      "fr": "c'est-à-dire",
+      "en": "that is to say",
+      "example": "Je travaille de nuit, c'est-à-dire de 22 h à 6 h.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Gérer l'échange: vocabulary used in TCF EO-T1."
+      }
+    },
+    {
+      "id": "echange-03",
+      "function": "echange",
+      "fr": "comment dire",
+      "en": "how shall I put it",
+      "example": "C'était, comment dire, très surprenant.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Gérer l'échange: vocabulary used in TCF EO-T1."
+      }
+    },
+    {
+      "id": "echange-04",
+      "function": "echange",
+      "fr": "par exemple",
+      "en": "for example",
+      "example": "J'aime le sport, par exemple le vélo.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Gérer l'échange: vocabulary used in TCF EO-T1."
+      }
+    },
+    {
+      "id": "echange-05",
+      "function": "echange",
+      "fr": "pouvez-vous reformuler",
+      "en": "can you rephrase",
+      "example": "Pardon, pouvez-vous reformuler la question ?",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Gérer l'échange: vocabulary used in TCF EO-T1."
+      }
+    },
+    {
+      "id": "echange-06",
+      "function": "echange",
+      "fr": "je n'ai pas bien compris",
+      "en": "I didn't quite understand",
+      "example": "Je n'ai pas bien compris la dernière partie.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Gérer l'échange: vocabulary used in TCF EO-T1."
+      }
+    },
+    {
+      "id": "echange-07",
+      "function": "echange",
+      "fr": "ce que je veux dire, c'est que",
+      "en": "what I mean is that",
+      "example": "Ce que je veux dire, c'est que le prix compte moins.",
+      "level": "B2",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Gérer l'échange: vocabulary used in TCF EO-T1."
+      }
+    },
+    {
+      "id": "echange-08",
+      "function": "echange",
+      "fr": "pour résumer",
+      "en": "to sum up",
+      "example": "Pour résumer, je suis favorable à ce projet.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "EO",
+        "task": "EO-T1",
+        "purpose": "Gérer l'échange: vocabulary used in TCF EO-T1."
+      }
+    },
+    {
+      "id": "quotidien-01",
+      "function": "quotidien",
+      "fr": "un loyer",
+      "en": "rent",
+      "example": "Le loyer est de 900 dollars par mois.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "La vie quotidienne: vocabulary used in TCF CO."
+      }
+    },
+    {
+      "id": "quotidien-02",
+      "function": "quotidien",
+      "fr": "les charges",
+      "en": "utilities / service charges",
+      "example": "Le chauffage est compris dans les charges.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "La vie quotidienne: vocabulary used in TCF CO."
+      }
+    },
+    {
+      "id": "quotidien-03",
+      "function": "quotidien",
+      "fr": "un préavis",
+      "en": "notice (period)",
+      "example": "Il faut donner un préavis de trois mois.",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "La vie quotidienne: vocabulary used in TCF CO."
+      }
+    },
+    {
+      "id": "quotidien-04",
+      "function": "quotidien",
+      "fr": "un rendez-vous",
+      "en": "an appointment",
+      "example": "J'ai rendez-vous chez le médecin à dix heures.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "La vie quotidienne: vocabulary used in TCF CO."
+      }
+    },
+    {
+      "id": "quotidien-05",
+      "function": "quotidien",
+      "fr": "une réclamation",
+      "en": "a complaint",
+      "example": "Il a fait une réclamation auprès du magasin.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "La vie quotidienne: vocabulary used in TCF CO."
+      }
+    },
+    {
+      "id": "quotidien-06",
+      "function": "quotidien",
+      "fr": "un remboursement",
+      "en": "a refund",
+      "example": "Vous obtiendrez un remboursement sous dix jours.",
+      "level": "B1",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "La vie quotidienne: vocabulary used in TCF CO."
+      }
+    },
+    {
+      "id": "quotidien-07",
+      "function": "quotidien",
+      "fr": "une facture",
+      "en": "an invoice / a bill",
+      "example": "Je n'ai pas reçu la facture du mois dernier.",
+      "level": "A2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "La vie quotidienne: vocabulary used in TCF CO."
+      }
+    },
+    {
+      "id": "quotidien-08",
+      "function": "quotidien",
+      "fr": "l'embauche",
+      "en": "hiring",
+      "example": "L'entreprise a gelé l'embauche cette année.",
+      "level": "B2",
+      "tcf_target": {
+        "section": "CO",
+        "purpose": "La vie quotidienne: vocabulary used in TCF CO."
+      }
+    }
+  ]
+}

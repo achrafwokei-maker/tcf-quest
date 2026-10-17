@@ -16,6 +16,7 @@ const SKILL_AREAS = [
 const TOOLS = [
   { title: "Académie TCF", icon: Feather, color: "var(--violet)", detail: "Strategies for every section and task", phase: 0, link: "/academie" },
   { title: "Boîte à outils", icon: Languages, color: "var(--blue)", detail: "Frameworks, connectors, grammar lessons", phase: 0, link: "/outils" },
+  { title: "Vocabulaire", icon: BookOpen, color: "var(--cyan)", detail: "Useful expressions by function, a few a day", phase: 0, link: "/vocabulaire" },
   { title: "Carnet d'erreurs", icon: NotebookPen, color: "var(--orange)", detail: "Your recurring mistakes, to drill", phase: 0, link: "/carnet" },
   { title: "Examens", icon: Timer, color: "var(--red)", detail: "Weekly four-skill trial, exam rules", phase: 0, link: "/examen" },
 ];
