@@ -3,8 +3,10 @@
 Off by default. Locally (TCFQUEST_MODE unset) every request uses the single learner's database,
 exactly as before. With TCFQUEST_MODE=beta:
 
-- TCFQUEST_INVITES lists testers as "name:sha256-of-code" pairs, comma-separated. Only hashes are
-  stored, so the server never holds the codes themselves. Remove a name to revoke that tester.
+- TCFQUEST_OWNER is the owner's login, "name:scrypt$salt$hash" (scripts/beta_admin.py owner NAME).
+  The name picks the database, so keep it the same when changing the password.
+- TCFQUEST_INVITES (optional, for later testers) lists "name:sha256-of-code" pairs, comma-separated.
+  Only hashes are stored, never the passwords or codes. Remove a name to revoke that login.
 - TCFQUEST_SECRET signs the login cookie (HMAC), so it cannot be forged or edited.
 - Every /api request needs a valid cookie, except the login endpoints and the health check.
   The tester's name selects their database (db.current_tester).
@@ -42,11 +44,30 @@ def code_hash(code: str) -> str:
     return hashlib.sha256(code.strip().encode()).hexdigest()
 
 
+def password_hash(password: str, salt: bytes | None = None) -> str:
+    """Slow, salted hash for a password the owner chose (stdlib scrypt)."""
+    salt = salt or os.urandom(16)
+    digest = hashlib.scrypt(password.encode(), salt=salt, n=2**14, r=8, p=1, dklen=32)
+    return f"scrypt${salt.hex()}${digest.hex()}"
+
+
+def _matches(secret: str, stored: str) -> bool:
+    if stored.startswith("scrypt$"):
+        try:
+            salt = bytes.fromhex(stored.split("$")[1])
+        except (IndexError, ValueError):
+            return False
+        return hmac.compare_digest(password_hash(secret, salt), stored)
+    return hmac.compare_digest(code_hash(secret), stored)
+
+
 def invites() -> dict[str, str]:
+    """Every allowed login: the owner first, then any invited testers."""
     out = {}
-    for pair in os.environ.get("TCFQUEST_INVITES", "").split(","):
+    pairs = [os.environ.get("TCFQUEST_OWNER", "")] + os.environ.get("TCFQUEST_INVITES", "").split(",")
+    for pair in pairs:
         name, _, digest = pair.strip().partition(":")
-        if NAME.match(name) and len(digest) == 64:
+        if NAME.match(name) and name not in out and (len(digest) == 64 or digest.startswith("scrypt$")):
             out[name] = digest.lower()
     return out
 
@@ -80,13 +101,13 @@ def login(code: str, client: str) -> str:
         _fails[client] = recent
         if len(recent) >= MAX_FAILS:
             raise HTTPException(429, "Too many attempts. Wait 15 minutes.")
-    digest = code_hash(code)
+    code = code.strip()
     for name, expected in invites().items():
-        if hmac.compare_digest(digest, expected):
+        if _matches(code, expected):
             return name
     with _lock:
         _fails[client].append(now)
-    raise HTTPException(401, "This invite code doesn't work.")
+    raise HTTPException(401, "Wrong password.")
 
 
 # ---------- per-tester database ----------

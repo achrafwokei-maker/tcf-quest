@@ -80,3 +80,10 @@ One line per decision: what, when, why, what it replaced. A decision changes onl
 - **AI provider switch** (`ai.py`): Ollama locally, Workers AI online. There is a per-tester daily neuron cap (default 450), and on top of that the Cloudflare free plan fails rather than bills. Quota errors become the usual "failed, try again" state, with a clear message.
 - **Content audio pre-recorded** with the natural voices (170 lines, 5.8 MB MP3, `content/audio/tts/`) so the beta needs no cloud TTS for content. Only lines not pre-recorded use MeloTTS or the browser voice. Attribution is in that folder's README. Jean (CC-BY-NC) is never used for these files.
 - **Not yet verified (needs accounts, B2):** the Workers AI JSON-schema mode with our prompts, MeloTTS French quality, libsql embedded replicas against a real Turso database, and whether Render asks for a card.
+
+## 2026-10-20: owner-only login for the beta
+
+- The owner is the only tester for now, so the main login is a password: `TCFQUEST_OWNER = name:scrypt$salt$hash`, made by `scripts/beta_admin.py owner NAME`. The password is asked hidden and only the hash leaves the Mac.
+- The name picks the database, so changing the password (re-run with the same name) keeps all progress.
+- The invite-code path (`TCFQUEST_INVITES`) stays optional for later testers; unset, it does nothing.
+- Every `/api` route, including AI, needs the signed login cookie. Wrong passwords are rate-limited (10 per 15 min).

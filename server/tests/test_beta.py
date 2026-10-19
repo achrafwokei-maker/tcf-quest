@@ -104,3 +104,21 @@ def test_serves_the_web_app_with_page_fallback(monkeypatch, tmp_path):
     assert c.get("/../secret.txt").text == "<html>app</html>"
     assert c.get("/%2e%2e/secret.txt").text == "<html>app</html>"
     assert c.get("/api/nothing-here").status_code == 404
+
+
+def test_owner_password_login_and_changing_it_keeps_the_data(beta, monkeypatch):
+    app, tmp = beta
+    monkeypatch.delenv("TCFQUEST_INVITES")
+    monkeypatch.setenv("TCFQUEST_OWNER", f"achraf:{testers.password_hash('quatre mots en ville')}")
+    c = client_for(app)
+    assert c.post("/api/beta/login", json={"code": "wrong password!"}).status_code == 401
+    assert c.post("/api/beta/login", json={"code": "quatre mots en ville"}).json()["tester"] == "achraf"
+    c.put("/api/profile", json={"display_name": "Achraf"})
+    assert "scrypt$" in testers.invites()["achraf"] and "quatre" not in str(testers.invites())
+    monkeypatch.setenv("TCFQUEST_OWNER", f"achraf:{testers.password_hash('un autre mot de passe')}")
+    assert c.get("/api/profile").status_code == 200              # still signed in: same name, same data
+    d = client_for(app)
+    assert d.post("/api/beta/login", json={"code": "quatre mots en ville"}).status_code == 401
+    assert d.post("/api/beta/login", json={"code": "un autre mot de passe"}).status_code == 200
+    assert d.get("/api/profile").json()["profile"]["display_name"] == "Achraf"
+    assert d.post("/api/eo/whatever/start").status_code != 401 and client_for(app).get("/api/ai/budget").status_code == 401

@@ -3,7 +3,7 @@ import { Button, CompassMark, Loading, Panel } from "./ui";
 
 interface Me { beta: boolean; tester: string | null }
 
-/** Online beta only: asks for the personal invite code once, then remembers it (secure cookie). Locally it renders the app directly. */
+/** Online beta only: asks for the password once, then remembers the login (secure cookie, 180 days). Locally it renders the app directly. */
 export function InviteGate({ children }: { children: ReactNode }) {
   const [me, setMe] = useState<Me | null>(null);
   const [waking, setWaking] = useState(false);
@@ -45,15 +45,15 @@ export function InviteGate({ children }: { children: ReactNode }) {
       <Panel className="space-y-4 text-center">
         <CompassMark className="mx-auto size-12" />
         <h1 className="title-poster text-4xl">TCF Quest · beta</h1>
-        <p className="font-semibold text-ink-soft">Enter the personal invite code you were given. Your progress is saved privately under it.</p>
+        <p className="font-semibold text-ink-soft">Private beta. Sign in to continue your progress.</p>
         <form onSubmit={submit} className="space-y-3">
           <label className="block text-left">
-            <span className="text-sm font-extrabold">Invite code</span>
-            <input value={code} onChange={(e) => setCode(e.target.value)} autoComplete="off" autoCapitalize="none" spellCheck={false}
+            <span className="text-sm font-extrabold">Password</span>
+            <input type="password" value={code} onChange={(e) => setCode(e.target.value)} autoComplete="current-password" autoCapitalize="none" spellCheck={false}
               className="mt-1 w-full rounded-[14px] border-2 border-line bg-surface-2 px-4 py-3 text-lg font-bold" />
           </label>
           {error && <p role="alert" className="text-sm font-bold text-danger">{error}</p>}
-          <Button type="submit" disabled={busy || code.trim().length < 4} className="w-full">Start</Button>
+          <Button type="submit" disabled={busy || code.trim().length < 4} className="w-full">Sign in</Button>
         </form>
         <p className="text-xs font-semibold text-ink-faint">Training app for the TCF Canada. Scores are estimates, never official results.</p>
       </Panel>

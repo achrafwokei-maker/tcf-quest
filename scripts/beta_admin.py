@@ -1,7 +1,8 @@
 """Online beta admin, run by the owner on the Mac (never on the server).
 
     server/.venv/bin/python scripts/beta_admin.py setup          # once: Turso group + server token
-    server/.venv/bin/python scripts/beta_admin.py add amina      # new tester: database + invite code
+    server/.venv/bin/python scripts/beta_admin.py owner achraf   # your login: database + password (asked, hidden)
+    server/.venv/bin/python scripts/beta_admin.py add amina      # later: invited tester, database + code
     server/.venv/bin/python scripts/beta_admin.py remove amina   # revoke (the database is kept)
     server/.venv/bin/python scripts/beta_admin.py invites        # the TCFQUEST_INVITES value for Render
     server/.venv/bin/python scripts/beta_admin.py backup         # copy every tester database to data/beta-backups/
@@ -45,6 +46,9 @@ def env() -> dict[str, str]:
         if "=" in line and not line.lstrip().startswith("#"):
             k, _, v = line.partition("=")
             out[k.strip()] = v.strip()
+    missing = [k for k in ("TURSO_ORG", "TURSO_API_TOKEN") if not out.get(k)]
+    if missing:
+        sys.exit(f"Fill in {', '.join(missing)} in {ENV_FILE.relative_to(ROOT)}, save the file, then run this again.")
     return out
 
 
@@ -109,6 +113,22 @@ def cmd_setup() -> None:
     print("\n(The token is also saved in data/beta-admin.env for backups. Don't share it.)")
 
 
+def cmd_owner(name: str) -> None:
+    """The owner's login. Re-run with the same name to change the password: the data stays."""
+    from getpass import getpass
+    from tcfquest.testers import NAME, password_hash
+    if not NAME.match(name):
+        sys.exit("Name: lowercase letters, digits and dashes, starting with a letter or digit.")
+    password = getpass("Choose a password (12+ characters, not used anywhere else): ").strip()
+    if len(password) < 12:
+        sys.exit("Too short: use at least 12 characters (a few words together is easiest).")
+    if getpass("Type it again: ").strip() != password:
+        sys.exit("The two passwords differ. Nothing was changed.")
+    create_db(db_name(name))
+    print("\nPaste this into Render → Environment as TCFQUEST_OWNER (it's a hash, not your password):")
+    print(f"{name}:{password_hash(password)}")
+
+
 def cmd_add(name: str) -> None:
     from tcfquest.testers import NAME, code_hash
     if not NAME.match(name):
@@ -127,9 +147,16 @@ def cmd_remove(name: str) -> None:
     print(f"Removed {name}. Their database is kept. Set TCFQUEST_INVITES in Render to:\n{invites_value()}")
 
 
+def after_setup() -> dict[str, str]:
+    e = env()
+    if not e.get("TCFQUEST_LIBSQL_URL_TEMPLATE"):
+        sys.exit("Run `setup` first (it saves the database address and token this command needs).")
+    return e
+
+
 def cmd_backup() -> None:
     import libsql
-    e = env()
+    e = after_setup()
     dest = BACKUPS / datetime.now().strftime("%Y-%m-%d-%H%M")
     dest.mkdir(parents=True, exist_ok=True)
     for name in testers():
@@ -143,7 +170,7 @@ def cmd_backup() -> None:
 
 def cmd_selftest() -> None:
     """Runs a real learner flow on the throwaway 'selftest' database, in remote then replica mode."""
-    e = env()
+    e = after_setup()
     os.environ.update(TCFQUEST_DB_BACKEND="libsql", TCFQUEST_LIBSQL_URL_TEMPLATE=e["TCFQUEST_LIBSQL_URL_TEMPLATE"],
                       TCFQUEST_LIBSQL_TOKEN=e["TCFQUEST_LIBSQL_TOKEN"])
     from tcfquest import db, sessions, content, testers as t
@@ -171,7 +198,7 @@ def cmd_selftest() -> None:
 
 if __name__ == "__main__":
     args = sys.argv[1:]
-    commands = {"setup": cmd_setup, "add": cmd_add, "remove": cmd_remove, "backup": cmd_backup,
+    commands = {"setup": cmd_setup, "owner": cmd_owner, "add": cmd_add, "remove": cmd_remove, "backup": cmd_backup,
                 "selftest": cmd_selftest, "invites": lambda: print(invites_value())}
     if not args or args[0] not in commands:
         sys.exit(__doc__)
