@@ -68,6 +68,11 @@ DEFAULTS = {
 }
 
 
+# Content lines pre-recorded on the Mac with the natural voices (scripts/prerender_audio.py), as MP3.
+# They let the online beta play the same voices without the Mac or any cloud quota.
+PRERECORDED_DIR = db.PROJECT_ROOT / "content" / "audio" / "tts"
+
+
 def cache_dir() -> Path:
     d = db.db_path().parent / "tts-cache"
     d.mkdir(parents=True, exist_ok=True)
@@ -108,17 +113,25 @@ async def worker_voices() -> dict | None:
         return None
 
 
+def audio_key(voice_id: str, text: str, speed: float) -> tuple[str, float]:
+    """Cache key of a line, and the speed the engine itself applies (Piper) or 1.0 (Pocket)."""
+    engine_speed = round(speed, 2) if VOICES[voice_id]["speed"] == "native" else 1.0
+    return hashlib.sha256(json.dumps([voice_id, engine_speed, sentences(text)]).encode()).hexdigest()[:32], engine_speed
+
+
 async def synthesize(voice_id: str, text: str, speed: float) -> tuple[bytes, bool]:
-    """WAV bytes for `text`, and whether the speed was applied natively (Piper) or must be
-    applied by the player (Pocket: pitch-preserving playback rate)."""
+    """Audio bytes for `text` (WAV, or MP3 when pre-recorded), and whether the speed was applied
+    natively (Piper) or must be applied by the player (Pocket: pitch-preserving playback rate)."""
     v = VOICES[voice_id]
     native = v["speed"] == "native"
-    engine_speed = round(speed, 2) if native else 1.0
+    key, engine_speed = audio_key(voice_id, text, speed)
     parts = sentences(text)
-    key = hashlib.sha256(json.dumps([voice_id, engine_speed, parts]).encode()).hexdigest()[:32]
     path = cache_dir() / f"{key}.wav"
     if path.exists():
         return path.read_bytes(), native
+    pre = PRERECORDED_DIR / f"{key}.mp3"
+    if pre.exists():
+        return pre.read_bytes(), native
     async with httpx.AsyncClient(timeout=120) as client:
         r = await client.post(f"{WORKER_URL}/synth", json={"engine": v["engine"], "voice": v["voice"],
                                                             "sentences": parts, "speed": engine_speed})

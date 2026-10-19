@@ -276,9 +276,7 @@ def examiner_reply(t: SpeakingTask, turns: list[dict]) -> tuple[str, int]:
                "options": {"temperature": 0.6, "seed": random.randint(1, 10_000), "num_ctx": 4096, "num_predict": 120},
                "messages": examiner_messages(t, turns)}
     try:
-        r = httpx.post(f"{ai.OLLAMA_URL}/api/chat", json=payload, timeout=60)
-        r.raise_for_status()
-        line = clean_line(json.loads(r.json()["message"]["content"])["reply"])
+        line = clean_line(json.loads(ai.chat(payload, 60))["reply"])
         if len(line) >= 3:
             return line, 0
     except (httpx.HTTPError, ValueError, KeyError):

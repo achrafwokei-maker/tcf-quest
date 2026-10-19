@@ -69,3 +69,14 @@ One line per decision: what, when, why, what it replaced. A decision changes onl
 | Pocket TTS 3.3.0 (code / French model) | MIT / CC-BY 4.0. Voices: Estelle Kyutai; VCTK voices (George, Paul, Charles) CC-BY 4.0; Jean (EARS) CC-BY-NC 4.0, personal use only |
 | Piper 1.8.0 | GPL-3.0 (engine, in a separate process). Voices: Siwis CC-BY 4.0, Tom AGPL-3.0, UPMC CC-BY-SA 4.0, Gilles CC0 |
 | MLX Whisper (evaluation only) | MIT |
+| libsql 0.1.11 (online beta only, optional extra) | MIT |
+
+
+## 2026-10-19: online beta foundations (B0–B1, local only)
+
+- **Hosting plan** in `docs/ONLINE_BETA_PLAN.md` (Render free + Turso + Cloudflare Workers AI). Approved for local code only; accounts and deployment still need the owner's approval.
+- **Database driver:** `TCFQUEST_DB_BACKEND=libsql` runs the same code on libSQL (Turso). libsql has no `row_factory`, `backup` or named parameters, so a thin adapter in `db.py` provides them. The whole backend suite runs on both drivers in `scripts/test.sh`.
+- **One database per tester**, chosen by a signed invite cookie (`testers.py`). Codes are stored only as SHA-256 hashes in an environment variable. Wrong codes are rate-limited. Local mode is unchanged.
+- **AI provider switch** (`ai.py`): Ollama locally, Workers AI online. There is a per-tester daily neuron cap (default 450), and on top of that the Cloudflare free plan fails rather than bills. Quota errors become the usual "failed, try again" state, with a clear message.
+- **Content audio pre-recorded** with the natural voices (170 lines, 5.8 MB MP3, `content/audio/tts/`) so the beta needs no cloud TTS for content. Only lines not pre-recorded use MeloTTS or the browser voice. Attribution is in that folder's README. Jean (CC-BY-NC) is never used for these files.
+- **Not yet verified (needs accounts, B2):** the Workers AI JSON-schema mode with our prompts, MeloTTS French quality, libsql embedded replicas against a real Turso database, and whether Render asks for a card.

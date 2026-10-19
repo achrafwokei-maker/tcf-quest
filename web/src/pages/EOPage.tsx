@@ -1,3 +1,4 @@
+import { AiFailedNote } from "../components/AiFailedNote";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Check, Clock, Eye, RotateCcw, Sparkles, Square, Volume2, X } from "lucide-react";
@@ -230,13 +231,8 @@ function Result({ task, session, onUpdate, onAgain }: { task: EOTaskInfo; sessio
         </details>
       </Panel>
       {session.feedback_status === "none" && <Panel pad="sm"><p className="font-semibold">You didn't answer, so there's nothing to give feedback on.</p></Panel>}
-      {session.feedback_status === "pending" && <Panel pad="sm"><Loading label="The local AI is reviewing the conversation (about 30 s)…" /></Panel>}
-      {session.feedback_status === "failed" && (
-        <Panel pad="sm" className="flex flex-wrap items-center gap-3">
-          <p className="flex-1 font-semibold">The conversation is saved, but the local AI couldn't give feedback (is Ollama running?).</p>
-          <Button variant="secondary" onClick={async () => onUpdate(await eoApi.retry(session.id))}><RotateCcw aria-hidden className="size-4" /> Try again</Button>
-        </Panel>
-      )}
+      {session.feedback_status === "pending" && <Panel pad="sm"><Loading label="The AI is reviewing the conversation (about 30 s)…" /></Panel>}
+      {session.feedback_status === "failed" && <AiFailedNote what="conversation" onRetry={async () => onUpdate(await eoApi.retry(session.id))} />}
       {session.feedback && <EOFeedbackView fb={session.feedback} />}
       <div className="flex flex-wrap justify-end gap-3">
         <Button variant="secondary" onClick={() => navigate("/carnet")}>Weak points</Button>

@@ -1,0 +1,36 @@
+# Checks every push and pull request. Render deploys the beta branch only after this passes.
+name: CI
+on:
+  push:
+    branches: [main, beta]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Backend tests (SQLite and libSQL)
+        working-directory: server
+        run: |
+          pip install --require-hashes -r requirements-beta.txt
+          pip install pytest==9.1.1
+          python -m pytest -q
+          TCFQUEST_DB_BACKEND=libsql python -m pytest -q
+      - name: Frontend type-check and tests
+        working-directory: web
+        run: |
+          npm ci --no-audit --no-fund
+          npx tsc --noEmit
+          npx vitest run
+      - name: Beta image builds
+        run: docker build -t tcfquest-beta .

@@ -2,6 +2,18 @@
 
 Read this first when resuming. Newest entry on top.
 
+## Online beta B0–B1 done (2026-10-19, local only, nothing deployed)
+
+Plan: `docs/ONLINE_BETA_PLAN.md`; details in DECISIONS (2026-10-19). Built:
+- `TCFQUEST_MODE=beta`: invite codes, one database per tester, and FastAPI serving `web/dist`.
+- libSQL driver adapter.
+- Workers AI provider with daily caps, plus the `/api/ai/budget` endpoint.
+- Pre-recorded content audio.
+
+Tests: 210 backend tests on both SQLite and libSQL, plus 23 frontend. Browser check on a throwaway beta server (port 8790): the wrong code is refused, the right code gives a fresh onboarding per tester, and pre-recorded audio plays with the worker off.
+
+Next, B2, needs the owner: free Cloudflare, Turso and Render accounts (no card), a Dockerfile/render.yaml, the `beta` branch with CI, and the first private deploy. Then B3: a phone and microphone pass.
+
 ## Final state (2026-10-17)
 
 App complete against `docs/CORE_FUNCTIONAL_GAPS.md`: M1–M13, the journey road, day/night themes, vocabulary cards, dead-link guard. 195 backend + 23 frontend tests. Public repo: github.com/achrafwokei-maker/tcf-quest (clean one-commit history; the private `phase-1-foundation` branch keeps the full history). Needs the owner's own try-out: microphone and voice ratings. Possible later work: more reserved mocks, teacher-marked samples to calibrate AI scores, README screenshots.

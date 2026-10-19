@@ -1,3 +1,4 @@
+import { AiFailedNote } from "../components/AiFailedNote";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { AlertTriangle, ArrowLeft, Check, Clock, FileText, PenLine, RotateCcw, Sparkles } from "lucide-react";
@@ -225,13 +226,8 @@ function Result({ task, sub, onUpdate, onAgain }: { task: WritingTask; sub: Subm
         <p className="mt-3 whitespace-pre-wrap rounded-[16px] bg-surface-2 p-3">{sub.text}</p>
       </Panel>
 
-      {sub.feedback_status === "pending" && <Panel pad="sm"><Loading label="The local AI is reading your text twice (about 30–60 s)…" /></Panel>}
-      {sub.feedback_status === "failed" && (
-        <Panel pad="sm" className="flex flex-wrap items-center gap-3">
-          <p className="flex-1 font-semibold">Your text is saved, but the local AI couldn't give feedback (is Ollama running?).</p>
-          <Button variant="secondary" onClick={async () => onUpdate(await writingApi.retry(sub.id))}><RotateCcw aria-hidden className="size-4" /> Try again</Button>
-        </Panel>
-      )}
+      {sub.feedback_status === "pending" && <Panel pad="sm"><Loading label="The AI is reading your text twice (about 30–60 s)…" /></Panel>}
+      {sub.feedback_status === "failed" && <AiFailedNote what="text" onRetry={async () => onUpdate(await writingApi.retry(sub.id))} />}
       {sub.feedback && <FeedbackView fb={sub.feedback} />}
 
       <div className="flex flex-wrap justify-end gap-3">

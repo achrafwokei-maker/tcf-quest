@@ -17,8 +17,9 @@ import wave
 from datetime import date
 
 import httpx
+from fastapi.concurrency import run_in_threadpool
 
-from . import db, tts
+from . import ai, db, tts
 
 MAX_BYTES = 10 * 1024 * 1024        # ~5 minutes of 16 kHz mono WAV
 ENGINE = "mlx-whisper large-v3-turbo"
@@ -29,7 +30,8 @@ class BadAudio(ValueError):
 
 
 def recordings_dir():
-    d = db.db_path().parent / "recordings" / date.today().strftime("%Y-%m")
+    # Online beta: each tester's recordings in their own folder (and wiped with the server's disk).
+    d = db.db_path().parent / "recordings" / (db.current_tester.get() or "") / date.today().strftime("%Y-%m")
     d.mkdir(parents=True, exist_ok=True)
     return d
 
@@ -48,19 +50,23 @@ async def transcribe(conn: sqlite3.Connection, data: bytes, context: str = "chec
     duration = _check_wav(data)
     path = recordings_dir() / f"{uuid.uuid4().hex}.wav"
     path.write_bytes(data)
+    engine = ENGINE
     try:
-        async with httpx.AsyncClient(timeout=120) as client:
-            r = await client.post(f"{tts.WORKER_URL}/transcribe", content=data,
-                                  headers={"Content-Type": "audio/wav"})
-        r.raise_for_status()
-        result = r.json()
-    except (httpx.HTTPError, ValueError):
+        if ai.provider() == "workers":
+            result, engine = await run_in_threadpool(ai.transcribe, data, duration), "workers-ai " + ai.CF_STT_MODEL
+        else:
+            async with httpx.AsyncClient(timeout=120) as client:
+                r = await client.post(f"{tts.WORKER_URL}/transcribe", content=data,
+                                      headers={"Content-Type": "audio/wav"})
+            r.raise_for_status()
+            result = r.json()
+    except (httpx.HTTPError, ValueError, KeyError):  # includes ai.QuotaExceeded: learner types instead
         result = {"text": "", "confidence": 0.0, "status": "engine_off", "duration_s": round(duration, 2), "segments": []}
     cur = conn.execute(
         """INSERT INTO speech_recording (path, context, context_ref, duration_s, transcript, confidence, status, engine)
            VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
         (str(path.relative_to(db.db_path().parent)), context, ref, result["duration_s"], result["text"],
-         result["confidence"], result["status"], None if result["status"] == "engine_off" else ENGINE))
+         result["confidence"], result["status"], None if result["status"] == "engine_off" else engine))
     conn.commit()
     return {"recording_id": cur.lastrowid, **result}
 

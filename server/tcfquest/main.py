@@ -3,22 +3,29 @@
 from __future__ import annotations
 
 import json
+import os
 import sqlite3
 from contextlib import asynccontextmanager
 from datetime import date, timedelta
+from pathlib import Path
 from typing import Iterator, Literal
 
+from fastapi.concurrency import run_in_threadpool
+from fastapi.responses import FileResponse
 from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Request, Response
 from pydantic import BaseModel, Field
 
 from . import (ai, avatar, content, db, estimates, feedback, notebook, onboarding, planner, reviews, sessions, tts,
-               exam, journey, speaking, speaking_ai, speech, vocab, weakness, writing, writing_ai)
+               exam, journey, speaking, speaking_ai, speech, testers, vocab, weakness, writing, writing_ai)
 
 SKILLS = ("listening", "reading", "speaking", "writing")
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    if testers.beta_mode():  # each tester's database is prepared on their first request
+        yield
+        return
     conn = db.connect()
     db.migrate(conn)
     with db.transaction(conn):
@@ -29,18 +36,56 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="TCF Quest", version="0.1.0", lifespan=lifespan)
+app.add_middleware(testers.TesterMiddleware)
 
 
 def get_db() -> Iterator[sqlite3.Connection]:
     """One short-lived connection per request (SQLite connections are per-thread)."""
     conn = db.connect()
     try:
+        testers.ensure_ready(conn)
         yield conn
     finally:
         conn.close()
 
 
+# ---------- online beta: invite code login (inactive locally) ----------
+
+class InviteIn(BaseModel):
+    code: str = Field(min_length=4, max_length=100)
+
+
+@app.get("/api/beta/me")
+def beta_me(request: Request):
+    if not testers.beta_mode():
+        return {"beta": False, "tester": None}
+    return {"beta": True, "tester": testers.verify(request.cookies.get(testers.COOKIE))}
+
+
+@app.post("/api/beta/login")
+def beta_login(body: InviteIn, request: Request, response: Response):
+    if not testers.beta_mode():
+        raise HTTPException(404, "Not available")
+    client = request.headers.get("x-forwarded-for", "").split(",")[0].strip() or (request.client.host if request.client else "?")
+    name = testers.login(body.code, client)
+    response.set_cookie(testers.COOKIE, testers.sign(name), max_age=testers.COOKIE_MAX_AGE,
+                        httponly=True, secure=True, samesite="lax")
+    return {"beta": True, "tester": name}
+
+
+@app.post("/api/beta/logout")
+def beta_logout(response: Response):
+    response.delete_cookie(testers.COOKIE)
+    return {"ok": True}
+
+
 # ---------- health ----------
+
+@app.get("/api/ai/budget")
+def ai_budget(conn: sqlite3.Connection = Depends(get_db)):
+    """Today's free cloud AI allowance for this learner (beta only; locally unlimited)."""
+    return ai.budget()
+
 
 @app.get("/api/health")
 async def health(conn: sqlite3.Connection = Depends(get_db)):
@@ -459,6 +504,8 @@ def review_close(flag_id: int, body: ResolveIn, conn: sqlite3.Connection = Depen
 
 @app.post("/api/backup")
 def make_backup(conn: sqlite3.Connection = Depends(get_db)):
+    if testers.beta_mode():
+        raise HTTPException(403, "Online backups are made by the maintainer")
     return {"path": str(db.backup(conn))}
 
 
@@ -523,8 +570,14 @@ async def tts_audio(body: TtsIn, conn: sqlite3.Connection = Depends(get_db)):
     try:
         wav, native = await tts.synthesize(voice_id, body.text, body.speed)
     except Exception:
+        if ai.provider() == "workers":  # not pre-recorded: cloud French voice, else the browser's
+            try:
+                mp3 = await run_in_threadpool(ai.speak, tts.spoken_text(body.text))
+                return Response(mp3, media_type="audio/mpeg", headers={"X-Voice": "cloud", "X-Speed-Applied": "0"})
+            except Exception:
+                pass
         raise HTTPException(503, "The local voice engine is not running. Using the browser voice instead.")
-    return Response(wav, media_type="audio/wav", headers={
+    return Response(wav, media_type="audio/mpeg" if wav[:4] != b"RIFF" else "audio/wav", headers={
         "X-Voice": voice_id, "X-Speed-Applied": "1" if native else "0", "Cache-Control": "max-age=86400"})
 
 
@@ -851,3 +904,21 @@ def vocab_grade(card_id: str, body: VocabGradeIn, conn: sqlite3.Connection = Dep
         return vocab.grade(conn, card_id, body.grade)
     except KeyError:
         raise HTTPException(404, "Unknown card")
+
+
+# ---------- web app (online beta: one service serves the built frontend; locally Vite does) ----------
+
+WEB_DIST = Path(os.environ.get("TCFQUEST_WEB_DIST", db.PROJECT_ROOT / "web" / "dist")).resolve()
+
+
+@app.get("/{path:path}", include_in_schema=False)
+def web_app(path: str):
+    if os.environ.get("TCFQUEST_SERVE_WEB") != "1" or path.startswith("api/"):
+        raise HTTPException(404, "Not found")
+    dist = Path(os.environ.get("TCFQUEST_WEB_DIST", WEB_DIST)).resolve()
+    f = (dist / path).resolve()
+    if path and f.is_file() and dist in f.parents:
+        # Hashed build files never change; the page itself must always be fresh after a deploy.
+        return FileResponse(f, headers={"Cache-Control": "public, max-age=31536000, immutable"}
+                            if f.parent.name == "assets" else None)
+    return FileResponse(dist / "index.html", headers={"Cache-Control": "no-cache"})

@@ -85,3 +85,27 @@ def test_audio_is_cached(client, monkeypatch):
     assert len(calls) == 1 and calls[0]["sentences"] == ["Bonjour Madame.", "Ça va ?"] and calls[0]["speed"] == 0.85
     r = client.post("/api/tts", json={"text": "Bonjour Madame. Ça va ?", "voice": "pocket:estelle", "speed": 0.85})
     assert r.headers["x-speed-applied"] == "0" and calls[-1]["speed"] == 1.0    # Pocket: the player slows it
+
+
+def test_prerecorded_line_plays_without_the_worker(client, monkeypatch, tmp_path):
+    monkeypatch.setattr(tts, "PRERECORDED_DIR", tmp_path)
+    key, _ = tts.audio_key(tts.DEFAULTS["female"], "Deux croissants, s'il vous plaît.", 1.0)
+    (tmp_path / f"{key}.mp3").write_bytes(b"ID3-fake-mp3")
+    r = client.post("/api/tts", json={"text": "Deux croissants, s'il vous plaît.", "speaker": "Madame Roux", "speed": 1.0})
+    assert r.status_code == 200 and r.content == b"ID3-fake-mp3" and r.headers["content-type"] == "audio/mpeg"
+    r = client.post("/api/tts", json={"text": "Une autre phrase.", "speaker": "Madame Roux", "speed": 1.0})
+    assert r.status_code == 503                                  # not recorded, worker off: browser voice
+
+
+def test_every_content_line_is_prerecorded():
+    """Guards the beta: new or edited content must be re-recorded (scripts/prerender_audio.py)."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("prerender", Path(__file__).resolve().parents[2] / "scripts" / "prerender_audio.py")
+    pre = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(pre)
+    missing = []
+    for text, speaker in pre.lines():
+        key, _ = tts.audio_key(tts.DEFAULTS[tts.CHARACTERS.get(speaker or "", "narrator")], text, 1.0)
+        if not (tts.PRERECORDED_DIR / f"{key}.mp3").exists():
+            missing.append(text[:40])
+    assert not missing, f"{len(missing)} lines need recording, e.g. {missing[:3]}"

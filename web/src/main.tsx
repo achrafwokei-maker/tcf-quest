@@ -7,6 +7,7 @@ import "./styles/index.css";
 import { api } from "./lib/api";
 import { useAsync } from "./lib/useAsync";
 import { AppShell } from "./components/AppShell";
+import { InviteGate } from "./components/InviteGate";
 import { ErrorNote, Loading } from "./components/ui";
 import { Onboarding } from "./pages/Onboarding";
 import { Today } from "./pages/Today";
@@ -77,7 +78,7 @@ function App() {
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <InviteGate><App /></InviteGate>
     </BrowserRouter>
   </StrictMode>,
 );

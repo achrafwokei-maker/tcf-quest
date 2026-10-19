@@ -212,10 +212,9 @@ def _ask(task: writing.WritingTask, text: str, words: int, seed: int, model_cls,
         payload = {"model": ai.MODEL, "stream": False, "think": False, "format": fmt,
                    "options": {"temperature": 0.3, "seed": seed + attempt, "num_ctx": 8192},
                    "messages": messages}
-        r = httpx.post(f"{ai.OLLAMA_URL}/api/chat", json=payload, timeout=TIMEOUT_S)
-        r.raise_for_status()
+        content = ai.chat(payload, TIMEOUT_S)
         try:
-            return model_cls.model_validate_json(r.json()["message"]["content"])
+            return model_cls.model_validate_json(content)
         except (ValidationError, KeyError, ValueError) as e:
             last_error = e
     raise ValueError(f"invalid rubric output: {last_error}")

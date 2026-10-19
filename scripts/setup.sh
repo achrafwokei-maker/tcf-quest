@@ -14,7 +14,7 @@ fi
 
 echo "→ Python 3.12 and backend packages"
 .tools/bin/uv python install 3.12 >/dev/null
-(cd server && "$ROOT/.tools/bin/uv" sync -q --python 3.12)
+(cd server && "$ROOT/.tools/bin/uv" sync -q --python 3.12 --extra beta)
 
 echo "→ Web app packages"
 (cd web && npm install --no-fund --no-audit --loglevel=error)

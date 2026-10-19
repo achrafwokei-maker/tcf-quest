@@ -113,10 +113,9 @@ def _ask(t, turns, full: bool, seed: int):
         payload = {"model": ai.MODEL, "stream": False, "think": False, "format": schema(full),
                    "options": {"temperature": 0.3, "seed": seed + attempt, "num_ctx": 8192},
                    "messages": messages(t, turns, full)}
-        r = httpx.post(f"{ai.OLLAMA_URL}/api/chat", json=payload, timeout=writing_ai.TIMEOUT_S)
-        r.raise_for_status()
+        content = ai.chat(payload, writing_ai.TIMEOUT_S)
         try:
-            return model_cls.model_validate_json(r.json()["message"]["content"])
+            return model_cls.model_validate_json(content)
         except (ValidationError, KeyError, ValueError) as e:
             last = e
     raise ValueError(f"invalid rubric output: {last}")
