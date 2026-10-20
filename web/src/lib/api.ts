@@ -92,7 +92,8 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   }
   if (!res.ok) {
     const detail = await res.json().catch(() => null);
-    throw new ApiError(res.status, detail?.detail ?? res.statusText);
+    // Never a blank message: show the server's reason, else the code (e.g. "Server error 500 on /profile").
+    throw new ApiError(res.status, typeof detail?.detail === "string" ? detail.detail : `Server error ${res.status} on ${path}`);
   }
   return res.json() as Promise<T>;
 }
