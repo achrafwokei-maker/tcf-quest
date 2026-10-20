@@ -118,3 +118,15 @@ def test_pasted_settings_are_cleaned():
                   "        = eyJabc.def-ghi"):
         assert clean_setting(messy) == "eyJabc.def-ghi"
     assert clean_setting("libsql://tcfq-{tester}-org.aws-us-east-1.turso.io ") == "libsql://tcfq-{tester}-org.aws-us-east-1.turso.io"
+
+
+def test_unexpected_errors_answer_in_json_without_secrets(monkeypatch, tmp_path):
+    from fastapi.testclient import TestClient
+    from tcfquest import db, main
+    monkeypatch.setenv("TCFQUEST_DB", str(tmp_path / "t.db"))
+    monkeypatch.setenv("TCFQUEST_LIBSQL_TOKEN", "secret-token-123456")
+    def boom(*a, **k):
+        raise ValueError("sync error with secret-token-123456 inside")
+    monkeypatch.setattr(db, "connect", boom)
+    r = TestClient(main.app, raise_server_exceptions=False).get("/api/profile")
+    assert r.status_code == 500 and "ValueError" in r.json()["detail"] and "secret-token" not in r.text

@@ -39,6 +39,20 @@ app = FastAPI(title="TCF Quest", version="0.1.0", lifespan=lifespan)
 app.add_middleware(testers.TesterMiddleware)
 
 
+@app.exception_handler(Exception)
+async def unexpected_error(request: Request, exc: Exception):
+    """An unexpected crash still answers in JSON, with a short reason the screen can show
+    (the full traceback stays in the server log). Secrets never appear in these messages."""
+    import logging
+    from fastapi.responses import JSONResponse
+    logging.getLogger("tcfquest").exception("Unexpected error on %s", request.url.path)
+    reason = f"{type(exc).__name__}: {str(exc)[:160]}"
+    for secret in (os.environ.get(k, "") for k in ("TCFQUEST_LIBSQL_TOKEN", "TCFQUEST_CF_TOKEN", "TCFQUEST_TURSO_API_TOKEN")):
+        if len(secret) > 8:
+            reason = reason.replace(secret.strip(), "***")
+    return JSONResponse({"detail": f"Server error ({reason})"}, status_code=500)
+
+
 def get_db() -> Iterator[sqlite3.Connection]:
     """One short-lived connection per request (SQLite connections are per-thread)."""
     conn = db.connect()
