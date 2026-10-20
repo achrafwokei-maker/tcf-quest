@@ -4,6 +4,7 @@ on:
   push:
     branches: [main, beta]
   pull_request:
+  workflow_dispatch:   # "Run workflow" button, to re-check without a new commit
 
 permissions:
   contents: read
