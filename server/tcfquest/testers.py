@@ -127,11 +127,22 @@ def ensure_ready(conn) -> None:
     if not tester or tester in _ready:
         return
     from . import estimates, weakness  # late import: these import db too
-    db.migrate(conn)
-    with db.transaction(conn):
-        weakness.backfill(conn)
-        estimates.update(conn)
-    _ready.add(tester)
+    with _ready_lock(tester):  # a new account's first page sends several requests at once: prepare once
+        if tester in _ready:
+            return
+        db.migrate(conn)
+        with db.transaction(conn):
+            weakness.backfill(conn)
+            estimates.update(conn)
+        _ready.add(tester)
+
+
+_locks: dict[str, threading.Lock] = {}
+
+
+def _ready_lock(tester: str) -> threading.Lock:
+    with _lock:
+        return _locks.setdefault(tester, threading.Lock())
 
 
 class TesterMiddleware:

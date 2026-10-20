@@ -141,3 +141,14 @@ def test_owner_value_survives_messy_pasting(beta, monkeypatch):
         monkeypatch.setenv("TCFQUEST_OWNER", messy)
         assert testers.invites()["achraf"] == h
     assert client_for(app).post("/api/beta/login", json={"code": "quatre mots en ville"}).json()["tester"] == "achraf"
+
+
+def test_first_requests_in_parallel_prepare_the_database_once(beta):
+    """A new account's first page fires several requests at once; they must not collide."""
+    from concurrent.futures import ThreadPoolExecutor
+    app, _ = beta
+    a = client_for(app, "amina")
+    with ThreadPoolExecutor(6) as pool:
+        codes = list(pool.map(lambda p: a.get(p).status_code, ["/api/profile", "/api/today", "/api/journey",
+                                                               "/api/vocab", "/api/profile", "/api/ai/budget"]))
+    assert codes == [200] * 6
