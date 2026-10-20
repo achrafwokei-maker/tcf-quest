@@ -33,4 +33,8 @@ jobs:
           npx tsc --noEmit
           npx vitest run
       - name: Beta image builds
-        run: docker build -t tcfquest-beta .
+      
+        run: docker build -t tcfquest-beta .E373-54C4
+        E373-54C4
+        
+

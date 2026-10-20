@@ -182,7 +182,7 @@ def cmd_selftest() -> None:
             t._ready.discard("selftest")
             conn = db.connect()
             t.ensure_ready(conn)
-            version = conn.execute("PRAGMA user_version").fetchone()[0]
+            version = db.schema_version(conn)
             s = content.get_set("premiers-pas-a")
             state = sessions.load_state(conn, s)
             item = state["order"][state["index"]]

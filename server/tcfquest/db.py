@@ -61,7 +61,7 @@ def migrations() -> list[tuple[int, Path]]:
 
 
 def migrate(conn: sqlite3.Connection) -> int:
-    current = conn.execute("PRAGMA user_version").fetchone()[0]
+    current = schema_version(conn)
     for version, file in migrations():
         if version <= current:
             continue
@@ -70,13 +70,31 @@ def migrate(conn: sqlite3.Connection) -> int:
             # executescript() would auto-commit, so run statement by statement instead.
             for statement in _split(file.read_text()):
                 conn.execute(statement)
-            conn.execute(f"PRAGMA user_version = {version}")
+            _set_schema_version(conn, version)
             conn.execute("COMMIT")
         except Exception:
             conn.execute("ROLLBACK")
             raise
         current = version
     return current
+
+
+def schema_version(conn: sqlite3.Connection) -> int:
+    """Applied migration number. SQLite keeps it in the user_version pragma; Turso doesn't allow
+    writing that pragma, so online databases keep it in a one-row table instead."""
+    if isinstance(conn, LibsqlConnection):
+        conn.execute("CREATE TABLE IF NOT EXISTS schema_version (version INTEGER NOT NULL)")
+        row = conn.execute("SELECT MAX(version) FROM schema_version").fetchone()
+        return row[0] or 0
+    return conn.execute("PRAGMA user_version").fetchone()[0]
+
+
+def _set_schema_version(conn: sqlite3.Connection, version: int) -> None:
+    if isinstance(conn, LibsqlConnection):
+        conn.execute("DELETE FROM schema_version")
+        conn.execute("INSERT INTO schema_version (version) VALUES (?)", (version,))
+    else:
+        conn.execute(f"PRAGMA user_version = {version}")
 
 
 def _split(sql: str) -> list[str]:

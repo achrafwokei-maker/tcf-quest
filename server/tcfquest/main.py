@@ -89,7 +89,7 @@ def ai_budget(conn: sqlite3.Connection = Depends(get_db)):
 
 @app.get("/api/health")
 async def health(conn: sqlite3.Connection = Depends(get_db)):
-    schema = conn.execute("PRAGMA user_version").fetchone()[0]
+    schema = db.schema_version(conn)
     return {"ok": True, "schema_version": schema, "ai": await ai.status()}
 
 
