@@ -110,3 +110,11 @@ def test_skins_unlock_by_weakest_skill_not_xp(client):
     assert client.put("/api/avatar/skin", json={"skin": "b1"}).json()["avatar"]["equipped_skin"] == "b1"
     assert client.put("/api/avatar/skin", json={"skin": "b2"}).status_code == 403
     assert client.put("/api/avatar/skin", json={"skin": "zz"}).status_code == 404
+
+
+def test_pasted_settings_are_cleaned():
+    from tcfquest.db import clean_setting
+    for messy in ("  eyJabc.def-ghi  ", "= eyJabc.def-ghi", '"eyJabc.def-ghi"', "eyJabc.def-ghi\nTCFQUEST_SECRET = x",
+                  "        = eyJabc.def-ghi"):
+        assert clean_setting(messy) == "eyJabc.def-ghi"
+    assert clean_setting("libsql://tcfq-{tester}-org.aws-us-east-1.turso.io ") == "libsql://tcfq-{tester}-org.aws-us-east-1.turso.io"

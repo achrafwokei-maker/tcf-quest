@@ -221,6 +221,12 @@ class LibsqlConnection:
 RESYNC_S = 300
 _synced_at: dict[str, float] = {}
 _sync_locks: dict[str, threading.Lock] = {}
+
+
+def clean_setting(value: str) -> str:
+    """A secret pasted into a dashboard often brings spaces, quotes, a leading '=' or a line break."""
+    words = value.replace('"', " ").replace("'", " ").strip().lstrip("=").split()
+    return words[0] if words else ""
 _sync_guard = threading.Lock()
 
 
@@ -238,7 +244,7 @@ def _libsql_connect(path: Path) -> sqlite3.Connection:
     url = os.environ.get("TCFQUEST_LIBSQL_URL_TEMPLATE")
     tester = current_tester.get()
     if url and tester:
-        remote, token = url.format(tester=tester), os.environ["TCFQUEST_LIBSQL_TOKEN"]
+        remote, token = clean_setting(url).format(tester=tester), clean_setting(os.environ["TCFQUEST_LIBSQL_TOKEN"])
         if os.environ.get("TCFQUEST_LIBSQL_REPLICA") == "1":
             # Local copy synced with Turso: reads stay on the server, writes go to Turso and come back
             # into the copy at once. This server is the only writer, so a full sync is needed only

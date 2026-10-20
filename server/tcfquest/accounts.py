@@ -33,7 +33,7 @@ _lock = threading.Lock()
 
 
 def project() -> str:
-    return os.environ.get("TCFQUEST_FIREBASE_PROJECT", "")
+    return db.clean_setting(os.environ.get("TCFQUEST_FIREBASE_PROJECT", ""))
 
 
 def enabled() -> bool:
@@ -43,7 +43,7 @@ def enabled() -> bool:
 def public_config() -> dict | None:
     if not enabled():
         return None
-    return {"apiKey": os.environ.get("TCFQUEST_FIREBASE_API_KEY", ""), "authDomain": f"{project()}.firebaseapp.com",
+    return {"apiKey": db.clean_setting(os.environ.get("TCFQUEST_FIREBASE_API_KEY", "")), "authDomain": f"{project()}.firebaseapp.com",
             "projectId": project()}
 
 
@@ -115,8 +115,8 @@ def sign_in(id_token: str) -> tuple[str, str | None]:
 
 
 def _turso(method: str, path: str, **kw) -> dict:
-    r = httpx.request(method, f"{TURSO_API}/{os.environ['TCFQUEST_TURSO_ORG']}{path}", timeout=30,
-                      headers={"Authorization": f"Bearer {os.environ['TCFQUEST_TURSO_API_TOKEN']}"}, **kw)
+    r = httpx.request(method, f"{TURSO_API}/{db.clean_setting(os.environ['TCFQUEST_TURSO_ORG'])}{path}", timeout=30,
+                      headers={"Authorization": f"Bearer {db.clean_setting(os.environ['TCFQUEST_TURSO_API_TOKEN'])}"}, **kw)
     r.raise_for_status()
     return r.json() if r.content else {}
 
