@@ -8,6 +8,8 @@ from __future__ import annotations
 
 import os
 import re
+import threading
+import time
 import shutil
 import sqlite3
 from contextlib import contextmanager
@@ -216,6 +218,17 @@ class LibsqlConnection:
         return self._conn.in_transaction
 
 
+RESYNC_S = 300
+_synced_at: dict[str, float] = {}
+_sync_locks: dict[str, threading.Lock] = {}
+_sync_guard = threading.Lock()
+
+
+def _sync_lock(tester: str) -> threading.Lock:
+    with _sync_guard:
+        return _sync_locks.setdefault(tester, threading.Lock())
+
+
 def _libsql_connect(path: Path) -> sqlite3.Connection:
     import libsql  # optional dependency, installed only for the online beta (pyproject extra "beta")
 
@@ -227,11 +240,20 @@ def _libsql_connect(path: Path) -> sqlite3.Connection:
     if url and tester:
         remote, token = url.format(tester=tester), os.environ["TCFQUEST_LIBSQL_TOKEN"]
         if os.environ.get("TCFQUEST_LIBSQL_REPLICA") == "1":
+            # Local copy synced with Turso: reads stay on the server, writes go to Turso and come back
+            # into the copy at once. This server is the only writer, so a full sync is needed only
+            # when the copy is first opened, plus every few minutes as a safety net.
             conn = libsql.connect(str(path), sync_url=remote, auth_token=token, isolation_level=None)
-            conn.sync()
+            if time.monotonic() - _synced_at.get(tester, -1e9) > RESYNC_S:
+                with _sync_lock(tester):  # one sync at a time per copy; others wait for it
+                    if time.monotonic() - _synced_at.get(tester, -1e9) > RESYNC_S:
+                        conn.sync()
+                        _synced_at[tester] = time.monotonic()
         else:
             conn = libsql.connect(remote, auth_token=token, isolation_level=None)
-    else:  # local file through libsql: used by tests to prove compatibility
-        conn = libsql.connect(str(path), isolation_level=None)
+        # No PRAGMA foreign_keys online: Turso forwards it on every connection (about 2 s each) and
+        # the schema has no cascades; the code only ever writes valid references.
+        return LibsqlConnection(conn)  # type: ignore[return-value]
+    conn = libsql.connect(str(path), isolation_level=None)  # local file: tests prove compatibility
     conn.execute("PRAGMA foreign_keys = ON")
     return LibsqlConnection(conn)  # type: ignore[return-value]

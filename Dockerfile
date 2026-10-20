@@ -10,7 +10,7 @@ RUN npm run build
 # Stage 2: the API, serving the built web app. Data lives in Turso, AI in Cloudflare Workers AI.
 FROM python:3.12-slim
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 \
-    TCFQUEST_MODE=beta TCFQUEST_SERVE_WEB=1 TCFQUEST_DB_BACKEND=libsql TCFQUEST_AI_PROVIDER=workers
+    TCFQUEST_MODE=beta TCFQUEST_SERVE_WEB=1 TCFQUEST_DB_BACKEND=libsql TCFQUEST_LIBSQL_REPLICA=1 TCFQUEST_AI_PROVIDER=workers
 WORKDIR /app
 COPY server/requirements-beta.txt server/
 RUN pip install --no-cache-dir --require-hashes -r server/requirements-beta.txt
