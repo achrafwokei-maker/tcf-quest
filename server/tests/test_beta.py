@@ -122,3 +122,13 @@ def test_owner_password_login_and_changing_it_keeps_the_data(beta, monkeypatch):
     assert d.post("/api/beta/login", json={"code": "un autre mot de passe"}).status_code == 200
     assert d.get("/api/profile").json()["profile"]["display_name"] == "Achraf"
     assert d.post("/api/eo/whatever/start").status_code != 401 and client_for(app).get("/api/ai/budget").status_code == 401
+
+
+def test_health_check_works_before_sign_in(beta, monkeypatch):
+    """Render's health check has no cookie; it must not touch any database (that crashed the first deploy)."""
+    app, tmp = beta
+    monkeypatch.setenv("TCFQUEST_DB_BACKEND", "libsql")
+    monkeypatch.setenv("TCFQUEST_AI_PROVIDER", "workers")
+    r = client_for(app).get("/api/health")
+    assert r.status_code == 200 and r.json()["ok"] is True
+    assert not list(tmp.glob("*.db"))

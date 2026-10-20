@@ -88,8 +88,16 @@ def ai_budget(conn: sqlite3.Connection = Depends(get_db)):
 
 
 @app.get("/api/health")
-async def health(conn: sqlite3.Connection = Depends(get_db)):
-    schema = db.schema_version(conn)
+async def health():
+    # Online, before sign-in there is no learner database: report that the server is up, nothing more.
+    if testers.beta_mode() and not db.current_tester.get():
+        return {"ok": True, "schema_version": None, "ai": {"running": ai.provider() == "workers"}}
+    conn = db.connect()
+    try:
+        testers.ensure_ready(conn)
+        schema = db.schema_version(conn)
+    finally:
+        conn.close()
     return {"ok": True, "schema_version": schema, "ai": await ai.status()}
 
 
