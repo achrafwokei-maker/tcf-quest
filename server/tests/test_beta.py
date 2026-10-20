@@ -132,3 +132,12 @@ def test_health_check_works_before_sign_in(beta, monkeypatch):
     r = client_for(app).get("/api/health")
     assert r.status_code == 200 and r.json()["ok"] is True
     assert not list(tmp.glob("*.db"))
+
+
+def test_owner_value_survives_messy_pasting(beta, monkeypatch):
+    app, _ = beta
+    h = testers.password_hash("quatre mots en ville")
+    for messy in (f"achraf:{h}\nachrafboudinar@Mac tcf-quest %", f'  "achraf:{h}"  ', f"achraf:{h} "):
+        monkeypatch.setenv("TCFQUEST_OWNER", messy)
+        assert testers.invites()["achraf"] == h
+    assert client_for(app).post("/api/beta/login", json={"code": "quatre mots en ville"}).json()["tester"] == "achraf"

@@ -2,6 +2,7 @@
 
     server/.venv/bin/python scripts/beta_admin.py setup          # once: Turso group + server token
     server/.venv/bin/python scripts/beta_admin.py owner achraf   # your login: database + password (asked, hidden)
+    server/.venv/bin/python scripts/beta_admin.py check          # does a password match Render's value?
     server/.venv/bin/python scripts/beta_admin.py add amina      # later: invited tester, database + code
     server/.venv/bin/python scripts/beta_admin.py remove amina   # revoke (the database is kept)
     server/.venv/bin/python scripts/beta_admin.py invites        # the TCFQUEST_INVITES value for Render
@@ -129,6 +130,22 @@ def cmd_owner(name: str) -> None:
     print(f"{name}:{password_hash(password)}")
 
 
+def cmd_check() -> None:
+    """Does a password match the TCFQUEST_OWNER value saved in Render? Nothing is sent anywhere."""
+    from getpass import getpass
+    from tcfquest import testers
+    value = input("Paste the TCFQUEST_OWNER value from Render, then press Enter: ")
+    os.environ["TCFQUEST_OWNER"] = value
+    accounts = testers.invites()
+    if not accounts:
+        sys.exit("That value isn't valid: it should start with achraf:scrypt$ (copy the whole line, nothing else).")
+    try:
+        name = testers.login(getpass("Type the password: "), "local-check")
+        print(f"Match: this password signs in as '{name}'.")
+    except Exception:
+        print("No match: this password doesn't fit that value. Run `owner achraf` again and paste the new line.")
+
+
 def cmd_add(name: str) -> None:
     from tcfquest.testers import NAME, code_hash
     if not NAME.match(name):
@@ -198,7 +215,7 @@ def cmd_selftest() -> None:
 
 if __name__ == "__main__":
     args = sys.argv[1:]
-    commands = {"setup": cmd_setup, "owner": cmd_owner, "add": cmd_add, "remove": cmd_remove, "backup": cmd_backup,
+    commands = {"setup": cmd_setup, "owner": cmd_owner, "check": cmd_check, "add": cmd_add, "remove": cmd_remove, "backup": cmd_backup,
                 "selftest": cmd_selftest, "invites": lambda: print(invites_value())}
     if not args or args[0] not in commands:
         sys.exit(__doc__)

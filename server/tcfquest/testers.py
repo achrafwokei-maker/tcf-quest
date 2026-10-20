@@ -66,7 +66,10 @@ def invites() -> dict[str, str]:
     out = {}
     pairs = [os.environ.get("TCFQUEST_OWNER", "")] + os.environ.get("TCFQUEST_INVITES", "").split(",")
     for pair in pairs:
-        name, _, digest = pair.strip().partition(":")
+        # Only the first word counts: pasting into a dashboard often drags along quotes, a newline
+        # or the terminal prompt after the value.
+        words = pair.replace('"', " ").replace("'", " ").split()
+        name, _, digest = (words[0] if words else "").partition(":")
         if NAME.match(name) and name not in out and (len(digest) == 64 or digest.startswith("scrypt$")):
             out[name] = digest.lower()
     return out
