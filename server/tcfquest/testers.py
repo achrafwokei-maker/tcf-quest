@@ -27,7 +27,7 @@ from . import db
 
 COOKIE = "tcfq_tester"
 COOKIE_MAX_AGE = 180 * 24 * 3600
-OPEN_PATHS = ("/api/beta/", "/api/health")
+OPEN_PATHS = ("/api/beta/", "/api/auth/", "/api/health")
 NAME = re.compile(r"^[a-z0-9][a-z0-9-]{0,30}$")
 
 # Failed logins per client address: at most MAX_FAILS within WINDOW_S.
@@ -93,6 +93,9 @@ def verify(cookie: str | None) -> str | None:
     name, _, sig = cookie.partition(".")
     if not hmac.compare_digest(sign(name), f"{name}.{sig}"):
         return None
+    if os.environ.get("TCFQUEST_FIREBASE_PROJECT"):  # open accounts: any signed name, unless blocked
+        blocked = {b.strip() for b in os.environ.get("TCFQUEST_BLOCKED", "").split(",")}
+        return name if NAME.match(name) and name not in blocked else None
     return name if name in invites() else None
 
 

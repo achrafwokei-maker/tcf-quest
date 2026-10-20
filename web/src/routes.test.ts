@@ -17,7 +17,7 @@ describe("in-app links", () => {
     const bad: string[] = [];
     for (const [f, src] of Object.entries(code)) {
       for (const m of src.matchAll(/(?:\bto=|\bto:\s*|navigate\(|link:\s*|href=)["'`](\/[^"'`$]*)["'`]/g)) {
-        if (!ok(m[1])) bad.push(`${f}: ${m[1]}`);
+        if (!m[1].startsWith("/api/") && !ok(m[1])) bad.push(`${f}: ${m[1]}`);   // /api/… = server downloads
       }
     }
     expect(bad).toEqual([]);
@@ -27,7 +27,7 @@ describe("in-app links", () => {
     const bad: string[] = [];
     for (const [f, text] of Object.entries(contentFiles)) {
       for (const m of text.matchAll(/"to":\s*"(\/[^"]*)"/g)) {
-        if (!ok(m[1])) bad.push(`${f}: ${m[1]}`);
+        if (!m[1].startsWith("/api/") && !ok(m[1])) bad.push(`${f}: ${m[1]}`);   // /api/… = server downloads
       }
     }
     expect(Object.keys(contentFiles).length).toBeGreaterThan(10);

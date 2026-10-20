@@ -38,7 +38,7 @@ def test_api_needs_an_invite(beta):
     c = client_for(app)
     assert c.get("/api/profile").status_code == 401
     assert c.get("/api/health").status_code == 200
-    assert c.get("/api/beta/me").json() == {"beta": True, "tester": None}
+    assert c.get("/api/beta/me").json() == {"beta": True, "tester": None, "firebase": None}
     assert c.post("/api/beta/login", json={"code": "wrong-code"}).status_code == 401
 
 
@@ -82,7 +82,7 @@ def test_local_mode_is_unchanged(monkeypatch):
         from tcfquest.main import app
 
         with TestClient(app) as c:
-            assert c.get("/api/beta/me").json() == {"beta": False, "tester": None}
+            assert c.get("/api/beta/me").json() == {"beta": False, "tester": None, "firebase": None}
             assert c.get("/api/profile").status_code == 200
             assert c.post("/api/beta/login", json={"code": "anything"}).status_code == 404
 

@@ -5,6 +5,7 @@ import { useAsync } from "../lib/useAsync";
 import { setVoiceSettings, speak, stopSpeaking, type VoiceSettings } from "../lib/speak";
 import { Badge, Button, ErrorNote, Loading, Panel, cx } from "../components/ui";
 import { ThemeChoice } from "../components/ThemeSwitch";
+import { AccountPanel } from "../components/AccountPanel";
 
 interface Voice {
   id: string; label: string; gender: "female" | "male"; native: boolean; licence: string;
@@ -70,6 +71,8 @@ export function SettingsPage() {
           Pick the French voices you'll hear in missions. Each character keeps the same voice. Everything runs on your Mac, for free.
         </p>
       </header>
+
+      <AccountPanel />
 
       <Panel>
         <h2 className="text-xl">Appearance</h2>

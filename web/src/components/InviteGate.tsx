@@ -1,9 +1,9 @@
 import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import { Button, CompassMark, Loading, Panel } from "./ui";
+import { AccountSignIn } from "./AccountSignIn";
+import type { Me } from "../lib/account";
 
-interface Me { beta: boolean; tester: string | null }
-
-/** Online beta only: asks for the password once, then remembers the login (secure cookie, 180 days). Locally it renders the app directly. */
+/** Online beta only: learner accounts (Firebase) when configured, else the owner's password, asked once, then remembers the login (secure cookie, 180 days). Locally it renders the app directly. */
 export function InviteGate({ children }: { children: ReactNode }) {
   const [me, setMe] = useState<Me | null>(null);
   const [waking, setWaking] = useState(false);
@@ -17,7 +17,7 @@ export function InviteGate({ children }: { children: ReactNode }) {
     const ask = (tries: number): Promise<void> =>
       fetch("/api/beta/me").then((r) => r.json() as Promise<Me>).then((m) => { if (alive) setMe(m); })
         .catch(() => (tries > 0 && alive ? new Promise((ok) => setTimeout(ok, 3000)).then(() => ask(tries - 1)) : undefined))
-        .then(() => { if (alive && tries === 0) setMe((m) => m ?? { beta: false, tester: null }); });
+        .then(() => { if (alive && tries === 0) setMe((m) => m ?? { beta: false, tester: null, firebase: null }); });
     void ask(20).finally(() => clearTimeout(slow));
     return () => { alive = false; clearTimeout(slow); };
   }, []);
@@ -39,6 +39,7 @@ export function InviteGate({ children }: { children: ReactNode }) {
 
   if (!me) return <div className="mx-auto max-w-xl px-6"><Loading label={waking ? "Waking the server up, about a minute…" : undefined} /></div>;
   if (!me.beta || me.tester) return <>{children}</>;
+  if (me.firebase) return <AccountSignIn config={me.firebase} onSignedIn={setMe} />;
 
   return (
     <div className="mx-auto max-w-md px-5 py-16">

@@ -2,6 +2,20 @@
 
 Read this first when resuming. Newest entry on top.
 
+## Accounts milestone built locally (2026-10-20, not deployed)
+
+What was built:
+- Firebase sign-in (Google, email/password with verification and reset). Code: `accounts.py`, `AccountSignIn.tsx`, `lib/account.ts`.
+- An automatic Turso database per account, with an account cap and a blocked list.
+- The owner's email maps to the `achraf` database.
+- "Download my data" and "Sign out" in Settings.
+
+Tests: 219 backend tests (each also run on libSQL) and 23 frontend. The sign-in screen was checked at phone size.
+
+Live beta (https://tcf-quest.onrender.com) still runs the owner-password version.
+
+Next: the owner creates a Firebase project and tests real sign-in on localhost; deploy only after their OK.
+
 ## Online beta B0–B1 done (2026-10-19, local only, nothing deployed)
 
 Plan: `docs/ONLINE_BETA_PLAN.md`; details in DECISIONS (2026-10-19). Built:

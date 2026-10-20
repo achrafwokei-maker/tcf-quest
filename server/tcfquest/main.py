@@ -15,7 +15,7 @@ from fastapi.responses import FileResponse
 from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Request, Response
 from pydantic import BaseModel, Field
 
-from . import (ai, avatar, content, db, estimates, feedback, notebook, onboarding, planner, reviews, sessions, tts,
+from . import (accounts, ai, avatar, content, db, estimates, feedback, notebook, onboarding, planner, reviews, sessions, tts,
                exam, journey, speaking, speaking_ai, speech, testers, vocab, weakness, writing, writing_ai)
 
 SKILLS = ("listening", "reading", "speaking", "writing")
@@ -58,8 +58,31 @@ class InviteIn(BaseModel):
 @app.get("/api/beta/me")
 def beta_me(request: Request):
     if not testers.beta_mode():
-        return {"beta": False, "tester": None}
-    return {"beta": True, "tester": testers.verify(request.cookies.get(testers.COOKIE))}
+        return {"beta": False, "tester": None, "firebase": None}
+    return {"beta": True, "tester": testers.verify(request.cookies.get(testers.COOKIE)),
+            "firebase": accounts.public_config()}
+
+
+class FirebaseIn(BaseModel):
+    id_token: str = Field(min_length=20, max_length=5000)
+
+
+@app.post("/api/auth/firebase")
+def auth_firebase(body: FirebaseIn, response: Response):
+    """Google or email/password sign-in done in the browser by Firebase; checked here."""
+    if not accounts.enabled():
+        raise HTTPException(404, "Not available")
+    name, email = accounts.sign_in(body.id_token)
+    response.set_cookie(testers.COOKIE, testers.sign(name), max_age=testers.COOKIE_MAX_AGE,
+                        httponly=True, secure=True, samesite="lax")
+    return {"beta": True, "tester": name, "email": email}
+
+
+@app.get("/api/account/export")
+def account_export(conn: sqlite3.Connection = Depends(get_db)):
+    """Download everything stored for this learner (JSON)."""
+    return Response(json.dumps(accounts.export(conn), ensure_ascii=False, default=str), media_type="application/json",
+                    headers={"Content-Disposition": f'attachment; filename="tcfquest-{date.today()}.json"'})
 
 
 @app.post("/api/beta/login")

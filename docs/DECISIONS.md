@@ -70,6 +70,8 @@ One line per decision: what, when, why, what it replaced. A decision changes onl
 | Piper 1.8.0 | GPL-3.0 (engine, in a separate process). Voices: Siwis CC-BY 4.0, Tom AGPL-3.0, UPMC CC-BY-SA 4.0, Gilles CC0 |
 | MLX Whisper (evaluation only) | MIT |
 | libsql 0.1.11 (online beta only, optional extra) | MIT |
+| PyJWT 2.15 + cryptography 50 (online beta only) | MIT / Apache-2.0 or BSD-3-Clause |
+| Firebase JS SDK 12.19.0 (loaded only online) | Apache-2.0 |
 
 
 ## 2026-10-19: online beta foundations (B0–B1, local only)
@@ -87,3 +89,15 @@ One line per decision: what, when, why, what it replaced. A decision changes onl
 - The name picks the database, so changing the password (re-run with the same name) keeps all progress.
 - The invite-code path (`TCFQUEST_INVITES`) stays optional for later testers; unset, it does nothing.
 - Every `/api` route, including AI, needs the signed login cookie. Wrong passwords are rate-limited (10 per 15 min).
+
+## 2026-10-20: learner accounts (Firebase Authentication, built locally, not deployed)
+
+- **Firebase Auth, Spark plan:** Google sign-in plus email/password. No payment method is needed. Verified limits ([pricing](https://firebase.google.com/pricing), [limits](https://firebase.google.com/docs/auth/limits)):
+  - up to 50k monthly active users;
+  - 1,000 verification emails and 150 password-reset emails per day.
+- **How sign-in works:** the browser signs in with Firebase. The server checks the ID token (RS256, Google's public certificates, audience, issuer, expiry), then sets the existing signed cookie, so all other routes are unchanged. Email/password accounts need a verified email.
+- **Databases:** one Turso database per account, created on first sign-in. The Turso free plan allows 100 databases, so `TCFQUEST_MAX_ACCOUNTS` defaults to 50. `TCFQUEST_ACCOUNT_MAP=email:achraf` keeps the owner's existing database. `TCFQUEST_BLOCKED` revokes an account.
+- **Export:** `/api/account/export` ("Download my data" in Settings) returns every table as JSON. The owner's `beta_admin.py backup` copies whole databases.
+- **Not free or not done:**
+  - Cloud AI stays limited to the shared Cloudflare 10k neurons/day plus per-account caps. There is no global cap across accounts yet; Cloudflare's free plan stops at the quota instead of billing.
+  - The Firebase web config is public by design; protection comes from the server-side token check.
