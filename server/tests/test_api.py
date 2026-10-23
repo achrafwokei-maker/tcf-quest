@@ -130,3 +130,11 @@ def test_unexpected_errors_answer_in_json_without_secrets(monkeypatch, tmp_path)
     monkeypatch.setattr(db, "connect", boom)
     r = TestClient(main.app, raise_server_exceptions=False).get("/api/profile")
     assert r.status_code == 500 and "ValueError" in r.json()["detail"] and "secret-token" not in r.text
+
+
+def test_settings_pasted_with_their_name_still_work():
+    from tcfquest.db import find_setting
+    url = "libsql://tcfq-{tester}-org.aws-us-east-1.turso.io"
+    for messy in (url, f"TCFQUEST_LIBSQL_URL_TEMPLATE = {url}", f"TCFQUEST_LIBSQL_URL_TEMPLATE={url}\n", f'"{url}"'):
+        assert find_setting(messy, "libsql://") == url
+    assert find_setting("TCFQUEST_LIBSQL_TOKEN        = eyJhbGci.payload.sig", "eyJ") == "eyJhbGci.payload.sig"

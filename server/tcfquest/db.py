@@ -224,6 +224,15 @@ _synced_at: dict[str, float] = {}
 _sync_locks: dict[str, threading.Lock] = {}
 
 
+def find_setting(value: str, prefix: str) -> str:
+    """The part of a pasted value that starts with `prefix` (e.g. the address inside a whole copied
+    line like 'NAME = libsql://...'); falls back to clean_setting."""
+    for word in value.replace('"', " ").replace("'", " ").replace("=", " ").split():
+        if word.startswith(prefix):
+            return word
+    return clean_setting(value)
+
+
 def clean_setting(value: str) -> str:
     """A secret pasted into a dashboard often brings spaces, quotes, a leading '=' or a line break."""
     words = value.replace('"', " ").replace("'", " ").strip().lstrip("=").split()
@@ -264,7 +273,8 @@ def _libsql_open(path: Path) -> sqlite3.Connection:
     url = os.environ.get("TCFQUEST_LIBSQL_URL_TEMPLATE")
     tester = current_tester.get()
     if url and tester:
-        remote, token = clean_setting(url).format(tester=tester), clean_setting(os.environ["TCFQUEST_LIBSQL_TOKEN"])
+        remote = find_setting(url, "libsql://").format(tester=tester)
+        token = find_setting(os.environ["TCFQUEST_LIBSQL_TOKEN"], "eyJ")  # Turso tokens are JWTs
         if os.environ.get("TCFQUEST_LIBSQL_REPLICA") == "1":
             # Local copy synced with Turso: reads stay on the server, writes go to Turso and come back
             # into the copy at once. This server is the only writer, so a full sync is needed only
