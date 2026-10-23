@@ -201,7 +201,8 @@ class LibsqlConnection:
         self._conn = conn
 
     def execute(self, sql: str, params=()):
-        return LibsqlCursor(self._conn.execute(*_positional(sql, params)))
+        with _no_panics():
+            return LibsqlCursor(self._conn.execute(*_positional(sql, params)))
 
     def executemany(self, sql: str, seq):
         for params in seq:
@@ -235,7 +236,26 @@ def _sync_lock(tester: str) -> threading.Lock:
         return _sync_locks.setdefault(tester, threading.Lock())
 
 
+@contextmanager
+def _no_panics():
+    """libsql is written in Rust; an internal crash ("panic") is not a normal Python error and would
+    bypass every handler, leaving a bare 500. Turn it into a RuntimeError with its message."""
+    try:
+        yield
+    except Exception:
+        raise
+    except BaseException as e:
+        if isinstance(e, (KeyboardInterrupt, SystemExit, GeneratorExit)):
+            raise
+        raise RuntimeError(f"database engine crashed: {e}") from None
+
+
 def _libsql_connect(path: Path) -> sqlite3.Connection:
+    with _no_panics():
+        return _libsql_open(path)
+
+
+def _libsql_open(path: Path) -> sqlite3.Connection:
     import libsql  # optional dependency, installed only for the online beta (pyproject extra "beta")
 
     # Online: TCFQUEST_LIBSQL_URL_TEMPLATE, e.g. "libsql://tcfq-{tester}-myorg.aws-us-east-1.turso.io".
