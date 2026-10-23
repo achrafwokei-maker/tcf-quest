@@ -224,6 +224,27 @@ _synced_at: dict[str, float] = {}
 _sync_locks: dict[str, threading.Lock] = {}
 
 
+_hosts: dict[str, str] = {}
+
+
+def database_url(template: str, tester: str) -> str:
+    """The account's Turso address. Taken from the template setting when it holds a valid
+    libsql:// address; otherwise asked from Turso itself (needs TCFQUEST_TURSO_ORG/_API_TOKEN)."""
+    found = find_setting(template or "", "libsql://")
+    if found.startswith("libsql://") and "{tester}" in found:
+        return found.format(tester=tester)
+    if tester not in _hosts and os.environ.get("TCFQUEST_TURSO_API_TOKEN"):
+        import httpx
+        org = clean_setting(os.environ["TCFQUEST_TURSO_ORG"])
+        r = httpx.get(f"https://api.turso.tech/v1/organizations/{org}/databases/tcfq-{tester}", timeout=20,
+                      headers={"Authorization": f"Bearer {clean_setting(os.environ['TCFQUEST_TURSO_API_TOKEN'])}"})
+        r.raise_for_status()
+        _hosts[tester] = r.json()["database"]["Hostname"]
+    if tester in _hosts:
+        return f"libsql://{_hosts[tester]}"
+    raise RuntimeError("No valid database address: set TCFQUEST_LIBSQL_URL_TEMPLATE to the libsql://… value")
+
+
 def find_setting(value: str, prefix: str) -> str:
     """The part of a pasted value that starts with `prefix` (e.g. the address inside a whole copied
     line like 'NAME = libsql://...'); falls back to clean_setting."""
@@ -273,13 +294,18 @@ def _libsql_open(path: Path) -> sqlite3.Connection:
     url = os.environ.get("TCFQUEST_LIBSQL_URL_TEMPLATE")
     tester = current_tester.get()
     if url and tester:
-        remote = find_setting(url, "libsql://").format(tester=tester)
+        remote = database_url(url, tester)
         token = find_setting(os.environ["TCFQUEST_LIBSQL_TOKEN"], "eyJ")  # Turso tokens are JWTs
         if os.environ.get("TCFQUEST_LIBSQL_REPLICA") == "1":
             # Local copy synced with Turso: reads stay on the server, writes go to Turso and come back
             # into the copy at once. This server is the only writer, so a full sync is needed only
             # when the copy is first opened, plus every few minutes as a safety net.
-            conn = libsql.connect(str(path), sync_url=remote, auth_token=token, isolation_level=None)
+            try:
+                conn = libsql.connect(str(path), sync_url=remote, auth_token=token, isolation_level=None)
+            except BaseException as e:
+                if isinstance(e, (KeyboardInterrupt, SystemExit)):
+                    raise
+                raise RuntimeError(f"{e} (address: {remote})") from None
             if time.monotonic() - _synced_at.get(tester, -1e9) > RESYNC_S:
                 with _sync_lock(tester):  # one sync at a time per copy; others wait for it
                     if time.monotonic() - _synced_at.get(tester, -1e9) > RESYNC_S:
